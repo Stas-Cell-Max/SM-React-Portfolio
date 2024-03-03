@@ -1,7 +1,26 @@
-const AboutMe = () => {
-    console.log('from about me page')
+// src/pages/AboutMe/index.jsx
 
-  return <div>About Me Page</div>;
+import React from 'react';
+import './AboutMe.css'; // Assuming you have or will create a CSS file for custom styles
+
+const AboutMe = () => {
+  return (
+    <div className="container my-5">
+      <div className="row">
+        <div className="col-12 col-md-4">
+          <img src="path_to_your_image.jpg" alt="Stanislav Morozan" className="img-thumbnail" />
+        </div>
+        <div className="col-12 col-md-8">
+          <h1>Stanislav Morozan</h1>
+          <p>
+            Write a short bio here. ..........................
+            .............
+            Remember to keep itprofessional and engaging.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default AboutMe;

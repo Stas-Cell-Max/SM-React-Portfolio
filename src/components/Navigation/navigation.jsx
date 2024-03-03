@@ -12,16 +12,16 @@ const Navigation = () => {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <NavLink className="nav-link" to="/about-me">About Me</NavLink>
+          <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/about-me">About Me</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/portfolio">Portfolio</NavLink>
+            <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/portfolio">Portfolio</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/contact">Contact</NavLink>
+            <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/contact">Contact</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/resume">Resume</NavLink>
+            <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/resume">Resume</NavLink>
           </li>
         </ul>
       </div>

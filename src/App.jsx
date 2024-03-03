@@ -1,17 +1,26 @@
-import "./App.css";
+// src/App.jsx
+
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AboutMe from "./pages/AboutMe";
-import Portfolio from "./pages/Portfolio";
-import NavigationBar from "./components/Navigation";
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import AboutMe from './pages/AboutMe/index';
+import Portfolio from './pages/Portfolio/index';
+import Contact from './pages/Contact/index'; 
+import Resume from './pages/Resume/index'; 
+
 
 const App = () => {
   return (
     <div>
       <Router>
-        <NavigationBar /> 
+       <Header />
         <Routes>
-          <Route path="/work" element={<Portfolio />} />
           <Route path="/" element={<AboutMe />} />
+          <Route path="/about-me" element={<AboutMe />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/resume" element={<Resume />} />
         </Routes>
       </Router>
     </div>
