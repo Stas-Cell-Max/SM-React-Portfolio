@@ -10,21 +10,18 @@ import Contact from './pages/Contact/index';
 import Resume from './pages/Resume/index'; 
 
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <Router>
-       <Header />
-        <Routes>
-          <Route path="/" element={<AboutMe />} />
-          <Route path="/about-me" element={<AboutMe />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/resume" element={<Resume />} />
-        </Routes>
-      </Router>
-    </div>
+    <main>
+      <Header />
+      <Footer />
+      <AboutMe />
+      <Portfolio />
+      <Contact />
+      <Resume />
+    </main>
   );
-};
-
+}
 export default App;
+
+
