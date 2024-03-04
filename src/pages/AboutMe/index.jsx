@@ -1,7 +1,7 @@
 // src/pages/AboutMe/index.jsx
 
 import React from 'react';
-import './AboutMe.css'; // Assuming you have or will create a CSS file for custom styles
+import myPhoto from '../../assets/images/profile.jpg' // Assuming you have or will create a CSS file for custom styles
 
 const AboutMe = () => {
   return (

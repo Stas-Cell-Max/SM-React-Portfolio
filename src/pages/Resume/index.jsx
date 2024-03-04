@@ -1,25 +1,24 @@
 // src/pages/Resume/index.jsx
 
 import React from 'react';
+//import resumeFile from '../../assets/resume.pdf';
 
 const Resume = () => {
-  return (
-    <div className="container my-5">
-      <h1 className="text-center">Resume</h1>
-      <div className="text-center mb-4">
-        <a href="path_to_your_resume.pdf" className="btn btn-primary" download>Download My Resume</a>
+    return (
+      <div className="container my-5">
+        <div className="row">
+          <div className="col-12">
+            {/*<a href={resumeFile} download className="btn btn-primary mb-3">Download Resume</a>*/}
+            <ul className="list-group">
+              <li className="list-group-item">Skill 1</li>
+              <li className="list-group-item">Skill 2</li>
+              <li className="list-group-item">Skill 3</li>
+              {/* Add more skills or proficiencies here */}
+            </ul>
+          </div>
+        </div>
       </div>
-      <h2>Proficiencies</h2>
-      <ul>
-        {/* Replace with own proficiencies */}
-        <li>HTML & CSS</li>
-        <li>JavaScript (ES6+)</li>
-        <li>React</li>
-        <li>Node.js</li>
-        {/* ...other proficiencies */}
-      </ul>
-    </div>
-  );
-};
-
-export default Resume;
+    );
+  };
+  
+  export default Resume;

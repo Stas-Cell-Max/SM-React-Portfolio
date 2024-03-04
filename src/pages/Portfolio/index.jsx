@@ -12,6 +12,27 @@ const Portfolio = () => {
       deployedLink: 'http://deployedlink.com',
       repoLink: 'http://githublink.com'
     },
+
+    {
+      title: 'Project Two',
+      image: 'path_to_image.jpg',
+      deployedLink: 'http://deployedlink.com',
+      repoLink: 'http://githublink.com'
+    },
+
+    {
+      title: 'Project Three',
+      image: 'path_to_image.jpg',
+      deployedLink: 'http://deployedlink.com',
+      repoLink: 'http://githublink.com'
+    },
+
+    {
+      title: 'Project Four',
+      image: 'path_to_image.jpg',
+      deployedLink: 'http://deployedlink.com',
+      repoLink: 'http://githublink.com'
+    },
     // ...other projects
   ];
 
