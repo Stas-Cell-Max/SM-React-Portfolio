@@ -11,7 +11,7 @@ import Resume from './pages/Resume/index';
 
 function App() {
   return (
-    <Router>
+    <div>
       <Header />
       <Routes>
         <Route path="/" element={<AboutMe />} />
@@ -21,7 +21,7 @@ function App() {
         <Route path="/resume" element={<Resume />} />
       </Routes>
       <Footer />
-    </Router>
+      </div>
   );
 }
 
