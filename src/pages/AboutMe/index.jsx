@@ -11,7 +11,7 @@ const AboutMe = () => {
           <img src="../../assets/images/profile.jpg" alt="Stanislav Morozan" className="img-thumbnail" />
         </div>
         <div className="col-12 col-md-8">
-          <h1>Stanislav Morozan</h1>
+          <h1>About Me</h1>
           <p>
             Write a short bio here. ..........................
             .............
