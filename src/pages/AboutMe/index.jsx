@@ -8,7 +8,7 @@ const AboutMe = () => {
     <div className="container my-5">
       <div className="row">
         <div className="col-12 col-md-4">
-          <img src="../../assets/images/profile.jpg" alt="Stanislav Morozan" className="img-thumbnail" />
+          <img src="../../assets/images/profile.jpg" alt="profile photo" className="img-thumbnail" />
         </div>
         <div className="col-12 col-md-8">
           <h1>About Me</h1>

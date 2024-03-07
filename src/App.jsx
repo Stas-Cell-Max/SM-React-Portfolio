@@ -13,6 +13,7 @@ function App() {
   return (
     <div>
       <Header />
+  
       <Routes>
         <Route path="/" element={<AboutMe />} />
         <Route path="/about-me" element={<AboutMe />} />
@@ -20,6 +21,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/resume" element={<Resume />} />
       </Routes>
+      
       <Footer />
       </div>
   );

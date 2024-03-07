@@ -1,15 +1,15 @@
 /* src/components/Footer/Footer.css */
 
 .footer {
-    position: fixed;
-    bottom: 0;
+    
     width: 100%;
-    background-color: #135065; /*  preferred footer background color */
+    background-color: #135065; /* Preferred footer background color */
     padding: 1rem 0;
     text-align: center;
   }
   
   .footer a {
+  
     color: #333; /*  preferred icon color */
     margin: 0 10px;
   }
