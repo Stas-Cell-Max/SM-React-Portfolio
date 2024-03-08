@@ -4,6 +4,7 @@ html, body {
 }
 
 #root {
+  padding: 0; 
   display: flex; /* Use flexbox to control the layout */
   flex-direction: column; /* Stack children vertically */
   justify-content: space-between; /* Space between header and footer */
@@ -14,10 +15,7 @@ html, body {
   text-align: center; /* Center align text */
 }
 
-/* Add styles for main content area */
-.main-content {
-  flex-grow: 1; /* Allow content area to grow and fill available space */
-}
+
 .logo {
   height: 6em;
   padding: 1.5em;
