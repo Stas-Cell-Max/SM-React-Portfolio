@@ -1,20 +1,21 @@
-html, body {
-  height: 100%; /* Make sure html and body are also taking up the full height */
-  margin: 0; /* Reset default margin */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
-
 #root {
-  padding: 0; 
-  display: flex; /* Use flexbox to control the layout */
-  flex-direction: column; /* Stack children vertically */
-  justify-content: space-between; /* Space between header and footer */
-  min-height: 100vh; /* Minimum height of viewport */
-  max-width: 1280px; /* Max width as you've set */
-  margin: 0 auto; /* Centering the content */
-  padding: 2rem; /* Padding as you've set */
-  text-align: center; /* Center align text */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
 }
 
+.content {
+  flex: 1;
+  padding: 2rem;
+}
 
 .logo {
   height: 6em;
