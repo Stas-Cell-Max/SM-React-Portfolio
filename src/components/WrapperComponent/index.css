@@ -1,4 +1,6 @@
 .margin-left-auto {
   margin-left: auto;
   width: 80vw;
+  overflow-y: scroll; /* This will enable scrolling */
+  height: 100vh; /* This will ensure that the component takes full viewport height */
 }
