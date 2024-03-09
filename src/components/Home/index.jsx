@@ -2,12 +2,12 @@
 
 import React from 'react';
 import './Home.css';
-import backgroundImage from '../../assets/background.jpg'; // Make sure to have a background image in the assets folder
+// import backgroundImage from './profile.jpg'; // Make sure to have a background image in the assets folder
 
 const Home = () => {
   return (
     <section id="home" style={{ 
-      backgroundImage: `url(${backgroundImage})`,
+      // backgroundImage: `url(${backgroundImage})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       height: '100vh',

@@ -1,44 +1,50 @@
 .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 1rem;
-  }
-  
-  .profile-container {
-    text-align: center;
-  }
-  
-  .profile-image {
-    width: 120px; /* Adjust as needed */
-    height: 120px; /* Adjust as needed */
-    border-radius: 50%;
-    margin-bottom: 1rem;
-    border: 3px solid white; /* Optional */
-  }
-  
-  .nav-link {
-    color: white;
-    margin: 0.5rem 0;
-  }
-  
-  .nav-link:hover {
-    color: #ddd;
-    text-decoration: none;
-  }
-  
-  .social-links {
-    margin-top: auto;
-    padding-top: 2rem;
-  }
-  
-  .icon-link {
-    color: white;
-    margin: 0 10px;
-    font-size: 1.5rem; /* Adjust icon size as needed */
-  }
-  
-  .icon-link:hover {
-    color: #ddd;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.profile-container {
+  text-align: center;
+}
+
+.profile-image {
+  width: 120px; /* Adjust as needed */
+  height: 120px; /* Adjust as needed */
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid white; /* Optional */
+}
+
+.nav-link {
+  color: white;
+  margin: 0.5rem 0;
+}
+
+.nav-link:hover {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.social-links {
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+.icon-link {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem; /* Adjust icon size as needed */
+}
+
+.icon-link:hover {
+  color: #ddd;
+}
+
+.fix-to-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20vw;
+}
