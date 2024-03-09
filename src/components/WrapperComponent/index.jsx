@@ -6,6 +6,7 @@ import Resume from "../Resume";
 import Portfolio from "../Portfolio";
 import Testimonial from "../Testimonial";
 import Contact from "../Contact";
+import Footer from "../Footer";
 import "./WrapperComponent.css";
 
 const WrapperComponent = () => {
@@ -33,6 +34,7 @@ const WrapperComponent = () => {
       <Element className="w-full" name="contact">
         <Contact />
       </Element>
+      <Footer />
     </div>
   );
 };

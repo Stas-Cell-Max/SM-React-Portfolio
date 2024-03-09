@@ -1,6 +1,7 @@
 /* src/components/Home/Home.css */
 
 #home {
+  background-color: #343a40;
     background-size: cover;
     background-position: center;
     height: 100vh;

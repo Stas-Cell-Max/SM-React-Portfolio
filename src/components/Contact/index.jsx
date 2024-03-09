@@ -1,5 +1,6 @@
 // src/pages/Contact/index.jsx
 import React from 'react';
+import './Contact.css'; 
 
 const Contact = () => {
   const handleSubmit = (e) => {
