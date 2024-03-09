@@ -1,0 +1,29 @@
+/* WrapperComponent.css */
+
+.wrapper-component {
+  margin-left: 20vw; /* Adjust this value to match the width of the fixed header */
+  width: 80vw; /* Adjust this value to take up the remaining viewport width */
+  overflow-y: auto; /* Allows for scrolling within the component */
+  height: 100vh; /* Sets the height to fill the viewport */
+  position: relative; /* Establishes a positioning context for children */
+}
+
+/* Style for each full-width element section */
+.wrapper-component .w-full {
+  width: 100%;
+  min-height: 100vh; /* Ensures that each section takes at least the height of the viewport */
+  padding: 4rem 1rem; /* Spacing at the top and bottom of each section */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/*  center content both horizontally and vertically */
+.wrapper-component .w-full > div {
+  width: 100%; /* Sets a max width for the content within each section */
+  max-width: 1200px; /* Optional - you can set a max width for larger screens */
+  margin: 0 auto; /* Centers the content block */
+}
+
+/* Continue with additional specific section styles as needed */

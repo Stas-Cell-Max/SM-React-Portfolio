@@ -4,14 +4,14 @@ import Home from "../Home";
 import WhatIDo from "../WhatIDo";
 import Resume from "../Resume";
 import Portfolio from "../Portfolio";
-import Testimonial from "../Testimonial"; // Assuming you have this component created
+import Testimonial from "../Testimonial";
 import Contact from "../Contact";
-import "./index.css";
+import "./WrapperComponent.css";
 
 const WrapperComponent = () => {
   return (
     // <div className="vh-100 ">
-    <div className="vh-100 w-full margin-left-auto ">
+    <div className="wrapper-component">
       <Element className="w-full" name="home">
         <Home />
       </Element>
