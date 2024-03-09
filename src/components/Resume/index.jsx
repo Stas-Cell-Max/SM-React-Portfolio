@@ -1,5 +1,6 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './Resume.css';
+
 
 const Resume = () => {
   return (
@@ -12,17 +13,17 @@ const Resume = () => {
             <div className="resume-item">
               <h4>Bachelor's Degree</h4>
               <h5>2005 - 2010</h5>
-              <p><em>Tech University of Moldova</em></p>
+              <p><em>Technical University of Moldova</em></p>
               <p>Computer Science </p>
             </div>
             <div className="resume-item">
               <h4>Advaced Diploma</h4>
               <h5>2014 - 2018</h5>
               <p><em>George Brown College</em></p>
-              <p>Architectural Technology Advaced Diploma</p>
+              <p>Architectural Technology </p>
             </div>
             <div className="resume-item">
-              <h4>Bachelor's Degree</h4>
+              <h4>Certification</h4>
               <h5>2023 - 2024</h5>
               <p><em>University of Toronto</em></p>
               <p>Full Stack Web Development</p>
@@ -40,6 +41,9 @@ const Resume = () => {
               <p>Description of job responsibilities and achievements</p>
             </div>
             {/* Add more resume-item divs as needed */}
+
+
+
           </div>
         </div>
 
@@ -55,6 +59,8 @@ const Resume = () => {
                 </div>
               </div>
               {/* Add more skill-item divs as needed */}
+
+
             </div>
           </div>
         </div>

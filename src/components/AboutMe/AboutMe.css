@@ -1,0 +1,35 @@
+.about-me {
+    color: #fff;
+    background-color: #333;
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .about-me .container {
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .about-me h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-me .introduction {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .about-me .personal-details {
+    margin-bottom: 2rem;
+  }
+  
+  .about-me .personal-details p {
+    font-size: 1rem;
+  }
+  
+  .about-me .btn {
+    padding: 0.5rem 2rem;
+  }
+  
