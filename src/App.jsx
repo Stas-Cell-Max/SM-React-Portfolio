@@ -7,7 +7,7 @@ import Footer from './components/Footer/Footer';
 import AboutMe from './pages/AboutMe/index';
 import Portfolio from './pages/Portfolio/index';
 import Contact from './pages/Contact/index'; 
-import Resume from './pages/Resume/index'; 
+import Resume from './pages/Resume/Index'; 
 
 function App() {
   return (
