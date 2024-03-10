@@ -7,7 +7,12 @@ const Resume = () => {
     <div className="resume-section" id="resume">
       <div className="container">
         <div className="row">
-          {/* Education Section */}
+         
+        <div className="col-lg-12 text-center">
+            <h2 className="section-heading">Resume</h2>
+            <hr className="my-4" />
+          </div>
+
           <div className="col-md-6">
             <h2 className="text-uppercase">Education</h2>
             <div className="resume-item">

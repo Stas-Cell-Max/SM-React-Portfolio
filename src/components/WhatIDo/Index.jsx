@@ -11,6 +11,7 @@ const WhatIDo = () => {
             <hr className="my-4" />
           </div>
         </div>
+        
         <div className="row">
           {/* Web Development */}
           <div className="col-md-4">
@@ -42,17 +43,16 @@ const WhatIDo = () => {
             <p className="text-muted">Integrating technology into building design and architecture.</p>
           </div>
 
-          {/* Sustainable Design */}
+          {/* Architectural Design */}
           <div className="col-md-4">
             <span className="fa-stack fa-4x">
               <i className="fas fa-circle fa-stack-2x text-primary"></i>
               <i className="fas fa-tree fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 className="service-heading">Sustainable Design</h4>
+            <h4 className="service-heading">Architectural Design</h4>
             <p className="text-muted">Creating eco-friendly and sustainable architectural solutions.</p>
           </div>
-          
-          {/* More services can be added here if needed */}
+        
         </div>
       </div>
     </section>

@@ -9,7 +9,7 @@ const Header = () => {
 
   const [isSticky, setIsSticky] = useState(false);  // State to control whether the header is sticky
   const [isNavModalOpen, setIsNavModalOpen] = useState(true);// State to control the responsive navbar modal
-
+  
   const checkScrollTop = () => {   // Function to check the scroll position and set the header to sticky
     if (window.scrollY > 180) {
       setIsSticky(true);   // When scrolled past 180px, set the header to sticky
@@ -18,11 +18,20 @@ const Header = () => {
     }
   };
 
+  const handleScrollToElement = (elementId) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    setIsNavModalOpen(true); // Close the nav modal when a link is clicked
+  };
+  
   useEffect(() => {   // This effect runs once when the component mounts to add the scroll event listener
     window.addEventListener("scroll", checkScrollTop);
     return () => window.removeEventListener("scroll", checkScrollTop); // Clean-up function to remove the event listener when the component unmounts
   }, []);
   
+  const toggleNav = () => {setIsNavOpen(!isNavOpen);};
   return (
     <header className={`header bg-dark text-white vh-100 fix-to-left ${isSticky ? "sticky" : ""}`}>
       <div className="profile-container">
@@ -35,72 +44,86 @@ const Header = () => {
       </div>
       <nav className={`nav flex-column ${!isNavModalOpen ? "show" : ""}`}>
         <Link
+        activeClass="active"
           to="home"
           className="nav-link"
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
+          onClick={() => setIsNavModalOpen(!isNavModalOpen)}
         >
           Home
         </Link>
         <Link
+        activeClass="active"
           to="aboutme"
           className="nav-link"
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
+          onClick={() => setIsNavModalOpen(!isNavModalOpen)}
         >
           About Me
         </Link>
         <Link
+        activeClass="active"
           to="whatido"
           className="nav-link"
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
+          onClick={() => setIsNavModalOpen(!isNavModalOpen)}
         >
           What I Do
         </Link>
         <Link
+        activeClass="active"
           to="resume"
           className="nav-link"
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
+          onClick={() => setIsNavModalOpen(!isNavModalOpen)}
         >
           Resume
         </Link>
         <Link
+        activeClass="active"
           to="portfolio"
           className="nav-link"
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
+          onClick={() => setIsNavModalOpen(!isNavModalOpen)}
         >
           Portfolio
         </Link>
         <Link
+        activeClass="active"
           to="testimonial"
           className="nav-link"
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
+          onClick={() => setIsNavModalOpen(!isNavModalOpen)}
         >
           Testimonial
         </Link>
         <Link
+        activeClass="active"
           to="contact"
           className="nav-link"
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
+          onClick={() => setIsNavModalOpen(!isNavModalOpen)}
         >
           Contact
         </Link>
@@ -148,6 +171,7 @@ const Header = () => {
           <i className="fab fa-instagram"></i>
         </a>
       </div>
+     
     </header>
   );
 };

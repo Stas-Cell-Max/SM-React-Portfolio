@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-scroll';
+
 import { Element } from "react-scroll";
 import AboutMe from "../AboutMe";
 import Home from "../Home";
@@ -15,25 +15,21 @@ const WrapperComponent = () => {
   return (
     // <div className="vh-100 ">
     <div className="wrapper-component">
-      <Element className="home" name="home">
-        <Home />
-      </Element>
-      <Element className="aboutme" name="aboutme">
-        <AboutMe />
-      </Element>
-      <Element  name="whatido">
+  <Element name="home"> <Home /></Element>
+      <Element name="aboutme"> <AboutMe /></Element>
+      <Element name="whatido">
         <WhatIDo />
       </Element>
-      <Element className="resume" name="resume">
+      <Element name="resume">
         <Resume />
       </Element>
-      <Element className="portfolio" name="portfolio">
+      <Element name="portfolio">
         <Portfolio />
       </Element>
-      <Element className="testimonial" name="testimonial">
+      <Element name="testimonials">
         <Testimonial />
       </Element>
-      <Element className="contact" name="contact">
+      <Element name="contact">
         <Contact />
       </Element>
       <Footer />

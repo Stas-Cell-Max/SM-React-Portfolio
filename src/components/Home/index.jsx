@@ -18,9 +18,10 @@ const Home = () => {
       alignItems: 'center',
       color: 'white'
     }}>
-      <h1>Welcome</h1>
+      <h1 className="section-heading">Welcome</h1>
+        <hr className="my-4" />
       <h2>I'm Stanislav Morozan</h2>
-      <p>based in Toronto, Canada.</p>
+      <p>Based in Toronto, Canada.</p>
       <button className="btn btn-primary mt-4">Let's Talk</button>
     </section>
   );

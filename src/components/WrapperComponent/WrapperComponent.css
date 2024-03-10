@@ -1,29 +1,67 @@
-/* WrapperComponent.css */
-
+/* Global settings for the wrapper */
 .wrapper-component {
-  margin-left: 20vw; /* Adjust this value to match the width of the fixed header */
-  width: 80vw; /* Adjust this value to take up the remaining viewport width */
-  overflow-y: auto; /* Allows for scrolling within the component */
-  height: 100vh; /* Sets the height to fill the viewport */
-  position: relative; /* Establishes a positioning context for children */
+  margin-left: 20vw;
+  width: 80vw;
+  overflow-y: auto;
+  height: 100vh;
+  position: relative;
+  background-color: #343a40; /* Dark background for all sections */
+  color: #ffffff; /* Light text for contrast */
 }
 
-/* Style for each full-width element section */
+/* Consistent spacing and alignment for all sections */
 .wrapper-component .w-full {
   width: 100%;
-  min-height: 100vh; /* Ensures that each section takes at least the height of the viewport */
-  padding: 4rem 1rem; /* Spacing at the top and bottom of each section */
+  min-height: 100vh;
+  padding: 4rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center; /* Adjust if you want content to be centered vertically as well */
 }
 
-/*  center content both horizontally and vertically */
-.wrapper-component .w-full > div {
-  width: 100%; /* Sets a max width for the content within each section */
-  max-width: 1200px; /* Optional - you can set a max width for larger screens */
-  margin: 0 auto; /* Centers the content block */
+/* Specific styles for alternating section backgrounds to add visual interest */
+.wrapper-component .w-full:nth-child(odd) {
+  background-color: #343a40; /* Darker shade for odd sections */
 }
 
-/* Continue with additional specific section styles as needed */
+.wrapper-component .w-full:nth-child(even) {
+  background-color: #212529; /* Lighter shade for even sections */
+}
+
+/* Styling for text and headings within each section for readability */
+.wrapper-component h1, .wrapper-component h2, .wrapper-component h3 {
+  color: #ffffff; /* White text for headings */
+  margin: 0.5rem 0; /* Consistent margin for headings */
+}
+
+.wrapper-component p {
+  color: #cccccc; /* Light grey text for paragraphs */
+  line-height: 1.6; /* Improved readability for text */
+}
+
+/* Style for buttons or links within sections */
+.wrapper-component .btn-primary {
+  background-color: #007bff; /* Bootstrap primary button color */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem; /* Spacing above buttons */
+  border-radius: 0.25rem; /* Rounded corners for buttons */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.wrapper-component .btn-primary:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .wrapper-component {
+    margin-left: 0;
+    width: 100vw; /* Full width on smaller screens */
+  }
+
+  .wrapper-component .w-full > div {
+    padding: 2rem 1rem; /* Adjusted padding for smaller screens */
+  }
+}

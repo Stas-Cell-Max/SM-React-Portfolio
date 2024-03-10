@@ -29,16 +29,13 @@
 .profile-container {
   text-align: center;
 }
-.profile-container {
-  text-align: center;
-}
 
 .profile-image {
-  width: 120px; /* Adjust as needed */
-  height: 120px; /* Adjust as needed */
+  width: 150px; /* Adjust as needed */
+  height: 150px; /* Adjust as needed */
   border-radius: 50%;
   margin-bottom: 1rem;
-  border: 3px solid white; /* Optional */
+  border: 6px solid #343a40; /* Optional */
 }
 
 
@@ -46,6 +43,7 @@
   color: white;
   margin: 0.5rem 0;
   transition: color 0.2s ease;
+  
 }
 
 
@@ -56,8 +54,12 @@
 }
 
 
+/* Social Links */
 .social-links {
-  margin-top: auto;
+  display: flex; /* Ensure flex layout for social links */
+  justify-content: center; /* Center social links */
+  padding: 1rem 0; /* Add some padding around the links */
+   margin-top: auto;
   padding-top: 2rem;
 }
 
@@ -113,9 +115,3 @@
   }
 }
 
-/* Social Links */
-.social-links {
-  display: flex; /* Ensure flex layout for social links */
-  justify-content: center; /* Center social links */
-  padding: 1rem 0; /* Add some padding around the links */
-}
