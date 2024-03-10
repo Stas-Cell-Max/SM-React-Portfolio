@@ -12,25 +12,35 @@ import Footer from "../Footer";
 import "./WrapperComponent.css";
 
 const WrapperComponent = () => {
+    // Define the function to handle navigation click
+    const handleNavClick = (elementId) => {
+      // Assuming 'elementId' is the name attribute value of the target Element component
+      // This will scroll to the Element with the corresponding 'name' prop
+      document.getElementById(elementId).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    };
+
   return (
     // <div className="vh-100 ">
     <div className="wrapper-component">
-  <Element name="home"> <Home /></Element>
-      <Element name="aboutme"> <AboutMe /></Element>
-      <Element name="whatido">
-        <WhatIDo />
+  <Element name="home" id="home"> <Home handleNavClick={handleNavClick} /></Element>
+      <Element name="aboutme" id="aboutme"> <AboutMe handleNavClick={handleNavClick} /></Element>
+      <Element name="whatido" id="whatido">
+        <WhatIDo handleNavClick={handleNavClick} />
       </Element>
-      <Element name="resume">
-        <Resume />
+      <Element name="resume" id="resume">
+        <Resume handleNavClick={handleNavClick} />
       </Element>
-      <Element name="portfolio">
-        <Portfolio />
+      <Element name="portfolio" id="portfolio">
+        <Portfolio handleNavClick={handleNavClick}/>
       </Element>
-      <Element name="testimonials">
-        <Testimonial />
+      <Element name="testimonials" id="testimonials">
+        <Testimonial handleNavClick={handleNavClick}/>
       </Element>
-      <Element name="contact">
-        <Contact />
+      <Element name="contact" id="contact" >
+        <Contact handleNavClick={handleNavClick}/>
       </Element>
       <Footer />
     </div>

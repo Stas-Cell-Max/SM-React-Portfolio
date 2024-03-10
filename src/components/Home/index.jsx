@@ -2,20 +2,43 @@
 
 import React from 'react';
 import './Home.css';
-// import backgroundImage from './profile.jpg'; // Make sure to have a background image in the assets folder
+import Typewriter from 'typewriter-effect';
 
-const Home = () => {
- 
+const Home = ({ handleNavClick }) => {
+  
   return (
-    <section id="home" className="home-section">
+    <section id="home" className="home-section d-flex min-vh-100 align-items-center justify-content-center">
+     <div className="container text-center">
+        <p className="text-7 fw-500 text-white mb-2 mb-md-3">Welcome</p>
+        <h2 className="text-16 fw-600 text-white mb-2 mb-md-3">
+          <Typewriter
+            options={{
+              strings: [
+                "I'm Stanislav Morozan.",
+                "I'm a Web Developer",
+                "MERN Stack",
+              ],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </h2>
+       <p className="text-5 text-light mb-4">Based in Toronto, Canada.</p>
+          <button
+            className="btn btn-outline-primary rounded-pill shadow-none smooth-scroll mt-2"
+            onClick={() => handleNavClick('contact')}
+          >
+            Let's Talk
+          </button>
+        </div>
+        <button
+          className="scroll-down-arrow animated text-white btn btn-link btn-lg"
+          onClick={() => handleNavClick('about')}
+        >
+          <i className="fa fa-chevron-down"></i>
+        </button>
      
-        <h1 className="section-heading">Welcome</h1>
-        <h2>I'm Stanislav Morozan</h2>
-        <p>Based in Toronto, Canada.</p>
-        <button className="btn btn-primary mt-4">Let's Talk</button>
-      
     </section>
   );
 };
-
 export default Home;

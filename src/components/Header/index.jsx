@@ -5,7 +5,8 @@ import { Link } from "react-scroll";
 import "./Header.css";
 
 
-const Header = () => {
+
+const Header = ({ handleNavClick }) => {
 
   const [isSticky, setIsSticky] = useState(false);  // State to control whether the header is sticky
   const [isNavModalOpen, setIsNavModalOpen] = useState(true);// State to control the responsive navbar modal
@@ -18,25 +19,17 @@ const Header = () => {
     }
   };
 
-  const handleScrollToElement = (elementId) => {
-    const element = document.getElementById(elementId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-    setIsNavModalOpen(true); // Close the nav modal when a link is clicked
-  };
-  
   useEffect(() => {   // This effect runs once when the component mounts to add the scroll event listener
     window.addEventListener("scroll", checkScrollTop);
     return () => window.removeEventListener("scroll", checkScrollTop); // Clean-up function to remove the event listener when the component unmounts
   }, []);
   
-  const toggleNav = () => {setIsNavOpen(!isNavOpen);};
+  const toggleNav = () => setIsNavModalOpen(!isNavModalOpen);
   return (
     <header className={`header bg-dark text-white vh-100 fix-to-left ${isSticky ? "sticky" : ""}`}>
       <div className="profile-container">
         <img
-          src="https://plus.unsplash.com/premium_photo-1669042646165-1878c78e6604?q=80&w=2480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://media.licdn.com/dms/image/D5603AQHvhrfO7_qk0Q/profile-displayphoto-shrink_800_800/0/1708111679202?e=1715817600&v=beta&t=ccjlk-99gBuLRePPCx2lMsoBsIiwJdHxPuY3syfpark"
           alt="Profile"
           className="profile-image"
         />
@@ -51,7 +44,7 @@ const Header = () => {
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => setIsNavModalOpen(!isNavModalOpen)}
+          onClick={() => handleNavClick('home')}
         >
           Home
         </Link>
@@ -63,7 +56,7 @@ const Header = () => {
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => setIsNavModalOpen(!isNavModalOpen)}
+          onClick={() => handleNavClick('aboutme')}
         >
           About Me
         </Link>
@@ -75,7 +68,7 @@ const Header = () => {
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => setIsNavModalOpen(!isNavModalOpen)}
+          onClick={() => handleNavClick('whatido')}
         >
           What I Do
         </Link>
@@ -87,7 +80,7 @@ const Header = () => {
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => setIsNavModalOpen(!isNavModalOpen)}
+          onClick={() => handleNavClick('resume')}
         >
           Resume
         </Link>
@@ -99,7 +92,7 @@ const Header = () => {
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => setIsNavModalOpen(!isNavModalOpen)}
+          onClick={() => handleNavClick('portfolio')}
         >
           Portfolio
         </Link>
@@ -111,7 +104,7 @@ const Header = () => {
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => setIsNavModalOpen(!isNavModalOpen)}
+          onClick={() => handleNavClick('testimonial')}
         >
           Testimonial
         </Link>
@@ -123,7 +116,7 @@ const Header = () => {
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => setIsNavModalOpen(!isNavModalOpen)}
+          onClick={() => handleNavClick('contact')}
         >
           Contact
         </Link>
