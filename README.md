@@ -36,9 +36,20 @@ This portfolio is a React-based single-page application (SPA) designed to showca
 4. Run the development server: `npm run dev`
 
 ## Future Enhancements
-- Integration of a backend server to handle contact form submissions.
-- Expansion of the project section with case studies for in-depth project descriptions.
-- Implementation of a blog section to share insights and updates on technology trends.
+-Built with Latest React v18+
+Created using Bootstrap 5
+No jQuery
+Light & Dark Versions
+Ultra Responsive Layout
+
+Portfolio with filter and Portfolio Details Popup
+Working Contact Form
+Google Web Fonts
+Typing Animation
+Video Backgrounds in Intro
+Font awesome Integrated
+Easy to Customize
+Detailed Well Documentation
 
 ## Contributing
 Contributions to React-Portfolio are highly appreciated. If you have suggestions for improvement or have found any issues, please open an issue or submit a pull request with your proposed changes. Code contributions should follow the established patterns and come with meaningful commit messages.

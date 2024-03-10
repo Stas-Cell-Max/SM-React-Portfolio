@@ -1,6 +1,7 @@
 // src/components/Home/Home.jsx
 
 import React from 'react';
+
 import './Home.css';
 // import backgroundImage from './profile.jpg'; // Make sure to have a background image in the assets folder
 

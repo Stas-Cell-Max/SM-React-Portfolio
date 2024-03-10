@@ -1,10 +1,12 @@
+import React from 'react';
+import { Link } from 'react-scroll';
 import { Element } from "react-scroll";
 import AboutMe from "../AboutMe";
 import Home from "../Home";
 import WhatIDo from "../WhatIDo";
 import Resume from "../Resume";
 import Portfolio from "../Portfolio";
-import Testimonial from "../Testimonial";
+import Testimonial from "../Testimonials";
 import Contact from "../Contact";
 import Footer from "../Footer";
 import "./WrapperComponent.css";
@@ -13,25 +15,25 @@ const WrapperComponent = () => {
   return (
     // <div className="vh-100 ">
     <div className="wrapper-component">
-      <Element className="w-full" name="home">
+      <Element className="home" name="home">
         <Home />
       </Element>
-      <Element className="w-full" name="aboutme">
+      <Element className="aboutme" name="aboutme">
         <AboutMe />
       </Element>
-      <Element className="w-full" name="whatido">
+      <Element  name="whatido">
         <WhatIDo />
       </Element>
-      <Element className="w-full" name="resume">
+      <Element className="resume" name="resume">
         <Resume />
       </Element>
-      <Element className="w-full" name="portfolio">
+      <Element className="portfolio" name="portfolio">
         <Portfolio />
       </Element>
-      <Element className="w-full" name="testimonial">
+      <Element className="testimonial" name="testimonial">
         <Testimonial />
       </Element>
-      <Element className="w-full" name="contact">
+      <Element className="contact" name="contact">
         <Contact />
       </Element>
       <Footer />
