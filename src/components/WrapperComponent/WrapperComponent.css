@@ -5,8 +5,21 @@
   overflow-y: auto;
   height: 100vh;
   position: relative;
-  background-color: #343a40; /* Dark background for all sections */
-  color: #ffffff; /* Light text for contrast */
+  background-image: url('https://www.greatspeechwriting.co.uk/wp-content/uploads/2020/09/man-working-on-laptop-2210x1473-1.jpg');
+  background-attachment: fixed; /* Keeps the background image fixed during scroll */
+  background-size: cover; /* Ensure it covers the entire component */
+  color:white; /* Light text for contrast */
+}
+
+.wrapper-component::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(22, 24, 24, 0.7); /* Dark overlay; adjust opacity as needed */
+  z-index: -1;
 }
 
 /* Consistent spacing and alignment for all sections */
@@ -31,12 +44,12 @@
 
 /* Styling for text and headings within each section for readability */
 .wrapper-component h1, .wrapper-component h2, .wrapper-component h3 {
-  color: #ffffff; /* White text for headings */
+  color: white; /* White text for headings */
   margin: 0.5rem 0; /* Consistent margin for headings */
 }
 
 .wrapper-component p {
-  color: #cccccc; /* Light grey text for paragraphs */
+  color: white; /* Light grey text for paragraphs */
   line-height: 1.6; /* Improved readability for text */
 }
 
