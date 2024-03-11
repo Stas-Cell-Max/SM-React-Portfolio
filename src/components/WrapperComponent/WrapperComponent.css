@@ -55,16 +55,16 @@
 
 /* Style for buttons or links within sections */
 .wrapper-component .btn-primary {
-  background-color: #007bff; /* Bootstrap primary button color */
+  background-color: #375e6d;; /* Bootstrap primary button color */
   border: none;
   padding: 0.75rem 1.5rem;
-  margin-top: 1rem; /* Spacing above buttons */
-  border-radius: 0.25rem; /* Rounded corners for buttons */
+  margin-top: 2rem; /* Spacing above buttons */
+  border-radius: 0.45rem; /* Rounded corners for buttons */
   transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 .wrapper-component .btn-primary:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+  background-color:  #375e6d;; /* Darker shade on hover */
 }
 
 /* Responsive adjustments for smaller screens */

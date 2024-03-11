@@ -2,7 +2,7 @@
 import React from 'react';
 import './Contact.css'; 
 
-const Contact = () => {
+const Contact = ({ handleNavClick }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here
