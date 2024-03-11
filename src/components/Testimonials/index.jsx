@@ -5,14 +5,14 @@ const testimonials = [
   {
     id: 1,
     name: "Gabriel Kraskovskyi",
-    title: "Freelancer from USA",
+    title: "Arch Tech from USA",
     quote: "I am happy working with printing and typesetting industry. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     rating: 5,
   },
   {
     id: 2,
     name: "Anna Antropova",
-    title: "User from UK",
+    title: "Arch from UK",
     quote: "I have used them twice now. Good rates, very efficient service and lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     rating: 5,
   },

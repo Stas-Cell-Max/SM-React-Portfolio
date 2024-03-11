@@ -6,11 +6,20 @@ import Header from "./components/Header";
 import WrapperComponent from "./components/WrapperComponent";
 
 function App() {
+
+      // Define the function to handle navigation click
+      const handleNavClick = (elementId) => {
+        // This will scroll to the Element with the corresponding 'name' prop
+        document.getElementById(elementId).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      };
   return (
   
     <Router>
-      <Header />
-      <WrapperComponent />
+      <Header handleNavClick={handleNavClick}/>
+      <WrapperComponent handleNavClick={handleNavClick}/>
     </Router>
   );
 }

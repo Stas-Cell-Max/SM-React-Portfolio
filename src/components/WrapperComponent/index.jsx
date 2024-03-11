@@ -11,18 +11,7 @@ import Contact from "../Contact";
 import Footer from "../Footer";
 import "./WrapperComponent.css";
 
-const WrapperComponent = () => {
-    // Define the function to handle navigation click
-    const handleNavClick = (elementId) => {
-      // This will scroll to the Element with the corresponding 'name' prop
-      document.getElementById(elementId).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-    };
-
-    
-
+const WrapperComponent = ({handleNavClick}) => {
   return (
     // <div className="vh-100 ">
   <div className="wrapper-component">
