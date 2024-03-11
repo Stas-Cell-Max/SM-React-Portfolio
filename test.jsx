@@ -1,176 +1,76 @@
-// src/components/Header.jsx
-
-import React, {useState, useEffect } from "react";
-import { Link } from "react-scroll";
-import "./Header.css";
+import React from 'react';
+import './Resume.css';
 
 
-
-const Header = ({ handleNavClick }) => {
-  const [isSticky, setIsSticky] = useState(false);
-  const [isNavModalOpen, setIsNavModalOpen] = useState(false);
-
-  // This function will toggle the visibility of the navigation modal in mobile view
-  const toggleNav = () => setIsNavModalOpen(!isNavModalOpen);
-
-  useEffect(() => {
-    const checkScrollTop = () => {
-      if (window.scrollY > 180) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
-    };
-
-    window.addEventListener("scroll", checkScrollTop);
-    return () => window.removeEventListener("scroll", checkScrollTop);
-  }, []);
-
- 
-
+const Resume = () => {
   return (
-    <header className={`header bg-dark text-white vh-100 fix-to-left ${isSticky ? "sticky" : ""}`}>
-      <div className="profile-container">
-        <img
-          src="https://media.licdn.com/dms/image/D5603AQHvhrfO7_qk0Q/profile-displayphoto-shrink_800_800/0/1708111679202?e=1715817600&v=beta&t=ccjlk-99gBuLRePPCx2lMsoBsIiwJdHxPuY3syfpark"
-          alt="Profile"
-          className="profile-image"
-        />
-        <h2>Stanislav Morozan</h2>
-      </div>
-      <nav className={`nav flex-column ${!isNavModalOpen ? '' : 'open'}`}>
-        <Link
-        onClick={() => handleNavClick('home')}
-        activeClass="active"
-          to="home"
-          className="nav-link"
-          style={{ cursor: "pointer" }}
-          spy={true}
-          smooth={true}
-          duration={500}
+    <div className="resume-section" id="resume">
+    <div className="container">
+      <h2 className="section-heading">Resume</h2>
+      <hr className="section-heading-hr"/>
+
+      <div className="education-experience-container">
+        <div className="education">
+          <h3>My Education</h3>
+              <h4>Bachelor's Degree</h4>
+              <h5>2005 - 2010</h5>
+              <p><em>Technical University of Moldova</em></p>
+              <p>Computer Science </p>
+            </div>
+            <div className="resume-item">
+              <h4>Advaced Diploma</h4>
+              <h5>2014 - 2018</h5>
+              <p><em>George Brown College</em></p>
+              <p>Architectural Technology </p>
+            </div>
+            <div className="resume-item">
+              <h4>Certification</h4>
+              <h5>2023 - 2024</h5>
+              <p><em>University of Toronto</em></p>
+              <p>Full Stack Web Development</p>
+            </div>
+            {/* Add more resume-item divs as needed */}
+          </div>
           
-        >
-          Home
-        </Link>
-        <Link
-        activeClass="active"
-          to="aboutme"
-          className="nav-link"
-          style={{ cursor: "pointer" }}
-          spy={true}
-          smooth={true}
-          duration={500}
-          onClick={() => handleNavClick('aboutme')}
-        >
-          About Me
-        </Link>
-        <Link
-        activeClass="active"
-          to="whatido"
-          className="nav-link"
-          style={{ cursor: "pointer" }}
-          spy={true}
-          smooth={true}
-          duration={500}
-          onClick={() => handleNavClick('whatido')}
-        >
-          What I Do
-        </Link>
-        <Link
-        activeClass="active"
-          to="resume"
-          className="nav-link"
-          style={{ cursor: "pointer" }}
-          spy={true}
-          smooth={true}
-          duration={500}
-          onClick={() => handleNavClick('resume')}
-        >
-          Resume
-        </Link>
-        <Link
-        activeClass="active"
-          to="portfolio"
-          className="nav-link"
-          style={{ cursor: "pointer" }}
-          spy={true}
-          smooth={true}
-          duration={500}
-          onClick={() => handleNavClick('portfolio')}
-        >
-          Portfolio
-        </Link>
-        <Link
-        activeClass="active"
-          to="testimonial"
-          className="nav-link"
-          style={{ cursor: "pointer" }}
-          spy={true}
-          smooth={true}
-          duration={500}
-          onClick={() => handleNavClick('testimonial')}
-        >
-          Testimonial
-        </Link>
-        <Link
-        activeClass="active"
-          to="contact"
-          className="nav-link"
-          style={{ cursor: "pointer" }}
-          spy={true}
-          smooth={true}
-          duration={500}
-          onClick={() => handleNavClick('contact')}
-        >
-          Contact
-        </Link>
-      </nav>
+          {/* Experience Section */}
+          <div className="experience">
+            <h3>My Experience</h3>
+            <div className="resume-item">
+              <h4>Jr. UI UX Designer</h4>
+              <h5>2012 - 2013</h5>
+              <p><em>ThemeforestGump</em></p>
+              <p>Description of job responsibilities and achievements</p>
+            </div>
+            {/* Add more resume-item divs as needed */}
+          </div>
+        </div>
 
-      <div className="social-links">
-        <a
-          href="https://linkedin.com/in/stanislavmorozan"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="icon-link"
-        >
-          <i className="fab fa-linkedin-in"></i>
-        </a>
-        <a
-          href="https://github.com/Stas-Cell-Max"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="icon-link"
-        >
-          <i className="fab fa-github"></i>
-        </a>
-        <a
-          href="https://facebook.com/stas.moozan"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="icon-link"
-        >
-          <i className="fab fa-facebook-f"></i>
-        </a>
-        <a
-          href="https://twitter.com/yourusername"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="icon-link"
-        >
-          <i className="fab fa-twitter"></i>
-        </a>
-        <a
-          href="https://instagram.com/stas_moozan"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="icon-link"
-        >
-          <i className="fab fa-instagram"></i>
-        </a>
-      </div>
-     
-    </header>
-  );
-};
+        {/* Skills Section */}
+        <div className="skills-container">
+          <h3>My Skills</h3>
+          <div className="skill-item">
+          <h4>HTML/CSS</h4>
+          <h4>JavaScript</h4>
+          <h4>JavaScript</h4>
+          <h4>JavaScript</h4>
+          <h4>JavaScript</h4>
+        </div>
+              
+              {/* Add more skill-item divs as needed */}
+            
+          </div>
+        
 
-export default Header;
+        {/* CV Link/Download */}
+        <div className="row">
+          <div className="col-md-12 text-center">
+            <a href="/path-to-your-cv.pdf" download className="btn btn-primary mt-3">Download CV</a>
+          </div>
+        </div>
+        </div>
+        
+        );
+      
+}
+
+export default Resume;

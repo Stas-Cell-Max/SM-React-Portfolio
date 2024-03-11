@@ -1,76 +1,50 @@
-.resume-section {
-    padding: 4rem 0;
-    color: #ffffff; /* If you have a dark background */
-    background-color: #333; /* Assuming a dark theme as per your screenshot */
+.section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.bg-dark {
+  background-color: #333;
+}
+
+.education-section .resume-item,
+.experience-section .resume-item {
+  background-color: #222;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid #64ffda;
+}
+
+.skills-section .skill-item {
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  background-color: #64ffda;
+  width: 0; /* Set width to 0 initially if you want to animate */
+}
+
+.download-cv {
+  background-color: #64ffda;
+  color: #333;
+  padding: 0.75rem 2rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.download-cv:hover {
+  background-color: #52cca3;
+}
+
+/* Add media queries for responsive adjustments as needed */
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 0;
   }
-  
-  .resume-section h2 {
-    border-bottom: 2px solid #64ffda; /* A colored bottom border for the headings */
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
-  }
-  
-  .resume-item {
-    margin-bottom: 2rem;
-  }
-  
-  .resume-item h4 {
-    font-size: 1.25rem;
-    color: #64ffda; /* Color for the job title or degree */
-  }
-  
-  .resume-item h5 {
-    font-size: 1rem;
-    font-weight: normal;
-  }
-  
-  .resume-item p {
-    font-size: 0.9rem;
-  }
-  
-  .skills .skill-item {
-    margin-bottom: 1rem;
-  }
-  
-  .skill-item h4 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .progress {
-    background-color: #555; /* A darker background for progress bar */
-    border-radius: 0.25rem;
-  }
-  
-  .progress-bar {
-    background-color: #64ffda; /* A bright color for progress */
-    transition: width 1s ease-in-out;
-  }
-  
-  /* Add media queries as necessary to ensure responsiveness */
-  @media (max-width: 768px) {
-    .resume-item h4 {
-      font-size: 1rem;
-    }
-  
-    .skill-item h4 {
-      font-size: 1rem;
-    }
-  }
-  
-  /* This is for the download CV button */
-  .btn-primary {
-    background-color: #64ffda; /* A bright color matching the theme */
-    border-color: #64ffda;
-  }
-  
-  .btn-primary:hover {
-    background-color: #52cca3; /* Slightly darker variant for hover */
-    border-color: #52cca3;
-  }
-  
-  /* Align download CV button to the center if it's alone in a row */
-  .resume-section .row:last-child {
-    justify-content: center;
-  }
-  
+}
