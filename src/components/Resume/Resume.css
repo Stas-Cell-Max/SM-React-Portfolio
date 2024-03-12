@@ -25,29 +25,33 @@
 }
 
 .text-9 {
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-size: 6rem;
+  font-weight: 700;
+  color: #474747 !important;
+  
 }
 
 .text-24 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 600;
+  z-index: 1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.text-uppercase {
-  text-transform: uppercase;
-}
+
 
 .text-muted {
-  color: #6c757d;
+  --bs-text-opacity: 1;
+  color: #e4f1e6 !important;
 }
+
 
 .text-light {
   color: #f8f9fa;
 }
 
 .text-dark {
-  color: #343a40;
+  color: #498dd1;
 }
 
 .text-primary {
@@ -59,7 +63,7 @@
 }
 
 .text-white {
-  color: #fff;
+  color: #583d3d;
 }
 
 .text-white-50 {
@@ -67,11 +71,11 @@
 }
 
 .bg-dark {
-  background-color: #343a40;
+  background-color: #5b6977;
 }
 
 .bg-white {
-  background-color: #2d4c5a;
+  background-color: #587c8d;
 }
 
 .bg-primary {
@@ -119,7 +123,7 @@
 }
 
 .badge.bg-primary {
-  color: #1f1c1c;
+  color: #503f3f;
   background-color: #64ffd8;
 }
 

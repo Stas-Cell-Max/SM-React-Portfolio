@@ -2,13 +2,32 @@
 
 import React from 'react';
 import './AboutMe.css'; 
+import resumeFile from '../../Documents/resume.pdf';
 
-const AboutMe = ({ handleNavClick }) => {
+const AboutMe = ({ handleNavClick, darkTheme }) => {
   return (
     <section id="about" className="about-me">
     <div className="container">
-      <h2>Know Me More</h2>
-      <hr className="my-4" />
+    <div className="position-relative d-flex text-center mb-5">
+          <h2
+            className={
+              "text-24   fw-600 w-100 mb-0 " +
+              (darkTheme ? "text-muted opacity-1" : "text-light opacity-4")
+            }
+          >
+            Know Me More
+          </h2>
+          <p
+            className={
+              "text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0 " +
+              (darkTheme ? "text-white" : "text-dark")
+            }
+          >
+            ABOUT ME
+            <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
+          </p>
+        </div>
+     
       <p className="introduction">
         I'm Stanislav Morozan, a passionate Full Stack Web Developer and Architectural Technologist based in Toronto, Canada. With a keen eye for design and a commitment to building functional, accessible websites and applications, I blend technical skills with a creative approach to solve complex problems and create memorable online experiences.
       </p>
@@ -17,6 +36,7 @@ const AboutMe = ({ handleNavClick }) => {
         <p><strong>Skills:</strong> JavaScript, React, Node.js, MongoDB ,Architectural Design</p>
         <p><strong>Hobbies:</strong> Driving, Woodworking, Urban Exploration</p>
       </div>
+     
       
     </div>
   </section>
