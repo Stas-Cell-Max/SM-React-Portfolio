@@ -6,19 +6,28 @@ import './Portfolio.css';
 
 
 const Portfolio = () => {
-  const [filterKey, setFilterKey] = useState('*');
+
+  // Define filter categories
+  const filters = {
+    ALL: '*',
+    WEB_DEV: 'web-dev',
+    ARCH_TECH: 'arch-tech'
+  };
+
+  const [filterKey, setFilterKey] = useState(filters.ALL);
   const [selectedProject, setSelectedProject] = useState(null);
   const isotope = useRef();
 
    // Initialize Isotope on component mount
    useEffect(() => {
-    isotope.current = new Isotope('.grid', {
-      itemSelector: '.grid-item',
-      layoutMode: 'fitRows'
-    });
+    if (isotope.current) {
+      filterKey === filters.ALL
+        ? isotope.current.arrange({ filter: '*' })
+        : isotope.current.arrange({ filter: `.${filterKey}` });
+    }
+  }, [filterKey]);
     
-    return () => isotope.current.destroy();
-  }, []);
+  
 
     // Update Isotope layout on filter change
     useEffect(() => {
@@ -30,18 +39,17 @@ const Portfolio = () => {
     }, [filterKey]);
 
     // Filter change handler
-  const handleFilterChange = newFilterKey => {
-    setFilterKey(newFilterKey);
+  const handleFilterChange = (key) => {
+    setFilterKey(filters[key]);
   };
 
    // Handle project selection
-   const handleProjectClick = project => {
+   const handleProjectClick = (project) => {
     setSelectedProject(project);
+  };
     // Assuming I have a method to show the modal
     // I may need to adapt this if I am using a different approach for modals
-    $('#projectDetailsModal').modal('show');
-  };
-
+  
   const portfolioData = [
     {
       title: "Las Vegas Trip Adviser",
@@ -208,16 +216,16 @@ const Portfolio = () => {
       <section id="portfolio" className="portfolio-section">
         {/* Buttons for filtering */}
         <div className="portfolio-filters">
-          <button onClick={() => handleFilterChange('*')}>All</button>
-          <button onClick={() => handleFilterChange('web-dev')}>Web Development</button>
-          <button onClick={() => handleFilterChange('arch-tech')}>Architect Technologist</button>
+          <button onClick={() => handleFilterChange('filters.ALL')}>All</button>
+          <button onClick={() => handleFilterChange('filters.WEB_DEV')}>Web Development</button>
+          <button onClick={() => handleFilterChange('filters.ARCH_TECH')}>Architect Technologist</button>
         </div>
 
         <div className="grid">
-          {/* Map through your projects and display them */}
+          {/* Map through the projects and display them */}
           {portfolioData.map(project => (
             <div key={project.id} className={`grid-item ${project.categories.join(' ')}`}>
-              <img src={project.image} alt={project.title} />
+              <img src={project.thumbImage} alt={project.title} />
               <button onClick={() => handleProjectClick(project)}>View Details</button>
             </div>
           ))}
@@ -225,8 +233,9 @@ const Portfolio = () => {
       </section>
       
       {selectedProject && (
-        <ProjectDetailsModal
-          projectDetails={selectedProject}
+  <ProjectDetailsModal
+    project={selectedProject}
+    closeModal={() => setSelectedProject(null)}
         />
       )}
     </>
