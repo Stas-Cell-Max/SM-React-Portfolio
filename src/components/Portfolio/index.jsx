@@ -1,48 +1,235 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState, useRef} from 'react';
+import Isotope from "isotope-layout";
+import ProjectDetailsModal from '../ProjectDetailsModal';
 import './Portfolio.css';
 
-// Example project data with category
-const portfolioData = [
-  { id: 1, category: 'Web Dev', title: 'Project One', image: 'path-to-web-dev-image', description: 'Web Development Project', link: '/project-one' },
-  { id: 2, category: 'Arch Tech', title: 'Project Two', image: 'path-to-arch-tech-image', description: 'Architectural Technology Project', link: '/project-two' },
-  // ... Add all six projects here
-];
+
 
 const Portfolio = () => {
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [filterKey, setFilterKey] = useState('*');
+  const [selectedProject, setSelectedProject] = useState(null);
+  const isotope = useRef();
 
-  const filteredProjects = activeCategory === 'All' 
-    ? portfolioData 
-    : portfolioData.filter(project => project.category === activeCategory);
+   // Initialize Isotope on component mount
+   useEffect(() => {
+    isotope.current = new Isotope('.grid', {
+      itemSelector: '.grid-item',
+      layoutMode: 'fitRows'
+    });
+    
+    return () => isotope.current.destroy();
+  }, []);
+
+    // Update Isotope layout on filter change
+    useEffect(() => {
+      if (filterKey === '*') {
+        isotope.current.arrange({ filter: `*` });
+      } else {
+        isotope.current.arrange({ filter: `.${filterKey}` });
+      }
+    }, [filterKey]);
+
+    // Filter change handler
+  const handleFilterChange = newFilterKey => {
+    setFilterKey(newFilterKey);
+  };
+
+   // Handle project selection
+   const handleProjectClick = project => {
+    setSelectedProject(project);
+    // Assuming I have a method to show the modal
+    // I may need to adapt this if I am using a different approach for modals
+    $('#projectDetailsModal').modal('show');
+  };
+
+  const portfolioData = [
+    {
+      title: "Las Vegas Trip Adviser",
+      projectInfo:
+        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      client: "Ruby Clinton",
+      technologies: "HTML, CSS3, JavaScript",
+      industry: "Tourism",
+      date: "July 16, 2023",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "/images/project-.jpg",
+      sliderImages: [
+        "/images/project-2.jpeg" ,
+        "/images/project-2.jpeg" ,
+      ],
+      categories: [filters.BRAND],
+    },
+
+    {
+      title: "Project Title 6",
+      projectInfo:
+        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      client: "Ruby Clinton",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "July 16, 2019",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "/images/project-.jpg",
+      sliderImages: [
+        "/images/project-2.jpeg" ,
+        "/images/project-2.jpeg" ,
+      ],
+      categories: [filters.BRAND],
+    },
+
+    {
+      title: "Project Title 5",
+      projectInfo:
+        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      client: "Ruby Clinton",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "July 16, 2019",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "/images/project-.jpg",
+      sliderImages: [
+        "/images/project-2.jpeg" ,
+        "/images/project-2.jpeg" ,
+      ],
+      categories: [filters.BRAND],
+    },
+    {
+      title: "Project Title 4",
+      projectInfo:
+        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      client: "Ruby Clinton",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "July 16, 2019",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "/images/project-.jpg",
+      sliderImages: [
+        "/images/project-2.jpeg" ,
+        "/images/project-2.jpeg" ,
+      ],
+      categories: [filters.BRAND],
+    },
+    {
+      title: "Project Title 3",
+      projectInfo:
+        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      client: "Ruby Clinton",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "July 16, 2019",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "/images/project-.jpg",
+      sliderImages: [
+        "/images/project-2.jpeg" ,
+        "/images/project-2.jpeg" ,
+      ],
+      categories: [filters.BRAND],
+    },
+    {
+      title: "Project Title 2",
+      projectInfo:
+        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      client: "Ruby Clinton",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "July 16, 2019",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "/images/project-.jpg",
+      sliderImages: [
+        "/images/project-2.jpeg" ,
+        "/images/project-2.jpeg" ,
+      ],
+      categories: [filters.BRAND],
+    },
+  ];
 
   return (
-    <section id="portfolio" className="portfolio-section">
-      <div className="container">
-        <h2 className="text-center">My Work</h2>
-        
-        <div className="portfolio-buttons text-center">
-          <button onClick={() => setActiveCategory('All')} className={`btn ${activeCategory === 'All' ? 'btn-primary' : 'btn-outline-primary'}`}>All</button>
-          <button onClick={() => setActiveCategory('Web Dev')} className={`btn ${activeCategory === 'Web Dev' ? 'btn-primary' : 'btn-outline-primary'}`}>Web Dev</button>
-          <button onClick={() => setActiveCategory('Arch Tech')} className={`btn ${activeCategory === 'Arch Tech' ? 'btn-primary' : 'btn-outline-primary'}`}>Arch Tech</button>
+    <>
+      <section id="portfolio" className="portfolio-section">
+        {/* Buttons for filtering */}
+        <div className="portfolio-filters">
+          <button onClick={() => handleFilterChange('*')}>All</button>
+          <button onClick={() => handleFilterChange('web-dev')}>Web Development</button>
+          <button onClick={() => handleFilterChange('arch-tech')}>Architect Technologist</button>
         </div>
 
-        <div className="row portfolio-cards">
-          {filteredProjects.map((project) => (
-            <div className="col-md-4 portfolio-card" key={project.id}>
-              <div className="card mb-4 shadow-sm">
-                <img src={project.image} alt={project.title} className="card-img-top" />
-                <div className="card-body">
-                  <h5 className="card-title">{project.title}</h5>
-                  <p className="card-text">{project.description}</p>
-                  <Link to={project.link} className="btn btn-secondary">View Project</Link>
-                </div>
-              </div>
+        <div className="grid">
+          {/* Map through your projects and display them */}
+          {portfolioData.map(project => (
+            <div key={project.id} className={`grid-item ${project.categories.join(' ')}`}>
+              <img src={project.image} alt={project.title} />
+              <button onClick={() => handleProjectClick(project)}>View Details</button>
             </div>
           ))}
         </div>
-      </div>
-    </section>
+      </section>
+      
+      {selectedProject && (
+        <ProjectDetailsModal
+          projectDetails={selectedProject}
+        />
+      )}
+    </>
   );
 };
 
