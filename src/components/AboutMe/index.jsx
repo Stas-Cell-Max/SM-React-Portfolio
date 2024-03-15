@@ -4,7 +4,7 @@ import React from 'react';
 import './AboutMe.css'; 
 import resumeFile from '../../Documents/resume.pdf';
 
-const AboutMe = ({ handleNavClick, darkTheme }) => {
+const AboutMe = ({ darkTheme }) => {
   return (
     <section id="about" className="about-me">
     <div className="container">
@@ -24,7 +24,7 @@ const AboutMe = ({ handleNavClick, darkTheme }) => {
             }
           >
             ABOUT ME
-            <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
+            <span className="heading-separator-line  d-block mx-auto" />
           </p>
         </div>
      

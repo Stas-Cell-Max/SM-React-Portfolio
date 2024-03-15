@@ -238,17 +238,20 @@ const Portfolio = () => {
           {/* Heading */}
           <div className="position-relative d-flex text-center mb-5">
             <h2
-              className="text-24 text-uppercase fw-600 w-100 mb-0 text-light opacity-4"
+              className="text-24 fw-600 w-100 mb-0 text-light opacity-4"
             >
-              Portfolio
+              My Work
               </h2>
           <p className="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">
-            My Work
+            PORTFOLIO
             <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
           </p>
           </div>
           {/* Heading end*/}
+          
           {/* Filter Menu */}
+
+
           <ul
             className="position-relative d-flex text-center mb-5"
           >
@@ -274,6 +277,8 @@ const Portfolio = () => {
               </li>
             ))}
           </ul>
+
+
           {/* Filter Menu end */}
           <div className="portfolio popup-ajax-gallery">
             <div className="row portfolio-filter filter-container g-4">
