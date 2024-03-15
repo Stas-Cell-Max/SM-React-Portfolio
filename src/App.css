@@ -1,0 +1,79 @@
+/* Global Styles */
+/* Add any base styles, body, button defaults, etc., here. */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  /* WrapperComponent Styles */
+  .wrapper-component {
+    /* Styles from WrapperComponent.css */
+  }
+  
+  .wrapper-component::before {
+    /* More styles from WrapperComponent.css */
+  }
+  
+  /* ... */
+  
+  /* Header Styles */
+  .header {
+    /* Styles from Header.css */
+  }
+  
+  /* Sticky header animation */
+  @keyframes slide-down {
+    /* From Header.css */
+  }
+  
+  /* ... */
+  
+  /* Home Styles */
+  #home {
+    /* Styles from Home.css */
+  }
+  
+  .scroll-down-arrow {
+    /* Styles from Home.css */
+  }
+  
+  /* ... */
+  
+  /* AboutMe Styles */
+  .about-me {
+    /* Styles from AboutMe.css */
+  }
+  
+  /* ... */
+  
+  /* WhatIDo Styles */
+  .what-i-do-section {
+    /* Styles from WhatIDo.css */
+  }
+  
+  /* ... */
+  
+  /* Resume Styles */
+  .section {
+    /* Styles from Resume.css */
+  }
+  
+  /* ... */
+  
+  /* Footer, Contact, Testimonials, etc. */
+  .footer {
+    /* If you have Footer.css */
+  }
+  
+  /* ... */
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .navbar-accordion {
+      /* Adjustments for smaller screens, if any */
+    }
+  
+    /* Any other responsive styles */
+  }
+  

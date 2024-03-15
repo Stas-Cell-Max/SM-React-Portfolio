@@ -14,19 +14,19 @@ const Portfolio = () => {
   const [selectedProjectDetails, setSelectedProjectDetails] = useState();
 
   const filters = {
-    DESIGN: "Desing",
-    BRAND: "Brand",
-    PHOTOS: "Photos",
+    WEBDEV: "Web Development",
+    ARCHTECH: "Architectural Technology",
+    ARCHDESIGN: "Architectural Design",
   };
 
   const projectsData = [
     {
-      title: "Project Title 1",
+      title: "Las Vegas Trip Advisor",
       projectInfo:
         "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
       client: "Ruby Clinton",
       technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
+      industry: "Web Development",
       date: "July 16, 2019",
       url: {
         name: "www.example.com",
@@ -39,12 +39,12 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/projects/project-1.jpg",
+      thumbImage: "/images/projects/project-2.jpeg",
       sliderImages: [
-        "images/projects/project-1.jpg",
-        "images/projects/project-5.jpg",
+        "/images/projects/project-2.jpeg",
+        "/images/projects/project-3.jpeg",
       ],
-      categories: [filters.BRAND],
+      categories: [filters.WEBDEV],
     },
     {
       title: "Project Title 2",
@@ -70,7 +70,7 @@ const Portfolio = () => {
         "images/projects/project-2.jpg",
         "images/projects/project-5.jpg",
       ],
-      categories: [filters.DESIGN],
+      categories: [filters.ARCHTECH],
     },
     {
       title: "Project Title 3",
@@ -96,7 +96,7 @@ const Portfolio = () => {
         "images/projects/project-3.jpg",
         "images/projects/project-5.jpg",
       ],
-      categories: [filters.PHOTOS],
+      categories: [filters.ARCHDESIGN],
     },
     {
       title: "Project Title 4",
@@ -122,7 +122,7 @@ const Portfolio = () => {
         "images/projects/project-1.jpg",
         "images/projects/project-4.jpg",
       ],
-      categories: [filters.BRAND, filters.PHOTOS],
+      categories: [filters.ARCHTECH, filters.ARCHDESIGN],
     },
     {
       title: "Project Title 5",
@@ -148,7 +148,7 @@ const Portfolio = () => {
         "images/projects/project-1.jpg",
         "images/projects/project-5.jpg",
       ],
-      categories: [filters.DESIGN],
+      categories: [filters.ARCHTECH],
     },
     {
       title: "Project Title 6",
@@ -174,7 +174,7 @@ const Portfolio = () => {
         "images/projects/project-1.jpg",
         "images/projects/project-5.jpg",
       ],
-      categories: [filters.BRAND],
+      categories: [filters.ARCHDESIGN],
     },
     {
       title: "Project Title 7",
@@ -200,7 +200,7 @@ const Portfolio = () => {
         "images/projects/project-1.jpg",
         "images/projects/project-5.jpg",
       ],
-      categories: [filters.DESIGN, filters.PHOTOS],
+      categories: [filters.WEBDEV, filters.ARCHTECH],
     },
   ];
 

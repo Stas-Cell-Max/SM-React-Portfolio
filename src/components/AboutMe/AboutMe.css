@@ -1,4 +1,4 @@
-.about-us {
+.about-me {
   color: grey;
   background-color: #333;
   padding: 4rem 0;
@@ -8,6 +8,7 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 0 15px;
+  
 }
 
 .text-center {

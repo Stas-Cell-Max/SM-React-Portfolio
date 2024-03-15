@@ -1,6 +1,6 @@
 .portfolio-section {
   padding: 60px 0;
-  background-color: #f8f9fa;
+  background-color: #494e65;
 }
 
 .portfolio-filters {
@@ -12,24 +12,25 @@
 }
 
 .portfolio-filters li {
-  margin: 0 10px;
+  margin: 0 20px;
 }
 
 .portfolio-filters button {
   border: none;
-  background-color: transparent;
-  padding: 5px 10px;
+  background-color: #333;
+  padding: 8px 16px;
   border-radius: 5px;
   cursor: pointer;
-  color: #333; /* Change as needed */
+  color: #fff; /* Change as needed */
   font-size: 1em; /* Change as needed */
   font-weight: bold; /* Change as needed */
-  transition: color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
 }
 
 .portfolio-filters button.active,
 .portfolio-filters button:hover {
   color: #007bff; /* Highlight color for active and hover states */
+  background-color: #64ffd8;
 }
 
 .grid {
@@ -45,16 +46,35 @@
   background-color: #fff; /* For white background */
   border: none; /* Remove borders */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Card-like box shadow */
+  border-radius: 10px; 
 }
 
 .grid-item img {
   width: 100%;
   display: block;
   transition: transform 0.3s ease-in-out;
+  border-radius: 10px
 }
-
 .grid-item:hover img {
   transform: scale(1.05); /* Zoom-in effect on hover */
+}
+
+.grid-item:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5); /* Dark overlay */
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 10px; /* Rounded corners for overlay */
+}
+
+.grid-item:hover::after {
+  opacity: 1;
 }
 
 /* Responsive design adjustments */
