@@ -3,7 +3,7 @@ import './Footer.css'; // Import the CSS file for styling
 
 const Footer = () => {
     return (
-        <footer className="footer">
+        <footer className="footer mt-0">
             <div className="container">
                 <span>  Made with <span role="img" aria-label="heart">❤️</span> by Stas </span>
                 <div>

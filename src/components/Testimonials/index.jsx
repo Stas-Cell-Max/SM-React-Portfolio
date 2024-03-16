@@ -22,9 +22,9 @@ const Testimonial = () => {
   },
   {
     id: 3,
-    name: "Gabriel Kraskovskyi",
+    name: "Christina MacIntyre ",
     title: "Arch Tech from USA",
-    src: "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/347436958_1917420595290690_4501166707948439754_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=wtr-gZqRzuEAX-LMPV-&_nc_ht=scontent-ord5-2.xx&oh=00_AfDA4hjGEuos6Ef_59guLEqm0wFnyNnuxESTp4dCkZo-KA&oe=65F9A939",
+    src: "https://media.licdn.com/dms/image/D5603AQEihJlxsuBEjA/profile-displayphoto-shrink_200_200/0/1705968358833?e=1715817600&v=beta&t=ohR16-2zzd1XO2uWYtIwF-6cyaN7gUUi-aOgIFVwWuc",
     quote: "I am happy working with printing and typesetting industry. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     rating: 5,
   },
@@ -58,11 +58,11 @@ var settings = {
 };
 
   return (
-    <section id="testimonial" className="testimonial-section">
-      <div className="container">
-      <div className="position-relative d-flex text-center mb-5">
+    <section id="testimonial" className="testimonial">
+      <div className={"container " }>
+      <div className="position-relative d-flex text-center  ">
           <h2
-            className={"text-24   fw-600 w-100 mb-0 " 
+            className={"text-24  fw-600 w-100 mb-0 " 
             }
           >
             Coleagues Speak
@@ -79,6 +79,7 @@ var settings = {
 
 
         <Slider {...settings}>
+          
           {reviews.map((review) => (
             <div key={review.id} className="testimonial-item">
               <img src={review.src} alt={review.name} className="testimonial-photo" />
@@ -93,7 +94,7 @@ var settings = {
             </div>
           ))}
         </Slider>
-      </div>
+        </div> 
     </section>
   );
 };

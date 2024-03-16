@@ -1,9 +1,16 @@
-.testimonial-section {
+.testimonial{
     background-color: #333; /* Adjust the background color as needed */
     color: white;
     padding: 4rem 0;
   }
-  
+  .container {
+    max-width: 900px;
+    margin-top: 5px;
+    margin: 0 auto;
+    padding: 5px 15px;
+    
+  }
+
   .section-title {
     text-align: center;
     margin-bottom: 5rem !important;
@@ -49,20 +56,23 @@
   }
   .testimonial-grid {
     display: flex;
-    gap: 1rem;
+    flex-wrap: nowrap; /* Prevent wrapping to a new line */
+  overflow-x: auto;
+    gap: 2rem;
     justify-content: center;
     flex-wrap: wrap;
   }
   
   .testimonial-item {
-    width: 80%;
-    flex-basis: calc(50% - 1rem);
+    width: 40%;
+    flex-basis: calc(40% - 1rem);
   
     margin-top: 5rem; /* Two testimonials per row */
     margin-bottom: 1rem;
     background-color: #212529; /* Adjust the background color of each testimonial as needed */
     padding: 2rem;
     border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1)
   }
   
   .testimonial-content p {
@@ -80,14 +90,62 @@
   }
   
   .testimonial-title {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #aaa; /* Adjust color for the title as needed */
   }
  
+ 
+  .slick-dot {
+    bottom: 10px;
+     /* Adjust this value to position the dots correctly */
+  }
+  
+  .slick-dots li {
+    border-radius: 30px;
+    display: block;
+    height: 20px;
+    margin: 5px 3px;
+    position: relative;
+    transition: all .2s ease;
+    width: 20px;
+  }
+  .slick-dots li {
+    background: transparent;
+    border: 0;
+    color: transparent;
+    cursor: pointer;
+    font-size: 0;
+    line-height: 0;
+    outline: none;
+    padding: 5px;
+}
+  
+  .slick-dots li button:before {
+    color: transparent; /* Make dots transparent */
+  border: 3px solid #57d499; /* Green border for all dots */
+  border-radius: 50%; /* Round shape */
+  content: '•'; /* Unicode character for the dot */
+  font-size: 35px;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #57d499; /* Color of the active dot */
+    border: none; 
+    
+  }
+  
+  
+  .slick-prev,
+  .slick-next {
+    color: #57d499; /* Color of arrows */
+    font-size: 24px; /* Size of arrows */
+  }
   
   @media (max-width: 768px) {
     .testimonial-item {
-      flex-basis: 100%; /* Stack testimonials on smaller screens */
+      flex-basis: 100%; 
+      width: 90%; /* Adjust for smaller screens */
+      margin: 1rem auto;/* Stack testimonials on smaller screens */
     }
   }
   

@@ -99,13 +99,13 @@
   line-height: 1.5;
   border-radius: 0.25rem; /* Rounded corners */
   color: #fff; /* Text color */
-  background-color: #007bff; /* Primary button color */
-  border-color: #007bff;
+  background-color: #6fd2d7; /* Primary button color */
+  border-color: #33506f;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3; /* Darker shade on hover */
-  border-color: #0056b3;
+  background-color: #6fd2d7; /* Darker shade on hover */
+  border-color: #33506f;
 }
 
 @media (max-width: 768px) {
