@@ -244,7 +244,7 @@ const Portfolio = () => {
               </h2>
           <p className="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">
             PORTFOLIO
-            <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
+            <span className="heading-separator-line  d-block mx-auto" />
           </p>
           </div>
           {/* Heading end*/}

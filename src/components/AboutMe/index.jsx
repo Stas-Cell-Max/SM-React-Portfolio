@@ -4,30 +4,28 @@ import React from 'react';
 import './AboutMe.css'; 
 import resumeFile from '../../Documents/resume.pdf';
 
-const AboutMe = ({ darkTheme }) => {
+const AboutMe = ({ }) => {
   return (
     <section id="about" className="about-me">
-    <div className="container">
+    
     <div className="position-relative d-flex text-center mb-5">
           <h2
             className={
-              "text-24   fw-600 w-100 mb-0 " +
-              (darkTheme ? "text-muted opacity-1" : "text-light opacity-4")
+              "text-24   fw-600 w-100 mb-0 " 
             }
           >
             Know Me More
           </h2>
           <p
             className={
-              "text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0 " +
-              (darkTheme ? "text-white" : "text-dark")
+              "text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0 " 
             }
           >
             ABOUT ME
             <span className="heading-separator-line  d-block mx-auto" />
           </p>
         </div>
-     
+     <div className="container">
       <p className="introduction">
         I'm Stanislav Morozan, a passionate Full Stack Web Developer and Architectural Technologist based in Toronto, Canada. With a keen eye for design and a commitment to building functional, accessible websites and applications, I blend technical skills with a creative approach to solve complex problems and create memorable online experiences.
       </p>

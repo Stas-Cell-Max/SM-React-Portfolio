@@ -27,11 +27,12 @@
 .heading-separator-line {
   display: block;
   width: 60px; /* Width of the separator line */
-  height: 4px; /* Height of the separator line */
-  background-color: #64ffd8; /* Bright color for separator */
+  height: 1px; /* Height of the separator line */
+  border: 0;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   margin: 0 auto; /* Center the separator horizontally */
   position: absolute;
-  bottom: -20px;
+  bottom: -0px;
   left: 50%;
   transform: translateX(-50%);
 }

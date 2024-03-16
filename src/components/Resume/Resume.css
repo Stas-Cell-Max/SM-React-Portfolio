@@ -1,7 +1,7 @@
 .section {
   padding: 4rem 0;
   background-color: #333; /* Dark background */
-  color: #fff; /* Light text */
+  color: #212529; /* Light text */
 }
 
 .container {
@@ -37,9 +37,6 @@
   z-index: 1;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-
-
 
 
 .rounded {

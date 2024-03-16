@@ -43,7 +43,7 @@
 
 
 .heading-separator-line {
-  width: 60%;
+  width: 60px;
   margin: 1rem auto;
   height: 1px;
   border: 0;
@@ -51,8 +51,6 @@
   position: absolute;
   bottom: -0px; /* Position below the text */
   margin-bottom: 1rem;
-  
-  
 }
 
 .position-relative {
