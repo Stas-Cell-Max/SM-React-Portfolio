@@ -28,6 +28,7 @@
 
 .profile-container {
   text-align: center;
+  padding-bottom: 2rem;
 }
 
 .profile-image {
@@ -45,7 +46,7 @@
   transition: color 0.2s ease;
   text-align: center;
   padding: 0.5rem ;
-  padding-top: 1.5rem;
+  padding-top: 0.5rem;
   
 }
 
@@ -61,14 +62,14 @@
 .social-links {
   display: flex; /* Ensure flex layout for social links */
   justify-content: center; /* Center social links */
-  padding: 1rem 0; /* Add some padding around the links */
+  padding: 1.5rem 0; /* Add some padding around the links */
    margin-top: auto;
   padding-top: 2rem;
 }
 
 .icon-link {
   color: white;
-  margin: 0 10px;
+  margin: 0 8px;
   font-size: 1.5rem; /* Adjust icon size as needed */
 }
 

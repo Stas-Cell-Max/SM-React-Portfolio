@@ -11,7 +11,9 @@ const Contact = ({  }) => {
 
   return (
     <section id="contact" className="contact">
+     <div className={"container " }>
           <div className="position-relative d-flex text-center mb-5">
+           
           <h2
             className={
               "text-24   fw-600 w-100 mb-0 " 
@@ -27,8 +29,8 @@ const Contact = ({  }) => {
             CONTACT
             <span className="heading-separator-line  d-block mx-auto" />
           </p>
-        </div>
-      
+       
+      </div>
 
 
 
@@ -53,6 +55,7 @@ const Contact = ({  }) => {
   <button type="submit" className="btn btn-primary">Send Message</button>
 </div>
       </form>
+      </div>
     </section>
   );
 };

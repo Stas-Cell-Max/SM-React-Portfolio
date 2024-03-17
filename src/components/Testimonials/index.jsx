@@ -30,9 +30,9 @@ const Testimonial = () => {
   },
   {
     id: 4,
-    name: "Anna Antropova",
-    title: "Arch from UK",
-    src: "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/361112109_10161048926611007_5778823206661691662_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=k99UOD_ESmAAX_xNtkj&_nc_ht=scontent-ord5-1.xx&oh=00_AfAiBQ4WWKchA5tnOCJjOL4QG81nUZZgb6-Uh6fnHOE-Ow&oe=65F954D3",
+    name: "Valeriia Kolimbet",
+    title: "QA Analyst from Toronto",
+    src: "https://scontent-ord5-1.xx.fbcdn.net/v/t1.6435-9/55849361_10157126481940270_605990318910734336_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=icF_iYRwSoUAX_bA02-&_nc_ht=scontent-ord5-1.xx&oh=00_AfB8XNTb7_Em-mlemcd8IWD0bc7AbHZnmhZbn-lODJA1gA&oe=661D903C",
     quote: "I have used them twice now. Good rates, very efficient service and lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     rating: 5,
   },
@@ -58,9 +58,10 @@ var settings = {
 };
 
   return (
+    
     <section id="testimonial" className="testimonial">
       <div className={"container " }>
-      <div className="position-relative d-flex text-center  ">
+      <div className="position-relative d-flex text-center mb-5 ">
           <h2
             className={"text-24  fw-600 w-100 mb-0 " 
             }
@@ -95,6 +96,7 @@ var settings = {
           ))}
         </Slider>
         </div> 
+        
     </section>
   );
 };
