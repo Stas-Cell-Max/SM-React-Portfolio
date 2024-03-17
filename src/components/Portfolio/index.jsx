@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Isotope from "isotope-layout";
 import ProjectDetailsModal from "../ProjectDetailsModal";
 import "./Portfolio.css";
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+
 
 
 const Portfolio = () => {
@@ -40,10 +40,10 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "/images/projects/project-2.jpeg",
+      thumbImage: "/images/project-2.jpeg",
       sliderImages: [
-        "/images/projects/project-2.jpeg",
-        "/images/projects/project-3.jpeg",
+        "/images/project-2.jpeg",
+        "/images/project-3.jpeg",
       ],
       categories: ["*", filters.WEBDEV],
     },
@@ -67,10 +67,10 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/projects/project-2.jpg",
+      thumbImage: "images/project-6.JPG",
       sliderImages: [
-        "images/projects/project-2.jpg",
-        "images/projects/project-5.jpg",
+        "images/project-6.JPG",
+        "images/project-8.JPG",
       ],
       categories: ["*", filters.ARCHTECH],
     },
@@ -94,10 +94,10 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/projects/project-3.jpg",
+      thumbImage: "images/project-3.jpeg",
       sliderImages: [
-        "images/projects/project-3.jpg",
-        "images/projects/project-5.jpg",
+        "images/project-3.jpeg",
+        "images/project-1.jpeg",
       ],
       categories: ["*", filters.ARCHDESIGN],
     },
@@ -121,10 +121,10 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/projects/project-4.jpg",
+      thumbImage: "images/project-4.png",
       sliderImages: [
-        "images/projects/project-1.jpg",
-        "images/projects/project-4.jpg",
+        "images/project-4.png",
+        "images/project-9.png",
       ],
       categories: ["*", filters.ARCHTECH, filters.ARCHDESIGN],
     },
@@ -148,10 +148,10 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/projects/project-5.jpg",
+      thumbImage: "images/project-10.jpeg",
       sliderImages: [
-        "images/projects/project-1.jpg",
-        "images/projects/project-5.jpg",
+        "images/project-10.jpeg",
+        "images/project-9.png",
       ],
       categories: ["*", filters.ARCHTECH],
     },
@@ -175,10 +175,10 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/projects/project-6.jpg",
+      thumbImage: "images/project-7.jpg",
       sliderImages: [
-        "images/projects/project-1.jpg",
-        "images/projects/project-5.jpg",
+        "images/project-7.jpg",
+        "images/project-8.JPG",
       ],
       categories: ["*", filters.ARCHDESIGN],
     },
@@ -202,10 +202,10 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/projects/project-7.jpg",
+      thumbImage: "images/project-4.png",
       sliderImages: [
-        "images/projects/project-1.jpg",
-        "images/projects/project-5.jpg",
+        "images/project-4.png",
+        "images/project-5.png",
       ],
       categories: ["*", filters.WEBDEV, filters.ARCHTECH],
     },
@@ -278,6 +278,7 @@ const Portfolio = () => {
                     "nav-link " +
                     (filterKey === filters[oneKey] ? "active" : "")
                   }
+                  style={{ cursor: "pointer" }}
                   onClick={handleFilterKeyChange(filters[oneKey])}
                 >
                   {filters[oneKey]}
@@ -288,16 +289,10 @@ const Portfolio = () => {
 
           {/* portfolio cards */}
           <div className="portfolio popup-ajax-gallery">
-          <TransitionGroup className="row portfolio-filter filter-container g-4">
-            {projectsData.map((project) => (
-              <CSSTransition
-                key={project.id}
-                timeout={500}
-                classNames="fade"
-              >
+            
             <div className="row portfolio-filter filter-container g-4">
               {projectsData.length > 0 &&
-                projectsData.map((project) => {
+                projectsData.map((project, ) => {
                   if (project.categories.includes(filterKey)) {
                     return (
                       <div
@@ -341,11 +336,9 @@ const Portfolio = () => {
                   } else {
                     return "";
                   }
-                
                 })}
             </div>
           </div>
-          </TransitionGroup>
         </div>
       </section>
       <div className="project-details-modal">

@@ -37,7 +37,24 @@
   left: 50%;
   transform: translateX(-50%);
 }
+.mb-5 {
+  margin-bottom: 2rem !important;
+}
+.nav-link {
+  color: white;
+  margin: 0.5rem 0;
+  transition: color 0.2s ease;
+  text-align: center;
+}
 
+.nav-link:hover {
+  color:  #64ffd8;
+  text-decoration: none;
+  text-shadow: 0 0 10px #c5a0f7, 0 0 20px #a763f5;
+}
+.justify-content-evenly {
+  justify-content: space-between;
+}
 /* Portfolio Filter Menu */
  .filter-container {
   display: flex;
@@ -68,11 +85,12 @@
 
 /* Portfolio Cards */
  .portfolio-box {
-  border: 1px solid #fff;
+  border: 1px solid #212529;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   overflow: hidden;
   background: #212529;
+  margin-bottom: 1rem;
 }
 
 .portfolio-box:hover {
@@ -87,9 +105,8 @@
   transition: opacity 0.3s;
 }
 .portfolio-img {
-  min-height: 200px;
+  min-height: 100px;
   position: relative;
-  background: url('/path/to/default-image.jpg') no-repeat center center;
   background-size: cover;
 }
 
@@ -118,4 +135,39 @@
 .portfolio-overlay-details span {
   font-size: 0.9rem;
   color: #64ffd8;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem;
+}
+
+.grid-item {
+  width: 33.333%; /* for three columns */
+  padding: 1rem;
+}
+
+.grid-item.size-lg {
+  height: 400px; /* Large size */
+}
+
+.grid-item.size-md {
+  height: 300px; /* Medium size */
+}
+
+.grid-item.size-sm {
+  height: 200px; /* Small size */
+}
+/* You might need media queries to adjust the widths for responsive design */
+@media (max-width: 768px) {
+  .grid-item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-item {
+    width: 100%;
+  }
 }
