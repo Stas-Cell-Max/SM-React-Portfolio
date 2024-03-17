@@ -12,19 +12,12 @@
 }
 
  .slick-track{
-  width: fit-content;
-  position: absolute;
-  margin-top: 5px;
+  position: relative;
   top: 0;
   left: 0;
-  display: block;
+  display: flex !important;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  margin: 0 auto;
-    margin-right: 2rem;
-    margin-left: 2rem;
-  justify-content: center;
 }
 
 .section-title {
@@ -116,37 +109,39 @@ overflow-x: auto;
    /* Adjust this value to position the dots correctly */
 }
 
-.slick-dots li {
+.slick-dots li{
+ 
+  border: 1px solid transparent;
   border-radius: 30px;
   display: block;
-  height: 20px;
-  margin: 5px 3px;
+  height: 30px;
+  margin: 5px 5px;
   position: relative;
   transition: all .2s ease;
-  width: 20px;
+  width: 30px;
 }
-.slick-dots li {
+.slick-dots li  {
   background: transparent;
   border: 0;
   color: transparent;
   cursor: pointer;
-  font-size: 0;
+  font-size: 2;
   line-height: 0;
   outline: none;
-  padding: 5px;
+  padding: 1px;
 }
 
 .slick-dots li button:before {
   color: transparent; /* Make dots transparent */
-border: 3px solid #57d499; /* Green border for all dots */
+border: 3px solid ; /* Green border for all dots */
 border-radius: 50%; /* Round shape */
 content: '•'; /* Unicode character for the dot */
-font-size: 35px;
+font-size: 15px;
 }
 
 .slick-dots li.slick-active button:before {
-  color: #57d499; /* Color of the active dot */
-  border: none; 
+  color: #40f09e; /* Color of the active dot */
+  border: 3px solid #40f09e;
   
 }
 

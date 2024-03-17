@@ -2,6 +2,8 @@ import React, { useEffect, useState, useRef } from "react";
 import Isotope from "isotope-layout";
 import ProjectDetailsModal from "../ProjectDetailsModal";
 import "./Portfolio.css";
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
+
 
 const Portfolio = () => {
   const isotope = useRef();
@@ -216,20 +218,28 @@ const Portfolio = () => {
       layoutMode: "masonry",
     });
 
-    // cleanup
+    const handleResize = () => {
+      isotope.current.layout();
+    }
+    
+    // Add resize event listener
+    window.addEventListener('resize', handleResize);
+
+     // cleanup
     return () => {
+      window.removeEventListener('resize', handleResize);
       isotope.current.destroy();
     };
   }, []);
 
-  // handling filter key change
-  useEffect(() => {
-    if (imagesLoaded) {
-      filterKey === "*"
-        ? isotope.current.arrange({ filter: ".Design" })
-        : isotope.current.arrange({ filter: `.${filterKey}` });
-    }
-  }, [filterKey, imagesLoaded]);
+    // handle images loaded and filter key change
+    useEffect(() => {
+      if (projectsData.length && imagesLoaded === projectsData.length) {
+        isotope.current.arrange({ filter: filterKey === '*' ? '*' : `.${filterKey}` });
+      }
+    }, [filterKey, imagesLoaded]);
+
+  
 
   const handleFilterKeyChange = (key) => () => {
     setFilterKey(key);
@@ -278,6 +288,13 @@ const Portfolio = () => {
 
           {/* portfolio cards */}
           <div className="portfolio popup-ajax-gallery">
+          <TransitionGroup className="row portfolio-filter filter-container g-4">
+            {projectsData.map((project) => (
+              <CSSTransition
+                key={project.id}
+                timeout={500}
+                classNames="fade"
+              >
             <div className="row portfolio-filter filter-container g-4">
               {projectsData.length > 0 &&
                 projectsData.map((project) => {
@@ -324,9 +341,11 @@ const Portfolio = () => {
                   } else {
                     return "";
                   }
+                
                 })}
             </div>
           </div>
+          </TransitionGroup>
         </div>
       </section>
       <div className="project-details-modal">
