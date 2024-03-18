@@ -32,7 +32,7 @@ const Contact = ({  }) => {
        
       </div>
 
-
+      <br></br>
 
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
@@ -55,6 +55,7 @@ const Contact = ({  }) => {
   <button type="submit" className="btn btn-primary">Send Message</button>
 </div>
       </form>
+      
       </div>
     </section>
   );

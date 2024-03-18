@@ -40,21 +40,32 @@
 .mb-5 {
   margin-bottom: 2rem !important;
 }
+
+.justify-content-evenly {
+  justify-content: center; /* Center the items instead of spacing them out */
+  display: flex;
+  flex-wrap: wrap; /* Ensure items can wrap if needed */
+  gap: 1rem;
+}
 .nav-link {
   color: white;
   margin: 0.5rem 0;
   transition: color 0.2s ease;
   text-align: center;
+  display: inline-flex; /* Makes .nav-link items flex containers themselves */
+  align-items: center; /* Vertically center the content within */
+  justify-content: center; 
 }
 
+.nav-link > div {
+  cursor: pointer;
+}
 .nav-link:hover {
   color:  #64ffd8;
   text-decoration: none;
   text-shadow: 0 0 10px #c5a0f7, 0 0 20px #a763f5;
 }
-.justify-content-evenly {
-  justify-content: space-between;
-}
+
 /* Portfolio Filter Menu */
  .filter-container {
   display: flex;
@@ -91,6 +102,14 @@
   overflow: hidden;
   background: #212529;
   margin-bottom: 1rem;
+  position: relative; /* Ensure the absolute positioned children relate to this parent */
+  background: #212529;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.portfolio-box:hover .portfolio-img img {
+  opacity: 0.3;
+  box-shadow: inset 0 0 100px rgba(0,0,0,0.5); /* Inner shadow for a vignette effect */
 }
 
 .portfolio-box:hover {
@@ -105,26 +124,35 @@
   transition: opacity 0.3s;
 }
 .portfolio-img {
-  min-height: 100px;
+  min-height: 80px;
   position: relative;
   background-size: cover;
 }
 
 /* Portfolio Image Overlay */
- .portfolio-overlay {
-  transition: background-color 0.3s;
+.portfolio-overlay {
+  visibility: hidden; /* Hide overlay details by default */
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+  background-color: rgba(73, 67, 67, 0.5); /* Semi-transparent overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center; /* Aligns children vertically center */
+  justify-content: center; /* Aligns children horizontally center */
 }
 
 .portfolio-box:hover .portfolio-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  visibility: visible; /* Show overlay details on hover */
+  opacity: 1;
 }
 
-.portfolio-overlay-details {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+.portfolio-overlay-details span {
+  font-size: 0.9rem;
+  color: #64ffd8; /* Theme color for consistency */
 }
 
 .portfolio-overlay-details h5 {

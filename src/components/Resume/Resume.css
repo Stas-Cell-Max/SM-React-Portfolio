@@ -120,7 +120,18 @@
 .shadow-none {
   box-shadow: none;
 }
+.skill-icon {
+  display: inline-block; /* Makes sure the padding and margin are applied correctly */
+  margin: 0 10px; /* Adjusts the space between icons */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+}
 
+.skill-icon:hover {
+  transform: scale(1.1); /* Slightly enlarges the icon */
+  box-shadow: 0 0 10px #c5a0f7, 0 0 20px #a763f5; /* Glowing effect */
+  background-color: transparent; /* Ensures no background color is influencing the glow */
+  border: none;
+}
 @media (max-width: 768px) {
   .text-9 {
     font-size: 2rem;

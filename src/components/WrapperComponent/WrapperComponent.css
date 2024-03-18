@@ -18,8 +18,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(22, 24, 24, 0.7); /* Dark overlay; adjust opacity as needed */
-  z-index: -1;
+  background: rgba(54, 65, 65, 0.7); /* Dark overlay; adjust opacity as needed */
+  z-index: 0;
 }
 
 /* Consistent spacing and alignment for all sections */
@@ -55,7 +55,7 @@
 
 /* Style for buttons or links within sections */
 .wrapper-component .btn-primary {
-  background-color: #375e6d;; /* Bootstrap primary button color */
+  background-color:  #c5a0f7, 0 0 20px #a763f5; /* Bootstrap primary button color */
   border: none;
   padding: 0.75rem 1.5rem;
   margin-top: 2rem; /* Spacing above buttons */
@@ -64,7 +64,7 @@
 }
 
 .wrapper-component .btn-primary:hover {
-  background-color:  #375e6d;; /* Darker shade on hover */
+  background-color:   #c5a0f7, 0 0 20px #a763f5;; /* Darker shade on hover */
 }
 
 /* Responsive adjustments for smaller screens */

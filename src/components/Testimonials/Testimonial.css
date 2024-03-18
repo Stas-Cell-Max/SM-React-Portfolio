@@ -110,11 +110,13 @@ overflow-x: auto;
 }
 
 .slick-dots li{
- 
+  margin-top: 10px;
+  position: static;
   border: 1px solid transparent;
   border-radius: 30px;
   display: block;
   height: 30px;
+  margin: 0;
   margin: 5px 5px;
   position: relative;
   transition: all .2s ease;
@@ -128,12 +130,12 @@ overflow-x: auto;
   font-size: 2;
   line-height: 0;
   outline: none;
-  padding: 1px;
+  padding: 5px;
 }
 
 .slick-dots li button:before {
   color: transparent; /* Make dots transparent */
-border: 3px solid ; /* Green border for all dots */
+border: 2px solid ; /* Green border for all dots */
 border-radius: 50%; /* Round shape */
 content: '•'; /* Unicode character for the dot */
 font-size: 15px;

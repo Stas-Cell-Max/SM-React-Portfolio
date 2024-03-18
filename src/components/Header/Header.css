@@ -41,14 +41,17 @@
 
 
 .nav-link {
+  
   color: white;
   margin: 0.5rem 0;
   transition: color 0.2s ease;
   text-align: center;
-  padding: 0.5rem ;
-  padding-top: 0.5rem;
+  padding: 6px 0;
+  font-size: 18px !important;
   
 }
+
+
 
 
 .nav-link:hover {
