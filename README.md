@@ -20,14 +20,23 @@ This portfolio is a React-based single-page application (SPA) designed to showca
 ## Features
 - **Single-Page Application**: Smooth navigation throughout the portfolio without the need for page reloads.
 - **Responsive Design**: Built with Bootstrap to ensure the portfolio is accessible on devices of various sizes.
-- **Project Showcasing**: Dedicated section to display project work with links to live sites and code repositories.
+- **Project Showcasing**: A dedicated section to display project work with filters, detailed popups, and links to live sites and code repositories.
 - **Contact Form**: An interactive form that allows potential employers or clients to reach out directly through the website.
+- **Typing Animation**: Engaging typewriter effect that highlights key skills and roles.
+- **Smooth Scrolling**: react-scroll for seamless and interactive navigation between sections.
+- **Dynamic Filtering**: isotope-layout for filtering projects in the portfolio with a sleek animation.
+- **Interactive Sliders**: Slider functionality for a dynamic way to display content.
+
 
 ## Technologies Used
 - React.js
 - Vite
 - Bootstrap
 - React Router
+- Typewriter Effect
+- React-scroll
+- Isotope-layout
+- Slick Carousel Slider
 
 ## Setup and Installation
 1. Clone the repository: `git clone git@github.com:Stas-Cell-Max/react-portfolio.git`
@@ -36,20 +45,12 @@ This portfolio is a React-based single-page application (SPA) designed to showca
 4. Run the development server: `npm run dev`
 
 ## Future Enhancements
--Built with Latest React v18+
-Created using Bootstrap 5
-No jQuery
-Light & Dark Versions
-Ultra Responsive Layout
+- Built with the latest React v18+
+- Light & Dark themes for user preference
+- Ultra-responsive layout for all devices
+- Detailed documentation for ease of customization
+- Video Backgrounds in Intro
 
-Portfolio with filter and Portfolio Details Popup
-Working Contact Form
-Google Web Fonts
-Typing Animation
-Video Backgrounds in Intro
-Font awesome Integrated
-Easy to Customize
-Detailed Well Documentation
 
 ## Contributing
 Contributions to React-Portfolio are highly appreciated. If you have suggestions for improvement or have found any issues, please open an issue or submit a pull request with your proposed changes. Code contributions should follow the established patterns and come with meaningful commit messages.
@@ -70,6 +71,10 @@ Special thanks to the following resources that have contributed to the developme
 - [React Documentation](https://reactjs.org/docs/getting-started.html)
 - [Bootstrap Documentation](https://getbootstrap.com/docs/)
 - [Vite](https://vitejs.dev/)
+- [Typewriter Effect Library](https://www.npmjs.com/package/typewriter-effect)
+- [react-scroll Library](https://www.npmjs.com/package/react-scroll)
+- [Isotope Layout Library](https://isotope.metafizzy.co/)
+- [Slick Carousel](https://kenwheeler.github.io/slick/)
 
 ## License
 This project is open-sourced under the [MIT License](LICENSE).
