@@ -59,7 +59,10 @@
   text-decoration: none;
   text-shadow: 0 0 10px #c5a0f7, 0 0 20px #a763f5;
 }
-
+.nav-link.active {
+  color: #64ffd8; /* Change the color or add more styles */
+  font-weight: bold;
+}
 
 /* Social Links */
 .social-links {

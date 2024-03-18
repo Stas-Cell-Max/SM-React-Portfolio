@@ -1,10 +1,7 @@
 // src/components/Header.jsx
-
 import React, {useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import "./Header.css";
-
-
 
 const Header = ({ handleNavClick }) => {
   const [isSticky, setIsSticky] = useState(false);

@@ -37,6 +37,15 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
   }
   
+  .service-heading{
+    color: #ffffff;
+  }
+
+  .text-muted{
+    color: #ffffff !important;
+  }
+
+
   .fa-inverse {
     color: #fff9f9;
     background-color: #282c30;
