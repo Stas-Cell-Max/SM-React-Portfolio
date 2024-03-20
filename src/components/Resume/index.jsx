@@ -8,21 +8,21 @@ const Resume = () => {
     const educationDetails = [
       {
         yearRange: "2005 - 2010",
-        title: "Computer Science",
-        place: "Technical University of Moldova",
-        desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+        title: "Technical University of Moldova",
+        place: "Information Technology",
+        desc: "Coursework encompassed network architecture, database management, software development, web technologies, cybersecurity, system analysis, and IT project management, equipping me with a foundational understanding of technology in business operations.",
       },
       {
         yearRange: "2014 - 2018",
-        title: "Advaced Diploma",
+        title: "Archietctural Technology",
         place: "George Brown College",
-        desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+        desc: "Comprehensive study in building design and architectural drafting, BIM (Building Information Modeling), sustainable design principles, construction technology, and project management, preparing for innovative solutions in architectural development and execution.",
       },
       {
         yearRange: "2023 - 2024",
-        title: "Certification",
+        title: "Web Development",
         place: "University of Toronto",
-        desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+        desc: "Intensive training in building dynamic web applications using MongoDB, Express.js, React.js, and Node.js. Covered full-stack development practices, RESTful APIs, CRUD operations, and modern JavaScript, emphasizing responsive design and user experience.",
       },
     ];
     const experienceDetails = [
@@ -30,19 +30,19 @@ const Resume = () => {
         yearRange: "2016 - 2018",
         title: "Jr. Architectural Tech",
         place: "NORR",
-        desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+        desc: "As a Jr. Architectural Technologist, I supported project teams with technical drawings, utilized BIM software for design efficiency, and contributed to sustainable design solutions, thereby enhancing project outcomes and efficiency.",
       },
       {
         yearRange: "2018 - 2020",
-        title: "Hariri Pontarini Architects",
-        place: "Architectural Tech",
-        desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+        title: "Architectural Tech",
+        place: "Hariri Pontarini Architects",
+        desc: "As an Intermediate Architectural Technologist, I led in the development of technical drawings and design documentation, mastered BIM and CAD software for advanced project modeling, and drove the integration of sustainable design principles, significantly improving project delivery and operational performance.",
       },
       {
         yearRange: "2020 - 2023",
         title: "Architectural Tech",
         place: "One York Construction Management",
-        desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+        desc: "As an Architectural Tech and Web Development Coordinator, I managed the convergence of architectural design with digital platforms, overseeing technical project aspects and web application development. I optimized cross-disciplinary workflows, enhancing project execution and digital user experience.",
       },
     ];
 

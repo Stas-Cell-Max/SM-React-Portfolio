@@ -33,10 +33,11 @@
     filter: invert(1);
 }
 
-.wrapper-component h2{
+.wrapper-component titled{
     font-size: 2rem;
     font-weight: 600;
-    color: black;
+    color: black ;
+    margin-left: 1rem;
 }
 
 /* Content within the modal */
@@ -49,7 +50,8 @@
 .modal-body h4 {
     margin-bottom: 15px;
 }
-  
+
+
 .modal-dialog {
     display: flex;
     justify-content: center; /* Horizontally center */

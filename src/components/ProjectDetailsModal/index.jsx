@@ -59,7 +59,7 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
               >
                 <h2
                   className={
-                    "text-6 font-weight-600 text-left mb-4" +
+                    "titled font-weight-600 text-center mb-4" +
                     (darkTheme ? " text-white" : "")
                   }
                 >
