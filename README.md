@@ -56,7 +56,7 @@ This portfolio is a React-based single-page application (SPA) designed to showca
 Contributions to React-Portfolio are highly appreciated. If you have suggestions for improvement or have found any issues, please open an issue or submit a pull request with your proposed changes. Code contributions should follow the established patterns and come with meaningful commit messages.
 
 ## Deployment
-The portfolio is deployed using Vite's build system, ensuring optimal load times and performance. Deployment instructions can be tailored to various platforms like Vercel, Netlify, or GitHub Pages.
+The portfolio is deployed on GitHub Pages: https://stas-cell-max.github.io/SM-React-Portfolio/ 
 
 ## Author
 Stanislav Morozan is a dedicated software developer with a passion for creating elegant and performant web applications. With a keen eye for design and user experience, Stanislav strives to bridge the gap between technology and users seamlessly.
