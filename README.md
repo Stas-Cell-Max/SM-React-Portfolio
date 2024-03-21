@@ -4,6 +4,11 @@
 
 This portfolio is a React-based single-page application (SPA) designed to showcase the development work of Stanislav Morozan. Utilizing the latest in web technologies, this portfolio highlights projects, skills, and the professional journey in a clean, user-friendly format. It leverages React's component-based architecture for modular and maintainable code, with Bootstrap for responsive design.
 
+
+<img width="1271" alt="0000" src="https://github.com/Stas-Cell-Max/SM-React-Portfolio/assets/137020431/f6d9902d-e2ea-491d-b253-8f329b59e113">
+
+
+
 ## Table of Content
 
 - [Features](#features)
