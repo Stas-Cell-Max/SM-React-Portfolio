@@ -127,7 +127,7 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/project-4.png",
+      thumbImage: "images/OPP.webp",
       sliderImages: [
         "images/project-4.png",
         "images/project-9.png",
@@ -154,7 +154,7 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/project-10.jpeg",
+      thumbImage: "images/OPP.webp",
       sliderImages: [
         "images/project-10.jpeg",
         "images/project-9.png",
@@ -181,7 +181,7 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/project-7.jpg",
+      thumbImage: "images/OPP.webp",
       sliderImages: [
         "images/project-7.jpg",
         "images/project-8.JPG",
@@ -208,7 +208,7 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/project-4.png",
+      thumbImage: "images/OPP.webp",
       sliderImages: [
         "images/project-4.png",
         "images/project-5.png",
@@ -235,7 +235,7 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/project-7.jpg",
+      thumbImage: "images/OPP.webp",
       sliderImages: [
         "images/project-7.jpg",
         "images/project-8.JPG",
@@ -287,7 +287,7 @@ const Portfolio = () => {
             <h2 className="text-24 fw-600 w-100 mb-0 text-light opacity-4">
               My Work
             </h2>
-            <p className="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">
+            <p className="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0 ">
               PORTFOLIO
               <span className="heading-separator-line  d-block mx-auto" />
             </p>

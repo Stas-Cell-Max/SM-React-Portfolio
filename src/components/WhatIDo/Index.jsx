@@ -4,12 +4,22 @@ import './WhatIDo.css'; // Ensure you have the corresponding CSS for styles
 const WhatIDo = () => {
   return (
     <section id="what-i-do" className="what-i-do-section">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12 text-center">
-            <h2 className="section-heading">What I Do</h2>
-            <hr className="my-4" />
-          </div>
+       <div className={"container " }>
+      <div className="position-relative d-flex text-center mb-5 ">
+          <h2
+            className={"text-24  fw-600 w-100 mb-0 " 
+            }
+          >
+            What i Do
+          </h2>
+          <p
+            className={
+              "text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0 " 
+            }
+          >
+            SERVICES
+            <span className="heading-separator-line  d-block mx-auto" />
+          </p>
         </div>
         
         <div className="row">
