@@ -15,7 +15,7 @@ This portfolio is a React-based single-page application (SPA) designed to showca
 - [Technologies Used](#technologies-used)
 - [Setup and Installation](#setup-and-installation)
 - [Future Enhancements](#future-enhancements)
-- [Contributing](#contributing)
+- [Contributing](#contributing
 - [Deployment](#deployment)
 - [Author](#author)
 - [Contacts](#contacts)

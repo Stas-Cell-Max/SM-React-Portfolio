@@ -27,7 +27,7 @@ const AboutMe = ({ }) => {
         </div>
      <div className="container">
       <p className="introduction">
-      I'm Stanislav Morozan, a Full Stack Web Developer and Architectural Technologist from Toronto, Canada. Merging design with technology, I create engaging, accessible websites and applications. My background in architectural technology enriches my web development, offering unique solutions that blend aesthetics with functionality. I utilize modern technologies like React and Node.js to develop scalable projects that meet user needs. Passionate about innovation and learning, I thrive in Toronto's dynamic tech scene, leading projects that transform ideas into impactful digital experiences. Join me in redefining the digital landscape through creative, user-centric design.
+      Leveraging a solid foundation in architectural technology and a life-long commitment to learning, I am a Full Stack Web Developer known for blending problem-solving skills and creativity to develop user-friendly applications. With a track record of managing complex projects from conception through execution, I excel in delivering solutions that enhance user experience and functionality. Specializing in JavaScript, React, Node.js, and responsive design, I am passionate about adopting a mobile-first approach to meet and exceed project goals. Eager to contribute to a quality-driven team, aiming to innovate and elevate web experiences.
       </p>
       <div className="personal-details">
         <p><strong>From:</strong> Toronto, Canada</p>
