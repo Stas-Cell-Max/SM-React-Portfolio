@@ -28,12 +28,14 @@ const Header = ({ handleNavClick }) => {
   return (
     <header className={`header bg-dark text-white vh-100 fix-to-left ${isSticky ? "sticky" : ""}`}>
       <div className="profile-container">
+      <div className="shadow"> 
         <img
           src="https://media.licdn.com/dms/image/D5603AQHvhrfO7_qk0Q/profile-displayphoto-shrink_800_800/0/1708111679202?e=1715817600&v=beta&t=ccjlk-99gBuLRePPCx2lMsoBsIiwJdHxPuY3syfpark"
           alt="Profile"
           className="profile-image"
         />
         <h2>Stanislav Morozan</h2>
+        </div>
       </div>
       <nav className={`nav flex-column ${!isNavModalOpen ? '' : 'open'}`}>
         <Link

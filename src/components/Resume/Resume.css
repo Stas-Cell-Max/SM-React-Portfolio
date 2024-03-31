@@ -40,6 +40,9 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.row {
+  margin-top: 15px;
+}
 
 .rounded {
   border-radius: 0.25rem;
