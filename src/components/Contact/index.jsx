@@ -35,29 +35,85 @@ const Contact = ({  }) => {
       <br></br>
 
       <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label htmlFor="name" className="form-label">Name</label>
-          <input type="text" className="form-control" id="name" placeholder="Your Name" required />
+      <div className="button-group text-center mb-6">
         </div>
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">Email Address</label>
-          <input type="email" className="form-control" id="email" placeholder="name@example.com" required />
+          {/* Name Fields */}
+          <div className="row mb-3">
+            <div className="row mb-3">
+              <input type="text" className="form-control .input-custom" id="firstName" placeholder="First Name" required />
+            </div>
+            <div className="row mb-3">
+              <input type="text" className="form-control .input-custom" id="lastName" placeholder="Last Name" required />
+            </div>
+          </div>
+
+          {/* Email & Occupation Fields */}
+          <div className="row mb-3">
+            <div className="row mb-3">
+              <input type="email" className="form-control .input-custom" id="email" placeholder="Email" required />
+            </div>
+            <div className="row mb-3">
+              <input type="text" className="form-control .input-custom" id="occupationLocation" placeholder="Occupation & Location" required />
+            </div>
+          </div>
+
+          {/* Message/Topic Textarea */}
+          <div className="row mb-3">
+            <textarea className="form-control .input-custom" id="message" rows="5" placeholder="Message/Topic" required></textarea>
+          </div>
+
+          {/* Submit Button */}
+          <div className="text-center">
+            <button type="submit" className="btn btn-primary btn-custom">Submit</button>
+          </div>
+        </form>
+
+        <p className="text-5 text-light mb-4">Follow Me /</p>
+        <div className="social-links">
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="icon-link"
+        >
+          <i className="fab fa-linkedin-in"></i>
+        </a>
+        <a
+          href="https://github.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="icon-link"
+        >
+          <i className="fab fa-github"></i>
+        </a>
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="icon-link"
+        >
+          <i className="fab fa-facebook-f"></i>
+        </a>
+        <a
+          href="https://twitter.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="icon-link"
+        >
+          <i className="fab fa-twitter"></i>
+        </a>
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="icon-link"
+        >
+          <i className="fab fa-instagram"></i>
+        </a>
         </div>
-        <div className="mb-3">
-          <label htmlFor="subject" className="form-label">Subject</label>
-          <input type="text" className="form-control" id="subject" placeholder="Subject" required />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="message" className="form-label">Message</label>
-          <textarea className="form-control" id="message" rows="5" placeholder="Your Message Here" required></textarea>
-        </div>
-        <div className="form-submit-group"> {/* Wrapping the button for consistent padding if needed */}
-  <button type="submit" className="btn btn-primary">Send Message</button>
-</div>
-      </form>
-      
       </div>
     </section>
+    
   );
 };
 
