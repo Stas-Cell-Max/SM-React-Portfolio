@@ -3,7 +3,7 @@ import React from 'react';
 import { Element } from "react-scroll";
 import AboutMe from "../AboutMe";
 import Home from "../Home";
-import WhatIDo from "../WhatIDo";
+import WhatIDo from "../WhatIDo/index.jsx";
 import Resume from "../Resume";
 import Portfolio from "../Portfolio";
 import Testimonial from "../Testimonials";
