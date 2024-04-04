@@ -2,7 +2,7 @@
 
 import React from 'react';
 import './AboutMe.css'; 
-import resumeFile from '../../Documents/resume.pdf';
+
 
 const AboutMe = ({ }) => {
   return (
