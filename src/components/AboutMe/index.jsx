@@ -34,8 +34,6 @@ const AboutMe = ({ }) => {
         <p><strong>Skills:</strong> JavaScript, React, Node.js, MongoDB ,Architectural Design</p>
         <p><strong>Hobbies:</strong> Driving, Woodworking, Urban Exploration</p>
       </div>
-     
-      
     </div>
   </section>
   );

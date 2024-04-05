@@ -5,11 +5,12 @@
   text-align: center;
   height: 100%;
   margin-bottom: 2rem; 
-  min-height: 100vh;
+  min-height: auto;
 }
 
-.about-me .container {
-  overflow-y: auto; /* Allows content to scroll vertically if it overflows */
+
+.about-me {
+  min-height: auto; /* Allows the component to grow with content */
 }
 .container {
   max-width: 900px;
@@ -80,7 +81,9 @@
   margin: 3rem 0;
   line-height: 1.7;
 }
-
+.personal-details {
+  margin-bottom: 2rem; /* Ensure there's space below the details */
+}
 .personal-details strong {
   font-weight: bold;
 }
@@ -102,24 +105,32 @@
   }
 
   .personal-details p {
-    font-size: 1rem; /* Adjust font size for personal details */
+    font-size: 0.7rem; /* Adjust font size for personal details */
   }
 }
 
 @media (max-width: 768px) {
   .about-me .text-24 {
-    font-size: 2rem; /* Smaller font size for headings */
+    font-size: 1.5rem; /* Smaller font size for headings */
   }
 
   .about-me .text-9 {
-    font-size: 1.5rem; /* Adjusted font size for subheadings */
+    font-size: 3.5rem; /* Adjusted font size for subheadings */
   }
 }
 
 @media (max-width: 768px) {
   .about-me .heading-separator-line {
-    width: 30px; /* Shorten the width of the separator line */
+    width: 50%; /* Shorten the width of the separator line */
     margin: 0.5rem auto; /* Adjust margin */
+  }
+}
+@media (max-width: 768px) {
+  .personal-details {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    align-items: center; 
+    font-size: 1rem;/* Align to the start of the container */
   }
 }
 
@@ -131,9 +142,13 @@
 
 @media (max-width: 768px) {
   .about-me .introduction, .about-me .personal-details p {
-    font-size: 1rem; /* Smaller font size for readability */
+    font-size: 0.7rem;/* Smaller font size for readability */
     line-height: 1.5; /* Improved line height for readability */
+    margin-bottom: 1rem; 
   }
 }
+
+
+
 
 

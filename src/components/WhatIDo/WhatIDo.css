@@ -109,5 +109,20 @@
     }
   }
   
-
+  @media (max-width: 768px) {
+    .what-i-do-section .text-24 {
+      font-size: 1.5rem; /* Smaller font size for headings */
+    }
+  
+    .what-i-do-section .text-9 {
+      font-size: 3.5rem; /* Adjusted font size for subheadings */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .what-i-do-section .heading-separator-line {
+      width: 50%; /* Shorten the width of the separator line */
+      margin: 0.5rem auto; /* Adjust margin */
+    }
+  }
   
