@@ -5,8 +5,25 @@
     background-color: #343a40;
     color: #212529;
     height: 100%;
+    font-size: 3rem ;
+  }
+ 
+ 
+  .what-i-do-section h2, .what-i-do-section .heading-separator-line {
+    font-size: 2.5rem;
+    width: 80%;
+    margin-top: 1rem;
+  }
+
+  .text-24 {
+    font-size: 3rem ;;
+    letter-spacing: 0.05em;
   }
   
+  .text-9 {
+    font-size: 2.5rem ; 
+    letter-spacing: 0.05em;
+  }
   .what-i-do-section h2.section-heading {
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -131,7 +148,7 @@
       margin-bottom: 0.1rem;
       margin-top: 0.3rem;
       max-width: 100%; 
-      padding: 0.5rem;
+      padding: 1rem;
       margin-bottom: 0.2rem; 
       
     }
@@ -164,13 +181,14 @@
   }
 .what-i-do-section .service-heading {
  
-    font-size: 1rem; /* Smaller font size for service heading */
+    font-size: 0.9rem; /* Smaller font size for service heading */
     text-align: left; /* Align the text to the left */
     width: auto;  /* Add padding to the right of the heading */
+  margin-bottom: 1rem;
   }
 
   .what-i-do-section .text-muted {
-    font-size: 0.8rem; /* Even smaller font size for service description */
+    font-size: 0.75rem; /* Even smaller font size for service description */
     text-align: left; /* Align the text to the left */
     margin-top: 0.25rem; /* Add a little margin above the description */
     

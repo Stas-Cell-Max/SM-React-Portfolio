@@ -71,9 +71,14 @@
   position: absolute;
   bottom: -0px; /* Position below the text */
   margin-bottom: 1rem;
-  
-
 }
+
+.col-md-6 {
+  flex: 0 0 auto;
+  width: 50%;
+  margin-top: 1rem;
+}
+
 
 .badge{
   background-color: #333 !important;
@@ -137,8 +142,73 @@
   background-color: transparent; /* Ensures no background color is influencing the glow */
   border: none;
 }
+
+
+/* Consistent media query breakpoint */
 @media (max-width: 768px) {
+  /* Container padding */
+  .section .container {
+    padding: 1rem 15px;
+  }
+  
+  /* Text adjustments for smaller screens */
+  .text-24 {
+    font-size: 1.5rem !important;
+  }
+  
   .text-9 {
-    font-size: 2rem;
+    font-size: 3rem !important;
+  }
+  
+  /* Heading separator line */
+  .heading-separator-line {
+    width: 50%;
+    margin: 0.5rem auto;
+  }
+  
+  /* Education and Experience boxes */
+  .info-box, .info-boxt {
+    padding: 2rem; /* Provide more space within the boxes */
+    margin: 1rem 0; /* Add space between boxes */
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Badge and headings inside the boxes */
+  .badge, .text-5 {
+    font-size: 1rem; /* Adjust font size for badges and subheadings */
+  }
+
+  /* Description text inside the boxes */
+  .mb-0 {
+    font-size: 0.7rem; /* Adjust font size for descriptions */
+    line-height: 1.5; /* Adjust line height for better readability */
+  }
+  
+  /* Skill icons */
+  .skill-icon img {
+    width: 30px; /* Adjust the size of skill icons */
+    height: 30px;
+    margin: 0 5px; /* Adjust space between icons */
+  }
+  
+  /* Download CV button */
+  .btn {
+    padding: 0.5rem 1rem; /* Adjust padding for better tap targets */
+  }
+
+  /* Skill icons hover effect */
+  .skill-icon:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+    box-shadow: none; /* Remove any box-shadow if present */
+  }
+  
+  /* Adjust the skill section layout */
+  .skill-icon {
+    margin-bottom: 0.5rem; /* Space between icons when wrapped */
+  }
+
+  /* Ensure the section is tall enough to contain its content */
+  .section {
+    min-height: auto; /* Allow the section to grow with the content */
   }
 }
