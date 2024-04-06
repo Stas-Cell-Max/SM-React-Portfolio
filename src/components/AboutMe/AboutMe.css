@@ -124,6 +124,9 @@
     width: 50%; /* Shorten the width of the separator line */
     margin: 0.5rem auto; /* Adjust margin */
   }
+  .about-me .container {
+    padding: 1rem 2px;
+  }
 }
 @media (max-width: 768px) {
   .personal-details {
