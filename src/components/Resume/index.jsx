@@ -39,10 +39,10 @@ const Resume = () => {
         desc: "As an Intermediate Architectural Technologist, I led in the development of technical drawings and design documentation, mastered BIM and CAD software for advanced project modeling, and drove the integration of sustainable design principles, significantly improving project delivery and operational performance.",
       },
       {
-        yearRange: "2020 - 2023",
-        title: "Architectural Tech",
+        yearRange: "2020 - 2024",
+        title: "Tech Integration Architect",
         place: "One York Construction Management",
-        desc: "As an Architectural Tech and Web Development Coordinator, I managed the convergence of architectural design with digital platforms, overseeing technical project aspects and web application development. I optimized cross-disciplinary workflows, enhancing project execution and digital user experience.",
+        desc: "Revolutionized client engagement by architecting the company's website from the ground up,leveraging architectural design principles to enhance visualization and interactivity. Direct involvement led to a 20% increase in online project inquiries.  Orchestrated the end-to-end development of a construction project management platform, facilitating unprecedented collaboration among stakeholders. This initiative reduced project delivery times by 25% and significantly improved stakeholder satisfaction.  Championed user-centric design, establishing robust feedback loops that informed continuous improvements, resulting in a 40% uptick in platform user satisfaction. Led targeted training programs that bolstered platform adoption and user proficiency. ",
       },
     ];
 
