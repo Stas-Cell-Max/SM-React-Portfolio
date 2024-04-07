@@ -28,15 +28,15 @@ const Resume = () => {
     const experienceDetails = [
       {
         yearRange: "2016 - 2018",
-        title: "Jr. Architectural Tech",
+        title: "Architectural Technologist",
         place: "NORR",
-        desc: "As a Jr. Architectural Technologist, I supported project teams with technical drawings, utilized BIM software for design efficiency, and contributed to sustainable design solutions, thereby enhancing project outcomes and efficiency.",
+        desc: "Enabled digital transformation of architectural solutions, translating physical design principles into the virtual realm, which enhanced client presentations and project bids.  Facilitated the high-fidelity digital conversion of technical drawings and specifications, ensuring detailed accuracy and improving project team collaboration by 20%.  Led the adoption of data-driven design techniques, leveraging analytics to inform design decisions and enhance UI adaptability, significantly reducing revision cycles by 25%. ",
       },
       {
         yearRange: "2018 - 2020",
-        title: "Architectural Tech",
+        title: "Architectural Design Technologist",
         place: "Hariri Pontarini Architects",
-        desc: "As an Intermediate Architectural Technologist, I led in the development of technical drawings and design documentation, mastered BIM and CAD software for advanced project modeling, and drove the integration of sustainable design principles, significantly improving project delivery and operational performance.",
+        desc: "Transformed project documentation processes by leading the digital transition using BIM methodologies, creating highly interactive and comprehensive project representations akin to sophisticated web applications, enhancing project stakeholder engagement by 30%.  Implemented responsive design principles in architectural visualization tools, significantly improving accessibility and user interaction, marking a firm-wide shift towards more digitally inclusive design practices.  Pioneered sustainable design integration into digital project delivery, optimizing code for energy-efficient operations and reducing digital carbon footprint by 15%.",
       },
       {
         yearRange: "2020 - 2024",
@@ -104,7 +104,7 @@ const Resume = () => {
           {/* Heading end*/}
           <div className="row gx-5">
             {/* My Education */}
-            <div className="col-md-6">
+            <div className="col-md-6 col-sm-12">
               <h2
                 className={
                   "text-6 fw-600 mb-4 " 
@@ -136,7 +136,7 @@ const Resume = () => {
                 ))}
             </div>
             {/* My Experience */}
-            <div className="col-md-6">
+            <div className="col-md-6 col-sm-12">
               <h2
                 className={
                   "text-6 fw-600 mb-4 " 

@@ -166,12 +166,35 @@
     margin: 0.5rem auto;
   }
   
-  /* Education and Experience boxes */
-  .info-box, .info-boxt {
-    padding: 2rem; /* Provide more space within the boxes */
-    margin: 1rem 0; /* Add space between boxes */
-    text-align: left; /* Align text to the left */
+  /* Stack "My Education" and "My Experience" vertically */
+  .resume .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
+  
+  /* Adjust text and icons for readability */
+  .resume .text-6, .resume .text-9 {
+    font-size: 1.5rem;
+  }
+
+  .resume .info-box, .resume .info-boxt {
+    padding: 2rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .resume .skill-icon img {
+    width: 30px; /* Adjust the skill icons size */
+    height: 30px;
+    margin: 0 5px; /* Adjust spacing around the icons */
+  }
+  
+  .resume .btn {
+    font-size: 1rem; /* Adjust button text size */
+    padding: .375rem .75rem; /* Adjust button padding */
+  }
+  /* Education and Experience boxes */
+  
   
   /* Badge and headings inside the boxes */
   .badge, .text-5 {
@@ -184,12 +207,7 @@
     line-height: 1.5; /* Adjust line height for better readability */
   }
   
-  /* Skill icons */
-  .skill-icon img {
-    width: 30px; /* Adjust the size of skill icons */
-    height: 30px;
-    margin: 0 5px; /* Adjust space between icons */
-  }
+
   
   /* Download CV button */
   .btn {
