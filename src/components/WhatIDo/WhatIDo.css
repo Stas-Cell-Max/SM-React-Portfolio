@@ -16,7 +16,7 @@
   }
 
   .text-24 {
-    font-size: 3rem ;;
+    font-size: 3rem ;
     letter-spacing: 0.05em;
   }
   
@@ -118,10 +118,11 @@
     .what-i-do-section .fa-stack.fa-4x {
       margin-bottom: 2rem;
     }
+    
   }
   
   @media (max-width: 768px) {
-    .what-i-do-section .text-24 {
+    .what-i-do-section .text-24  {
       font-size: 1.5rem; /* Smaller font size for headings */
     }
   

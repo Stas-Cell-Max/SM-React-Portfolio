@@ -1,84 +1,51 @@
+/* General styles that apply to the whole section */
 .section {
   padding: 4rem 0;
-  background-color: #333; /* Dark background */
-  color: #212529; /* Light text */
-  height: 100%;
+  background-color: #333;
+  color: #fff;
+  min-height: 100%;
 }
 
+/* Styles for the container to center content and provide padding */
 .container {
   max-width: 1200px;
   margin: auto;
   padding: 0 15px;
- 
 }
 
+/* Utility classes for text alignment and margins */
 .text-center {
   text-align: center;
 }
 
-.mb-5 {
-  margin-bottom: 5rem;
+.mb-5, .mb-4, .mt-4 {
+  margin-bottom: 3rem;
 }
 
-.text-6 {
-  font-size: 2rem;
+/* Heading styles */
+.text-24 {
+  font-size: 2.5rem;
   font-weight: 600;
-  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .text-9 {
   font-size: 6rem;
   font-weight: 700;
-  color: #3b3b3b !important;
-  
+  color: #3b3b3b;
 }
 
-.text-24 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  z-index: 1;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
+/* Row and column adjustments */
 .row {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 15px;
 }
 
-.rounded {
-  border-radius: 0.25rem;
-  
-  background-color: black;
-}
-
-.p-4 {
-  padding: 1.5rem;
-}
-
-.mb-4 {
-  margin-bottom: 1.5rem;
-}
-
-.mt-4 {
-  margin-top: 1.5rem;
-}
-
-.heading-separator-line {
-  width: 60%;
-  margin: 1rem auto;
-  height: 1px;
-  border: 0;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  position: absolute;
-  bottom: -0px; /* Position below the text */
-  margin-bottom: 1rem;
-}
-
 .col-md-6 {
-  flex: 0 0 auto;
-  width: 50%;
-  margin-top: 1rem;
+  flex: 0 0 50%;
+  max-width: 50%;
 }
-
 
 .badge{
   background-color: #333 !important;
@@ -144,89 +111,73 @@
 }
 
 
-/* Consistent media query breakpoint */
+
 @media (max-width: 768px) {
-  /* Container padding */
-  .section .container {
-    padding: 1rem 15px;
+   .container.text-24 {
+    font-size: 1.5rem ; /* Smaller font size for headings */
   }
-  
-  /* Text adjustments for smaller screens */
-  .text-24 {
-    font-size: 1.5rem !important;
+
+ .container .text-9 {
+    font-size: 3.5rem; /* Adjusted font size for subheadings */
   }
-  
-  .text-9 {
-    font-size: 3rem !important;
+}
+
+@media (max-width: 768px) {
+   .container .heading-separator-line {
+    width: 50%; /* Shorten the width of the separator line */
+    margin: 0.5rem auto; /* Adjust margin */
   }
-  
-  /* Heading separator line */
+}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .col-md-6 {
+    /* Stack "My Education" and "My Experience" vertically */
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Adjust font sizes and padding for readability */
+  .text-24, .text-9, .text-6 {
+    font-size: 1.5rem;
+  }
+
+  .mb-5, .mb-4, .mt-4 {
+    margin-bottom: 2rem;
+  }
+
   .heading-separator-line {
     width: 50%;
     margin: 0.5rem auto;
   }
-  
-  /* Stack "My Education" and "My Experience" vertically */
-  .resume .col-md-6 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  
-  /* Adjust text and icons for readability */
-  .resume .text-6, .resume .text-9 {
-    font-size: 1.5rem;
-  }
 
-  .resume .info-box, .resume .info-boxt {
-    padding: 2rem;
+  .info-box, .info-boxt {
+    /* Adjust padding and margin for the boxes */
+    padding: 1.5rem;
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 2rem;
   }
 
-  .resume .skill-icon img {
-    width: 30px; /* Adjust the skill icons size */
-    height: 30px;
-    margin: 0 5px; /* Adjust spacing around the icons */
-  }
-  
-  .resume .btn {
-    font-size: 1rem; /* Adjust button text size */
-    padding: .375rem .75rem; /* Adjust button padding */
-  }
-  /* Education and Experience boxes */
-  
-  
-  /* Badge and headings inside the boxes */
-  .badge, .text-5 {
-    font-size: 1rem; /* Adjust font size for badges and subheadings */
+  .badge {
+    /* Adjust font size for badges */
+    font-size: 1rem;
   }
 
-  /* Description text inside the boxes */
   .mb-0 {
-    font-size: 0.7rem; /* Adjust font size for descriptions */
-    line-height: 1.5; /* Adjust line height for better readability */
+    /* Adjust font size for descriptions */
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
-  
 
-  
-  /* Download CV button */
+  /* Skill icons adjustments */
+  .skill-icon img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+  }
+
+  /* Download CV button adjustments */
   .btn {
-    padding: 0.5rem 1rem; /* Adjust padding for better tap targets */
-  }
-
-  /* Skill icons hover effect */
-  .skill-icon:hover {
-    transform: scale(1.1); /* Slightly increase size on hover */
-    box-shadow: none; /* Remove any box-shadow if present */
-  }
-  
-  /* Adjust the skill section layout */
-  .skill-icon {
-    margin-bottom: 0.5rem; /* Space between icons when wrapped */
-  }
-
-  /* Ensure the section is tall enough to contain its content */
-  .section {
-    min-height: auto; /* Allow the section to grow with the content */
+    padding: 0.5rem 1rem;
   }
 }
