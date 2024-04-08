@@ -42,7 +42,7 @@ const Resume = () => {
         yearRange: "2020 - 2024",
         title: "Tech Integration Architect",
         place: "One York Construction Management",
-        desc: "Revolutionized client engagement by architecting the company's website from the ground up,leveraging architectural design principles to enhance visualization and interactivity. Direct involvement led to a 20% increase in online project inquiries. Orchestrated the end-to-end development of a construction project management platform, facilitating unprecedented collaboration among stakeholders. This initiative reduced project delivery times by 25% and significantly improved stakeholder satisfaction.  Championed user-centric design, establishing robust feedback loops that informed continuous improvements, resulting in a 40% uptick in platform user satisfaction. Led targeted training programs that bolstered platform adoption and user proficiency. ",
+        desc: "Revolutionized client engagement by architecting the company's website from the ground up,leveraging architectural design principles to enhance visualization and interactivity. Direct involvement led to a 20% increase in online project inquiries. Orchestrated the end-to-end development of a construction project management platform, facilitating unprecedented collaboration among stakeholders. This initiative reduced project delivery times by 25% and significantly improved stakeholder satisfaction. Championed user-centric design, establishing robust feedback loops that informed continuous improvements, resulting in a 40% uptick in platform user satisfaction. Led targeted training programs that bolstered platform adoption and user proficiency. ",
       },
     ];
 
@@ -56,7 +56,7 @@ const Resume = () => {
           <div className="position-relative d-flex text-center mb-5">
             <h2
               className={
-                "text-24   fw-600 w-100 mb-0 " 
+                "text-24 fw-600 w-100 mb-0 " 
               }
             >
               Resume
@@ -77,7 +77,7 @@ const Resume = () => {
           <div className="row gx-5">
             {/* My Education */}
             <div className="col-md-6 col-sm-12">
-              <h3
+              <h3 align="center"
                 className={
                   "text-6 fw-600 mb-4 " 
                 }
@@ -109,7 +109,7 @@ const Resume = () => {
             </div>
             {/* My Experience */}
             <div className="col-md-6 col-sm-12">
-              <h3
+              <h3 align="center"
                 className={
                   "text-6 fw-600 mb-4 " 
                 }
@@ -141,14 +141,17 @@ const Resume = () => {
             </div>
           </div>
           {/* My Skills */}
+          <div className="col-12">
           <h2 align="center"
-            className={
-              "text-6 fw-600 mt-4 mb-4 " 
-            }
+              className="text-6 fw-600 mb-4"
           >
             My Skills
           </h2>
-          <p align="center">
+          <div
+          className="info-box rounded p-4 mb-4"
+          >
+            <div className="skills-content">
+          <p align="center  ">
   <a title='Git' href="https://git-scm.com/" target="_blank" rel="noreferrer" className="skill-icon"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" width="36" height="36" alt="Git" /></a>&nbsp;&nbsp;&nbsp;
   <a title='JavaScript' href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer" className="skill-icon"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="JavaScript" /></a>&nbsp;&nbsp;&nbsp;
   <a title='HTML5' href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer" className="skill-icon"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /></a>&nbsp;&nbsp;&nbsp;
@@ -165,7 +168,9 @@ const Resume = () => {
   <a title='Cloud' href="https://cloud.google.com/" target="_blank" rel="noreferrer" className="skill-icon"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/googlecloud-colored.svg" width="36" height="36" alt="Google Cloud" /></a>&nbsp;&nbsp;&nbsp;
    <a title='Mongoose' href="https://mongoosejs.com/" target="_blank" rel="noreferrer" className="skill-icon"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mongoose-colored.svg" width="36" height="36" alt="Mongoose" /></a>&nbsp;&nbsp;&nbsp;
   <a title='MongoDB' href="https://www.mongodb.com/" target="_blank" rel="noreferrer" className="skill-icon"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mongodb-colored.svg" width="36" height="36" alt="MongoDB" /></a>&nbsp;&nbsp;&nbsp;
-</p>
+</p></div></div></div>
+
+
           <div className="text-center mt-5">
 
             <a

@@ -16,7 +16,7 @@
   }
 
   .text-24 {
-    font-size: 3rem ;
+    font-size: 2.5rem !important;
     letter-spacing: 0.05em;
   }
   
@@ -189,7 +189,7 @@
   }
 
   .what-i-do-section .text-muted {
-    font-size: 0.75rem; /* Even smaller font size for service description */
+    font-size: 0.8rem; /* Even smaller font size for service description */
     text-align: left; /* Align the text to the left */
     margin-top: 0.25rem; /* Add a little margin above the description */
     
