@@ -100,12 +100,12 @@
 
   .about-me .introduction {
     padding: 1rem; /* Reduce padding for the introduction text */
-    font-size: 1.5rem; /* Adjust font size for readability */
+    font-size: 0.8rem !important; /* Adjust font size for readability */
     margin: 0.5rem 0; /* Adjust margin */
   }
 
   .personal-details p {
-    font-size: 0.7rem; /* Adjust font size for personal details */
+    font-size: 0.8rem !important; /* Adjust font size for personal details */
   }
   .about-me .text-24 {
     font-size: 1.5rem; /* Smaller font size for headings */

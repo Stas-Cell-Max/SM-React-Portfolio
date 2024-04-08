@@ -95,11 +95,11 @@ const Resume = () => {
                     <p className="badge bg-primary text-2 fw-400">
                       {value.yearRange}
                     </p>
-                    <h3 className={"text-5 " }>
+                    <h3 className={"text-5 " }> 
                       {value.title}
                     </h3>
-                    <p className={ "mb-0 "}>
-                      {value.place}
+                    <p className={ "mb-0 "}> <strong>
+                      {value.place} </strong>
                     </p>
                     <p className={"mb-0 "}>
                       {value.desc}
@@ -130,8 +130,8 @@ const Resume = () => {
                     <h3 className={"text-5 " }>
                       {value.title}
                     </h3>
-                    <p className={ "mb-0 "}>
-                      {value.place}
+                    <p className={ "mb-0 "}> <strong> 
+                      {value.place}</strong>
                     </p>
                     <p className={"mb-0 "}>
                       {value.desc}

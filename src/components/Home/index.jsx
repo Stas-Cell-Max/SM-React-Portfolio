@@ -14,7 +14,7 @@ const Home = ({ handleNavClick }) => {
           <Typewriter
             options={{
               strings: [
-                "I'm Stanislav Morozan.",
+                "I'm Stanislav Morozan",
                 "I'm a Web Developer",
                 "MERN Stack",
               ],

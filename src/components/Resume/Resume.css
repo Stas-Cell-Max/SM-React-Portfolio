@@ -120,6 +120,11 @@
  .container .text-9 {
     font-size: 3.5rem; /* Adjusted font size for subheadings */
   }
+  .container .text-5 {
+    font-size: 1.2rem; /* Adjusted font size for subheadings */
+  }
+
+
 }
 
 @media (max-width: 768px) {

@@ -7,10 +7,10 @@ const WhatIDo = () => {
        <div className={"container " }>
       <div className="position-relative d-flex text-center mb-5 ">
           <h2
-            className={"text-24  fw-600 w-100 mb-0 " 
+            className={"text-24 fw-600 w-100 mb-0 " 
             }
           >
-            What i Do
+            What I Do
           </h2>
           <p
             className={
@@ -30,7 +30,7 @@ const WhatIDo = () => {
               <i className="fas fa-code fa-stack-1x fa-inverse"></i>
             </span>
             <div className="service-content">
-            <h4 className="service-heading">Web Development</h4>
+            <h4 className="service-heading"> <strong>Web Development </strong> </h4>
             <p className="text-muted">Building responsive and dynamic websites and web applications.</p>
           </div>
           </div>
@@ -42,7 +42,7 @@ const WhatIDo = () => {
               <i className="fas fa-laptop-code fa-stack-1x fa-inverse"></i>
             </span>
             <div className="service-content">
-            <h4 className="service-heading">Web Design</h4>
+            <h4 className="service-heading"> <strong> Web Design</strong></h4>
             <p className="text-muted">Designing engaging and user-focused web experiences.</p>
           </div>
          </div>
@@ -53,7 +53,7 @@ const WhatIDo = () => {
               <i className="fas fa-drafting-compass fa-stack-1x fa-inverse"></i>
             </span>
             <div className="service-content">
-            <h4 className="service-heading">Architectural Technology</h4>
+            <h4 className="service-heading"> <strong> Architectural Technology</strong></h4>
             <p className="text-muted">Integrating technology into building design and architecture.</p>
           </div>
           </div>
@@ -65,7 +65,7 @@ const WhatIDo = () => {
               <i className="fas fa-tree fa-stack-1x fa-inverse"></i>
             </span>
             <div className="service-content">
-            <h4 className="service-heading">Architectural Design</h4>
+            <h4 className="service-heading"> <strong> Architectural Design</strong></h4>
             <p className="text-muted">Creating eco-friendly and sustainable architectural solutions.</p>
           </div>
           </div>
