@@ -6,43 +6,46 @@ import resumeFile from '../../Documents/Resume_Stanislav Morozan_P.pdf';
 const Resume = () => {
   
     const educationDetails = [
-      {
-        yearRange: "2005 - 2010",
-        title: "Science of Information Technology",
-        place: "Technical University of Moldova",
-        desc: "Coursework encompassed network architecture, database management, software development, web technologies, cybersecurity, system analysis, and IT project management, equipping me with a foundational understanding of technology in business operations.",
-      },
-      {
-        yearRange: "2014 - 2018",
-        title: "Architectural Technology",
-        place: "George Brown College",
-        desc: "Comprehensive study in building design and architectural drafting, BIM (Building Information Modeling), sustainable design principles, construction technology, and project management, preparing for innovative solutions in architectural development and execution.",
-      },
+
       {
         yearRange: "2023 - 2024",
         title: "Web Development",
         place: "University of Toronto",
-        desc: "Intensive training in building dynamic web applications using MongoDB, Express.js, React.js, and Node.js. Covered full-stack development practices, RESTful APIs, CRUD operations, and modern JavaScript, emphasizing responsive design and user experience.",
+        desc: "Mastered full-stack development technologies including MongoDB, Express.js, React.js, and Node.js, specializing in dynamic, responsive web applications with RESTful APIs, modern JavaScript, and implementing best practices in code efficiency.",
       },
+      
+      {
+        yearRange: "2014 - 2018",
+        title: "Architectural Technology",
+        place: "George Brown College",
+        desc: "Gained expertise in digital design and project visualization with BIM and CAD software, incorporating Building Science principles. Applied Building Codes and data-driven decision-making, grounded in Data Analysis, in collaborative projects using an agile methodology for optimized outcomes.",
+      },
+     {
+        yearRange: "2005 - 2010",
+        title: "Science of Information Technology",
+        place: "Technical University of Moldova",
+        desc: "Built a foundation in IT principles covering software development, systems analysis, and advanced problem-solving.",
+      },
+      
     ];
     const experienceDetails = [
       {
         yearRange: "2016 - 2018",
         title: "Architectural Technologist",
         place: "NORR",
-        desc: "Enabled digital transformation of architectural solutions, translating physical design principles into the virtual realm, which enhanced client presentations and project bids. Facilitated the high-fidelity digital conversion of technical drawings and specifications, ensuring detailed accuracy and improving project team collaboration by 20%.  Led the adoption of data-driven design techniques, leveraging analytics to inform design decisions and enhance UI adaptability, significantly reducing revision cycles by 25%. ",
+        desc: "Transformed architectural solutions into digital formats, enhancing client presentations and bids. Streamlined the conversion of technical drawings for greater team collaboration. Championed data-driven design to improve UI adaptability and reduce revision cycles. ",
       },
       {
         yearRange: "2018 - 2020",
         title: "Architectural Design Technologist",
         place: "Hariri Pontarini Architects",
-        desc: "Transformed project documentation processes by leading the digital transition using BIM methodologies, creating highly interactive and comprehensive project representations akin to sophisticated web applications, enhancing project stakeholder engagement by 30%.  Implemented responsive design principles in architectural visualization tools, significantly improving accessibility and user interaction, marking a firm-wide shift towards more digitally inclusive design practices.  Pioneered sustainable design integration into digital project delivery, optimizing code for energy-efficient operations and reducing digital carbon footprint by 15%.",
+        desc: "Led digital transformation of project documentation with BIM, producing interactive representations that boosted stakeholder engagement. Applied responsive design to visualization tools, enhancing accessibility and user interaction, and spearheaded sustainable design in digital delivery, optimizing for energy efficiency. ",
       },
       {
         yearRange: "2020 - 2024",
         title: "Tech Integration Architect",
         place: "One York Construction Management",
-        desc: "Revolutionized client engagement by architecting the company's website from the ground up,leveraging architectural design principles to enhance visualization and interactivity. Direct involvement led to a 20% increase in online project inquiries. Orchestrated the end-to-end development of a construction project management platform, facilitating unprecedented collaboration among stakeholders. This initiative reduced project delivery times by 25% and significantly improved stakeholder satisfaction. Championed user-centric design, establishing robust feedback loops that informed continuous improvements, resulting in a 40% uptick in platform user satisfaction. Led targeted training programs that bolstered platform adoption and user proficiency. ",
+        desc: " Revolutionized client engagement by architecting the company's website with enhanced visualization and interactivity, and led the creation of a construction project management platform, boosting stakeholder collaboration and satisfaction. Prioritized user-centric design with continuous feedback for ongoing improvements and conducted training to increase platform adoption and proficiency.",
       },
     ];
 
