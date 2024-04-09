@@ -5,7 +5,7 @@
   background-color: #343a40; /* Dark background for portfolio section */
   color: grey;
   padding: 1rem 0;
-  height: 100%;
+  height: auto;
   
 }
 
@@ -202,8 +202,44 @@
   }
 }
 
-@media (max-width: 480px) {
-  .grid-item {
-    width: 100%;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Adjust the portfolio item to full width for smaller screens */
+  .portfolio-filter .filter-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 2rem; /* Add some space between the items */
   }
+
+  /* Adjust the overlay details font sizes for better readability */
+  .portfolio-overlay-details h5 {
+    font-size: 1rem; /* Smaller font size for project titles */
+  }
+
+  .portfolio-overlay-details span {
+    font-size: 0.8rem; /* Smaller font size for project categories */
+  }
+
+  /* Adjust the image sizes within the portfolio items */
+  .portfolio-img img {
+    height: auto; /* Ensure the height is auto to maintain aspect ratio */
+  }
+
+  /* Adjustments to the filter menu for better usability on small screens */
+  .filter-container {
+    flex-direction: column; /* Stack the filter buttons vertically */
+    align-items: center; /* Center-align the filter buttons */
+    gap: 0.5rem; /* Reduce the gap between buttons for compact display */
+  }
+
+  /* Additional adjustments for the filter buttons */
+  .filter-container button {
+    padding: 0.5rem 1rem; /* Adjust padding for smaller touch targets */
+    font-size: 0.9rem; /* Smaller font size for filter button text */
+  }
+}
+
+/* Further enhance the portfolio section for very small screens (e.g., below 480px) */
+@media (max-width: 480px) {
+  /* Optional: You might want to make additional adjustments for very small screens */
 }

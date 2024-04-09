@@ -32,3 +32,21 @@
 .social-links a:hover {
     color: #64ffda; /* Highlight color on hover */
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content {
+    flex: 1; /* This will make the content expand to fill available space, pushing the footer down */
+  }
+  
+  .footer {
+    flex-shrink: 0; /* Prevents the footer from shrinking */
+  }
