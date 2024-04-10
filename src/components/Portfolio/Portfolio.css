@@ -63,15 +63,35 @@
   display: inline-flex; /* Makes .nav-link items flex containers themselves */
   align-items: center; /* Vertically center the content within */
   justify-content: center; 
+  text-decoration: none !important;
 }
 
 .nav-link > div {
   cursor: pointer;
+  text-decoration: none;
 }
 .nav-link:hover {
   color:  #64ffd8;
   text-decoration: none;
   text-shadow: 0 0 10px #c5a0f7, 0 0 20px #a763f5;
+}
+
+.nav-link, .nav-link:visited {
+  text-decoration: none; /* This removes underline from links */
+}
+
+.nav-link:hover, .nav-link:focus {
+  text-decoration: none; /* This removes underline on hover and focus */
+}
+
+.nav-link.active {
+  text-decoration: none; /* This removes underline from the active class */
+  border-bottom: none; /* If you have a border simulating an underline, remove it */
+}
+
+/* If using the 'a' tags directly without active class */
+a.nav-link:hover, a.nav-link:focus, a.nav-link:active {
+  text-decoration: none; /* This removes underline from the a tag in different states */
 }
 
 /* Portfolio Filter Menu */
@@ -201,7 +221,28 @@
     width: 50%;
   }
 }
+@media (max-width: 768px) {
+  .text-24 {
+    font-size: 1.7rem !important;
+  }
+}
 
+@media (max-width: 768px) {
+  
+ .container .text-9 {
+    font-size: 3.3rem; /* Adjusted font size for subheadings */
+  }
+  .container .text-5 {
+    font-size: 1.2rem; /* Adjusted font size for subheadings */
+  }
+}
+
+@media (max-width: 768px) {
+   .container .heading-separator-line {
+    width: 50%; /* Shorten the width of the separator line */
+    margin: 0.5rem auto; /* Adjust margin */
+  }
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
   /* Adjust the portfolio item to full width for smaller screens */
@@ -210,6 +251,8 @@
     max-width: 100%;
     margin-bottom: 2rem; /* Add some space between the items */
   }
+
+ 
 
   /* Adjust the overlay details font sizes for better readability */
   .portfolio-overlay-details h5 {
@@ -238,8 +281,51 @@
     font-size: 0.9rem; /* Smaller font size for filter button text */
   }
 }
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .nav-link {
+    
+    padding: 0.15rem 0.15rem; /* Reduce padding */
+    font-size: 0.75rem !important; /* Optionally, reduce font size for more space */
+  }
 
-/* Further enhance the portfolio section for very small screens (e.g., below 480px) */
-@media (max-width: 480px) {
-  /* Optional: You might want to make additional adjustments for very small screens */
+  .justify-content-evenly {
+    justify-content: space-around; /* Adjusts distribution of space around items */
+  }
+
+  .filter-container {
+    display: flex;
+    justify-content: center; /* Ensure items are centered */
+    flex-wrap: wrap; /* Allow wrapping if necessary, but aim for no wrap */
+    gap: 5px; /* Reduce gap between filter buttons */
+  }
+}
+
+.nav-link,
+.nav-link:visited,
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  text-decoration: none !important; /* Add !important to ensure override */
+}
+
+/* If .nav-link is within a <li> or other element, be more specific */
+li .nav-link,
+li .nav-link:visited,
+li .nav-link:hover,
+li .nav-link:focus,
+li .nav-link:active {
+  text-decoration: none !important; /* Again, ensure override */
+}
+
+/* Remove border from the bottom of active link if it's being used instead of text-decoration */
+.nav-link.active,
+li .nav-link.active {
+  border-bottom: none !important; /* Remove any border that might be used */
+}
+
+/* Specific targeting for the active class within nav-link, if the active class is applied to a child div */
+.nav-link.active > div,
+li .nav-link.active > div {
+  text-decoration: none !important; /* Target the child div specifically */
 }

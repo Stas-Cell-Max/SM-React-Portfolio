@@ -5,6 +5,7 @@ import "./Header.css";
 
 const Header = ({ handleNavClick }) => {
   const [isSticky, setIsSticky] = useState(false);
+  const [selectedTab, setSelectedTab] = useState("home");
   const [isNavModalOpen, setIsNavModalOpen] = useState(false);
 
   // This function will toggle the visibility of the navigation modal in mobile view
@@ -39,10 +40,12 @@ const Header = ({ handleNavClick }) => {
       </div>
       <nav className={`nav flex-column ${!isNavModalOpen ? '' : 'open'}`}>
         <Link
-        onClick={() => handleNavClick('home')}
-        activeClass="active"
-          to="home"
-          className="nav-link"
+         onClick={() => {
+          setSelectedTab("home");
+          handleNavClick("home");
+        }}
+        className={`nav-link test ${selectedTab === "home" ? "active" : ""}`}
+        style={{ cursor: "pointer" }}
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
