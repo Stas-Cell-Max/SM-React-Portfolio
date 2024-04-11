@@ -44,9 +44,9 @@ const Header = ({ handleNavClick }) => {
           setSelectedTab("home");
           handleNavClick("home");
         }}
+        to="home"
         className={`nav-link test ${selectedTab === "home" ? "active" : ""}`}
         style={{ cursor: "pointer" }}
-          style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
@@ -57,24 +57,30 @@ const Header = ({ handleNavClick }) => {
         <Link
         activeClass="active"
           to="aboutme"
-          className="nav-link"
+          className={`nav-link ${selectedTab === "aboutme" ? "active" : ""}`}
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick('aboutme')}
+          onClick={() => {
+            setSelectedTab("aboutme");
+            handleNavClick("aboutme");
+          }}
         >
           About Me
         </Link>
         <Link
-        activeClass="active"
-          to="whatido"
-          className="nav-link"
-          style={{ cursor: "pointer" }}
-          spy={true}
-          smooth={true}
-          duration={500}
-          onClick={() => handleNavClick('whatido')}
+        activeClass="whatido"
+        to="aboutme"
+        className={`nav-link ${selectedTab === "whatido" ? "active" : ""}`}
+        style={{ cursor: "pointer" }}
+        spy={true}
+        smooth={true}
+        duration={500}
+        onClick={() => {
+          setSelectedTab("whatido");
+          handleNavClick("whatido");
+        }}
         >
           What I Do
         </Link>
