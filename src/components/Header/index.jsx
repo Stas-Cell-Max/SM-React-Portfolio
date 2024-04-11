@@ -71,7 +71,7 @@ const Header = ({ handleNavClick }) => {
         </Link>
         <Link
         activeClass="whatido"
-        to="aboutme"
+        to="whatido"
         className={`nav-link ${selectedTab === "whatido" ? "active" : ""}`}
         style={{ cursor: "pointer" }}
         spy={true}
@@ -85,50 +85,62 @@ const Header = ({ handleNavClick }) => {
           What I Do
         </Link>
         <Link
-        activeClass="active"
-          to="resume"
-          className="nav-link"
-          style={{ cursor: "pointer" }}
-          spy={true}
-          smooth={true}
-          duration={500}
-          onClick={() => handleNavClick('resume')}
+       activeClass="resume"
+       to="resume"
+       className={`nav-link ${selectedTab === "resume" ? "active" : ""}`}
+       style={{ cursor: "pointer" }}
+       spy={true}
+       smooth={true}
+       duration={500}
+       onClick={() => {
+         setSelectedTab("resume");
+         handleNavClick("resume");
+       }}
         >
           Resume
         </Link>
         <Link
-        activeClass="active"
-          to="portfolio"
-          className="nav-link"
-          style={{ cursor: "pointer" }}
-          spy={true}
-          smooth={true}
-          duration={500}
-          onClick={() => handleNavClick('portfolio')}
+         activeClass="portfolio"
+         to="portfolio"
+         className={`nav-link ${selectedTab === "portfolio" ? "active" : ""}`}
+         style={{ cursor: "pointer" }}
+         spy={true}
+         smooth={true}
+         duration={500}
+         onClick={() => {
+           setSelectedTab("portfolio");
+           handleNavClick("portfolio");
+         }}
         >
           Portfolio
         </Link>
         <Link
-        activeClass="active"
-          to="testimonial"
-          className="nav-link"
-          style={{ cursor: "pointer" }}
-          spy={true}
-          smooth={true}
-          duration={500}
-          onClick={() => handleNavClick('testimonial')}
+           activeClass="testimonial"
+           to="testimonial"
+           className={`nav-link ${selectedTab === "testimonial" ? "active" : ""}`}
+           style={{ cursor: "pointer" }}
+           spy={true}
+           smooth={true}
+           duration={500}
+           onClick={() => {
+             setSelectedTab("testimonial");
+             handleNavClick("testimonial");
+           }}
         >
           Testimonial
         </Link>
         <Link
-        activeClass="active"
-          to="contact"
-          className="nav-link"
-          style={{ cursor: "pointer" }}
-          spy={true}
-          smooth={true}
-          duration={500}
-          onClick={() => handleNavClick('contact')}
+         activeClass="contact"
+         to="contact"
+         className={`nav-link ${selectedTab === "contact" ? "active" : ""}`}
+         style={{ cursor: "pointer" }}
+         spy={true}
+         smooth={true}
+         duration={500}
+         onClick={() => {
+           setSelectedTab("contact");
+           handleNavClick("contact");
+         }}
         >
           Contact
         </Link>
