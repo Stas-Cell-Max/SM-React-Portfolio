@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Isotope from "isotope-layout";
 import ProjectDetailsModal from "../ProjectDetailsModal";
+import imagesLoaded from 'imagesloaded';
 import "./Portfolio.css";
 
 
@@ -10,9 +11,10 @@ const Portfolio = () => {
 
   // store the filter keyword in a state
   const [filterKey, setFilterKey] = useState("*");
-  const [imagesLoaded, setimagesLoaded] = useState(0);
+  const [imagesLoadedCount, setImagesLoadedCount] = useState(0);
   const [selectedProjectDetails, setSelectedProjectDetails] = useState();
-
+ 
+// Filters map
   const filters = {
     WEBDEV: "Web Development",
     ARCHTECH: "Architectural Technology",
@@ -244,40 +246,93 @@ const Portfolio = () => {
     },
   ];
 
-  // initialize an Isotope object with configs
+  // Initialize Isotope after all images are loaded
   useEffect(() => {
-    isotope.current = new Isotope(".portfolio-filter", {
-      itemSelector: ".filter-item",
-      layoutMode: "masonry",
+    const imgLoad = imagesLoaded('.portfolio-filter');
+    imgLoad.on('always', () => {
+      setTimeout(() => {
+        isotope.current = new Isotope(".portfolio-filter", {
+          itemSelector: ".filter-item",
+          layoutMode: "masonry",
+        });
+        isotope.current.layout();
+      }, 500); // Timeout ensures images have loaded
     });
 
-    const handleResize = () => {
-      isotope.current.layout();
-    }
-    
-    // Add resize event listener
-    window.addEventListener('resize', handleResize);
-
-     // cleanup
+    // Cleanup function to destroy Isotope instance
     return () => {
-      window.removeEventListener('resize', handleResize);
-      isotope.current.destroy();
+      if (isotope.current) {
+        isotope.current.destroy();
+      }
     };
   }, []);
 
-    // handle images loaded and filter key change
-    useEffect(() => {
-      if (projectsData.length && imagesLoaded === projectsData.length) {
+  // Handle filter key change and window resize
+  useEffect(() => {
+    const handleLayout = () => {
+      if (isotope.current) {
         isotope.current.arrange({ filter: filterKey === '*' ? '*' : `.${filterKey}` });
       }
-    }, [filterKey, imagesLoaded]);
+    };
 
+    // Apply layout on filter change
+    handleLayout();
+
+    // Re-apply layout on window resize with debounce
+    let resizeTimer;
+    const handleResize = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(handleLayout, 300);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [filterKey]);
+
+  // Update Isotope layout when imagesLoadedCount changes
+  useEffect(() => {
+    if (imagesLoadedCount === projectsData.length) {
+      if (isotope.current) {
+        isotope.current.layout();
+      }
+    }
+  }, [imagesLoadedCount]);
+
+  useEffect(() => {
+    const iso = isotope.current;
+    
+    // Instantiate ResizeObserver
+    const resizeObserver = new ResizeObserver(entries => {
+      if (iso) {
+        iso.arrange(); // or iso.layout()
+      }
+    });
+  
+    // Observe the Isotope container for size changes
+    const container = document.querySelector('.portfolio-filter');
+    if (container) {
+      resizeObserver.observe(container);
+    }
+  
+    // Clean up observer on component unmount
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    window.dispatchEvent(new Event('resize'));
+  }, [imagesLoadedCount]);
+  
   
 
   const handleFilterKeyChange = (key) => () => {
     setFilterKey(key);
   };
-
   return (
     <>
       <section id="portfolio" className="container px-lg-5 min-vh-100">
@@ -340,7 +395,7 @@ const Portfolio = () => {
                           <div className="portfolio-img rounded">
                             <img
                               onLoad={() => {
-                                setimagesLoaded(imagesLoaded + 1);
+                                setImagesLoadedCount(prevCount => prevCount + 1); 
                               }}
                               className="img-fluid d-block portfolio-image"
                               src={project.thumbImage}

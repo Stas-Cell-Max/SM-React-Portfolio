@@ -1,22 +1,22 @@
 /* src/components/Portfolio/Portfolio.css */
 
-/* Portfolio Section Styles */
+* {
+  box-sizing: border-box;
+}
+
 #portfolio {
-  background-color: #343a40; /* Dark background for portfolio section */
+  background-color: #343a40;
   color: grey;
   padding: 1rem 0;
-  height: auto;
-  
+  overflow: visible; /* Allow content to determine the height */
 }
 
 .container {
   max-width: 1000px;
-  margin-top: 5px;
-  margin: 0 auto;
-  padding: 5px 15px;
-  
+  margin: 5px auto;
+  padding: 0 15px;
 }
-/* Portfolio Section Heading */
+
 .text-center {
   text-align: center;
 }
@@ -24,120 +24,58 @@
 .text-24 {
   font-size: 2.5rem;
   font-weight: 600;
-  z-index: 1;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 2;
 }
 
- .text-9 {
-  font-size: 8.25rem; /* Very large font size for emphasized text */
-  color: #282c30!important; /* Dark grey color for text */
+.text-9 {
+  font-size: 8.25rem;
+  color: #282c30;
 }
 
 .heading-separator-line {
   display: block;
-  width: 60px; /* Width of the separator line */
-  height: 1px; /* Height of the separator line */
-  border: 0;
+  width: 60px;
+  height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  margin: 0 auto; /* Center the separator horizontally */
+  margin: 0 auto;
   position: absolute;
   bottom: -0px;
   left: 50%;
   transform: translateX(-50%);
 }
+
 .mb-5 {
-  margin-bottom: 1.2rem !important;
+  margin-bottom: 1.2rem;
 }
 
-.justify-content-evenly {
-  justify-content: center; /* Center the items instead of spacing them out */
+.portfolio-filter,
+.filter-container {
   display: flex;
-  flex-wrap: wrap; /* Ensure items can wrap if needed */
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-bottom: 1rem;
   gap: 1rem;
 }
-.nav-link {
-  color: white;
-  margin: 0.5rem 0;
-  transition: color 0.2s ease;
-  text-align: center;
-  display: inline-flex; /* Makes .nav-link items flex containers themselves */
-  align-items: center; /* Vertically center the content within */
-  justify-content: center; 
-  text-decoration: none !important;
+
+.filter-item {
+  flex: 0 1 calc(33.3% - 10px);
+  margin: 5px;
+  height: auto;
 }
 
-.nav-link > div {
-  cursor: pointer;
-  text-decoration: none;
-}
-.nav-link:hover {
-  color:  #64ffd8;
-  text-decoration: none;
-  text-shadow: 0 0 10px #c5a0f7, 0 0 20px #a763f5;
-}
-
-.nav-link, .nav-link:visited {
-  text-decoration: none; /* This removes underline from links */
-}
-
-.nav-link:hover, .nav-link:focus {
-  text-decoration: none; /* This removes underline on hover and focus */
-}
-
-.nav-link.active {
-  text-decoration: none; /* This removes underline from the active class */
-  border-bottom: none; /* If you have a border simulating an underline, remove it */
-}
-
-/* If using the 'a' tags directly without active class */
-a.nav-link:hover, a.nav-link:focus, a.nav-link:active {
-  text-decoration: none; /* This removes underline from the a tag in different states */
-}
-
-/* Portfolio Filter Menu */
- .filter-container {
-  display: flex;
-  justify-content: center; /* Center buttons horizontally */
-  list-style: none; /* Remove default list styling */
-  padding: 0; /* Remove default padding */
-  margin-bottom: 1rem; /* Space below the filter buttons */
-}
-
- .filter-container button {
-  background: transparent;
-  border: none;
-  color: #fff;
-  margin: 0 1rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: color 0.3s, border-bottom 0.3s;
-}
-
-
- .filter-container button:hover,
- .filter-container button.active {
-  color: #64ffd8;
-  border-bottom: 2px solid #64ffd8;
-}
-
-/* Portfolio Cards */
- .portfolio-box {
+.portfolio-box {
   border: 1px solid #212529;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
   overflow: hidden;
   background: #212529;
   margin-bottom: 1rem;
-  position: relative; /* Ensure the absolute positioned children relate to this parent */
-  background: #212529;
- 
+  position: relative;
   cursor: pointer;
 }
+
 .portfolio-box:hover .portfolio-img img {
   opacity: 0.3;
-  box-shadow: inset 0 0 100px rgba(0,0,0,0.5); /* Inner shadow for a vignette effect */
 }
 
 .portfolio-box:hover {
@@ -145,193 +83,105 @@ a.nav-link:hover, a.nav-link:focus, a.nav-link:active {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Portfolio Images */
- .portfolio-img img {
-  max-width: 100%;
-  display: block;
-  height: auto;
-  transition: opacity 0.3s;
-}
 .portfolio-img {
-  height: auto;
-  min-height: 60px;
-  position: relative;
   background-size: cover;
+  width: 100%;
+  position: relative;
 }
 
-/* Portfolio Image Overlay */
+.portfolio-img img {
+  max-width: 100%;
+  height: auto;
+}
+
 .portfolio-overlay {
-  visibility: hidden; /* Hide overlay details by default */
+  visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.3s linear;
-  background-color: rgba(73, 67, 67, 0.5); /* Semi-transparent overlay */
+  background-color: rgba(73, 67, 67, 0.5);
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
-  height: 100%;
   display: flex;
   padding: 1rem;
-  align-items: center; /* Aligns children vertically center */
-  justify-content: center; /* Aligns children horizontally center */
-  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
 }
 
 .portfolio-box:hover .portfolio-overlay {
-  visibility: visible; /* Show overlay details on hover */
+  visibility: visible;
   opacity: 1;
 }
 
+.portfolio-overlay-details h5,
 .portfolio-overlay-details span {
-  font-size: 0.9rem;
-  color: #64ffd8; /* Theme color for consistency */
-}
-
-.portfolio-overlay-details h5 {
-  margin: 0;
-  font-size: 1.2rem;
-  color: white;
-}
-.portfolio-overlay-details span {
-  font-size: 0.9rem;
   color: #64ffd8;
+  margin: 0;
+  font-size: 1.2rem; /* For h5 */
 }
 
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -1rem;
-}
-
-.grid-item {
-  width: 33.333%; /* for three columns */
-  padding: 1rem;
-}
-
-.grid-item.size-lg {
-  height: 400px; /* Large size */
-}
-
-.grid-item.size-md {
-  height: 300px; /* Medium size */
-}
-
-.grid-item.size-sm {
-  height: 200px; /* Small size */
-}
-/* You might need media queries to adjust the widths for responsive design */
+/* Media Queries */
 @media (max-width: 768px) {
-  .grid-item {
+  .container {
+    padding: 5px 10px;
+    max-width: 100%;
+  }
+  
+  .text-24 {
+    font-size: 1.7rem;
+  }
+  
+  .text-9 {
+    font-size: 3.3rem;
+  }
+  
+  .heading-separator-line {
     width: 50%;
   }
-}
-@media (max-width: 768px) {
-  .text-24 {
-    font-size: 1.7rem !important;
-  }
-}
-
-@media (max-width: 768px) {
   
- .container .text-9 {
-    font-size: 3.3rem; /* Adjusted font size for subheadings */
+  .justify-content-evenly {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 0.2rem; /* Space between items */
   }
-  .container .text-5 {
-    font-size: 1.2rem; /* Adjusted font size for subheadings */
-  }
-}
-
-@media (max-width: 768px) {
-   .container .heading-separator-line {
-    width: 50%; /* Shorten the width of the separator line */
-    margin: 0.5rem auto; /* Adjust margin */
-  }
-}
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  /* Adjust the portfolio item to full width for smaller screens */
-  .portfolio-filter .filter-item {
-    flex-basis: 100%; 
+  
+  .filter-item {
+    flex-basis: 100%;
     max-width: 100%;
-    margin-bottom: 2rem; /* Add some space between the items */
+    margin: 5px 0; /* Adjust margin to avoid horizontal scrolling */
+  }
+  
+  .portfolio-img img {
+    width: 100%; /* Full width images on smaller screens */
   }
 
- 
-
-  /* Adjust the overlay details font sizes for better readability */
   .portfolio-overlay-details h5 {
-    font-size: 1rem; /* Smaller font size for project titles */
+    font-size: 1rem; /* Smaller title size for readability */
   }
 
   .portfolio-overlay-details span {
-    font-size: 0.8rem; /* Smaller font size for project categories */
+    font-size: 0.8rem; /* Smaller detail text for readability */
   }
 
-  /* Adjust the image sizes within the portfolio items */
-  .portfolio-img img {
-    height: auto; /* Ensure the height is auto to maintain aspect ratio */
-  }
-
-  /* Adjustments to the filter menu for better usability on small screens */
-  .filter-container {
-    flex-direction: column; /* Stack the filter buttons vertically */
-    align-items: center; /* Center-align the filter buttons */
-    gap: 0.5rem; /* Reduce the gap between buttons for compact display */
-  }
-
-  /* Additional adjustments for the filter buttons */
-  .filter-container button {
-    padding: 0.5rem 1rem; /* Adjust padding for smaller touch targets */
-    font-size: 0.9rem; /* Smaller font size for filter button text */
-  }
-}
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
   .nav-link {
-    
-    padding: 0.15rem 0.15rem; /* Reduce padding */
-    font-size: 0.75rem !important; /* Optionally, reduce font size for more space */
+    width: 100%; /* Full width for each nav link */
+    justify-content: center; /* Center the content inside nav link */
+    padding: 0.2rem 0; /* Adjust padding as needed */
   }
 
-  .justify-content-evenly {
-    justify-content: space-around; /* Adjusts distribution of space around items */
+  .nav-link,
+  .nav-link:visited,
+  .nav-link:hover,
+  .nav-link:focus,
+  .nav-link:active {
+    font-size: 0.75rem; /* Smaller font size for filter buttons */
   }
-
-  .filter-container {
-    display: flex;
-    justify-content: center; /* Ensure items are centered */
-    flex-wrap: wrap; /* Allow wrapping if necessary, but aim for no wrap */
-    gap: 5px; /* Reduce gap between filter buttons */
+  
+  /* Simplify nav-link active state styling */
+  .nav-link.active,
+  .nav-link.active > div {
+    color: #64ffd8; /* Highlight active filter */
   }
-}
-
-.nav-link,
-.nav-link:visited,
-.nav-link:hover,
-.nav-link:focus,
-.nav-link:active {
-  text-decoration: none !important; /* Add !important to ensure override */
-}
-
-/* If .nav-link is within a <li> or other element, be more specific */
-li .nav-link,
-li .nav-link:visited,
-li .nav-link:hover,
-li .nav-link:focus,
-li .nav-link:active {
-  text-decoration: none !important; /* Again, ensure override */
-}
-
-/* Remove border from the bottom of active link if it's being used instead of text-decoration */
-.nav-link.active,
-li .nav-link.active {
-  border-bottom: none !important; /* Remove any border that might be used */
-}
-
-/* Specific targeting for the active class within nav-link, if the active class is applied to a child div */
-.nav-link.active > div,
-li .nav-link.active > div {
-  text-decoration: none !important; /* Target the child div specifically */
 }
