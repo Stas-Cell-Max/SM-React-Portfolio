@@ -1,15 +1,16 @@
 import React from 'react';
-import './MobilePortfolio.css'; // Mobile-specific styles
+import './MobilePortfolio.css'; 
 
 const MobilePortfolio = ({ projectsData }) => {
     return (
-        <div className="mobile-portfolio">
-            {projectsData.map(project => (
-                <div key={project.id} className="mobile-portfolio-item">
-                    <img src={project.thumbImage} alt={project.title} className="mobile-portfolio-image" />
-                    <div className="mobile-portfolio-content">
-                        <h5>{project.title}</h5>
-                        <p>{project.projectInfo}</p>
+        <div className="mobile-portfolio container">
+            {projectsData.map((project, index) => (
+                <div key={index} className="project card mb-3">
+                    <img src={project.thumbImage} className="card-img-top" alt={project.title} />
+                    <div className="card-body">
+                        <h5 className="card-title">{project.title}</h5>
+                        <p className="card-text">{project.projectInfo}</p>
+                        <a href={project.url.link} className="btn btn-primary">View Project</a>
                     </div>
                 </div>
             ))}

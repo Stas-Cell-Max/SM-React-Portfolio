@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Header from "./components/Header";
 import HamburgerHeader from "./components/HamburgerHeader";
+import Portfolio from "./components/Portfolio";
+import MobilePortfolio from "./components/MobilePortfolio";
 import WrapperComponent from "./components/WrapperComponent";
 import "slick-carousel/slick/slick.css";         
 import "slick-carousel/slick/slick-theme.css";
@@ -33,6 +35,7 @@ function App() {
     <Router>
     {/* Conditionally render Header or HamburgerHeader based on windowWidth */}
     {windowWidth > 768 ? <Header handleNavClick={handleNavClick}/> : <HamburgerHeader handleNavClick={handleNavClick}/>}
+    {windowWidth > 768 ? <Portfolio projectsData={projectsData} /> : <MobilePortfolio projectsData={projectsData} />}
     <WrapperComponent handleNavClick={handleNavClick}/>
   </Router>
   );
