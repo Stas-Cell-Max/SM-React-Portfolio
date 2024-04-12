@@ -40,7 +40,7 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "/images/VegasMama.png",
+      thumbImage: "/images/VegasMama2.png",
       sliderImages: [
         "/images/VegasMama2.png",
         "/images/VegasMama3.png",

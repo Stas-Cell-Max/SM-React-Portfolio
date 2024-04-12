@@ -1,0 +1,33 @@
+.mobile-portfolio {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-portfolio-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mobile-portfolio-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mobile-portfolio-content {
+    padding: 15px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+h5 {
+    margin: 10px 0;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+}

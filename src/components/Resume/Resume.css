@@ -46,6 +46,8 @@
   flex: 0 0 50%;
   max-width: 50%;
   margin-top: 2rem;
+  margin-right: -15px;
+  
 }
 
 .badge{
