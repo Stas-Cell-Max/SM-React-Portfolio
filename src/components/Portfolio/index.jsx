@@ -249,22 +249,21 @@ const Portfolio = () => {
   // Initialize Isotope after all images are loaded
   useEffect(() => {
     const imgLoad = imagesLoaded('.portfolio-filter');
-    imgLoad.on('always', () => {
-      setTimeout(() => {
-        isotope.current = new Isotope(".portfolio-filter", {
-          itemSelector: ".filter-item",
-          layoutMode: "masonry",
-        });
-        isotope.current.layout();
-      }, 500); // Timeout ensures images have loaded
-    });
-
-    // Cleanup function to destroy Isotope instance
-    return () => {
+    imgLoad.on('always', function() {
       if (isotope.current) {
-        isotope.current.destroy();
+        isotope.current.layout();
       }
-    };
+    });
+  }, []);
+  
+  useEffect(() => {
+    function handleResize() {
+      if (isotope.current) {
+        isotope.current.layout();
+      }
+    }
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   // Handle filter key change and window resize
@@ -335,7 +334,7 @@ const Portfolio = () => {
   };
   return (
     <>
-      <section id="portfolio" className="container px-lg-5 min-vh-100">
+      <section id="portfolio" className="min-vh-100">
         <div className="container px-lg-5">
           {/* Heading */}
           <div className="position-relative d-flex text-center mb-5">

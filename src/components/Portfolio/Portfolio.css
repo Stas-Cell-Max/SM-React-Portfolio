@@ -8,12 +8,12 @@
   background-color: #343a40;
   color: grey;
   padding: 1rem 0;
-  overflow: visible; /* Allow content to determine the height */
+ 
 }
 
 .container {
-  max-width: 1000px;
-  margin: 5px auto;
+  max-width: 1200px; 
+  margin: auto;
   padding: 0 15px;
 }
 
@@ -53,15 +53,12 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  list-style: none;
-  margin-bottom: 1rem;
   gap: 1rem;
 }
 
 .filter-item {
-  flex: 0 1 calc(33.3% - 10px);
+  flex: 0 1 calc(33.3% - 5px);
   margin: 5px;
-  height: auto;
 }
 
 .portfolio-box {
@@ -72,6 +69,7 @@
   margin-bottom: 1rem;
   position: relative;
   cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.3s;
 }
 
 .portfolio-box:hover .portfolio-img img {
@@ -105,7 +103,6 @@
   right: 0;
   bottom: 0;
   display: flex;
-  padding: 1rem;
   align-items: center;
   justify-content: center;
 }
@@ -122,11 +119,18 @@
   font-size: 1.2rem; /* For h5 */
 }
 
+ol, ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0; /* Remove default margins if needed */
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   .container {
     padding: 5px 10px;
     max-width: 100%;
+    min-height: 100%;
   }
   
   .text-24 {
@@ -141,6 +145,15 @@
     width: 50%;
   }
   
+  .portfolio-box {
+    border: 1px solid #212529;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: #212529;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  } 
+  
   .justify-content-evenly {
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items horizontally */
@@ -149,12 +162,18 @@
   
   .filter-item {
     flex-basis: 100%;
-    max-width: 100%;
-    margin: 5px 0; /* Adjust margin to avoid horizontal scrolling */
+    margin-bottom: 1rem; /* Adjust margin to avoid horizontal scrolling */
+  }
+
+  .portfolio-filter .filter-item {
+    flex-basis: 100%; /* Full width */
+    margin-bottom: 1rem; /* Space between items */
+   
   }
   
   .portfolio-img img {
     width: 100%; /* Full width images on smaller screens */
+    height: auto;
   }
 
   .portfolio-overlay-details h5 {
@@ -169,6 +188,7 @@
     width: 100%; /* Full width for each nav link */
     justify-content: center; /* Center the content inside nav link */
     padding: 0.2rem 0; /* Adjust padding as needed */
+    text-align: center; 
   }
 
   .nav-link,
@@ -183,5 +203,13 @@
   .nav-link.active,
   .nav-link.active > div {
     color: #64ffd8; /* Highlight active filter */
+  }
+  .nav-link, .nav-link.active, .nav-link:hover {
+    border-bottom: none; /* If borders are being added, this will remove them */
+  }
+
+  /* Hide <hr> elements or styled div separators within the nav list */
+  .nav-link hr, .nav-link .separator-div {
+    display: none;
   }
 }
