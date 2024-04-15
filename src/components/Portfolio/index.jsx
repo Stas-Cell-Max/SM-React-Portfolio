@@ -1,18 +1,17 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Isotope from "isotope-layout";
-import ProjectDetailsModal from "../ProjectDetailsModal";
 import imagesLoaded from 'imagesloaded';
+import ProjectDetailsModal from "../ProjectDetailsModal";
 import "./Portfolio.css";
 
-
-
-const Portfolio = () => {
-  const isotope = useRef();
-
-  // store the filter keyword in a state
+const Portfolio = ({ darkTheme }) => {
+  const filterContainerRef = useRef(null);
+  const isotope = useRef(null);
   const [filterKey, setFilterKey] = useState("*");
-  const [imagesLoadedCount, setImagesLoadedCount] = useState(0);
-  const [selectedProjectDetails, setSelectedProjectDetails] = useState();
+  const [imagesLoadedCount, setImagesLoadedCount] = useState(0); // Correct state function name
+  const [selectedProjectDetails, setSelectedProjectDetails] = useState(null);
+
+  
  
 // Filters map
   const filters = {
@@ -246,35 +245,38 @@ const Portfolio = () => {
     },
   ];
 
-  // initialize an Isotope object with configs
   useEffect(() => {
-    isotope.current = new Isotope(".portfolio-filter", {
-      itemSelector: ".filter-item",
-      layoutMode: "masonry",
+    // Initialize Isotope after ensuring the images are loaded
+    const elem = filterContainerRef.current;
+    imagesLoaded(elem, function() {
+      isotope.current = new Isotope(elem, {
+        itemSelector: '.filter-item',
+        layoutMode: 'masonry',
+        percentPosition: true
+      });
     });
 
-    // cleanup
-    return () => {
-      isotope.current.destroy();
-    };
+    return () => isotope.current?.destroy(); // Cleanup Isotope instance
   }, []);
 
-  // handling filter key change
   useEffect(() => {
-    if (imagesLoaded) {
-      filterKey === "*"
-        ? isotope.current.arrange({ filter: `*` })
-        : isotope.current.arrange({ filter: `.${filterKey}` });
+    if (imagesLoadedCount && isotope.current) {
+      isotope.current.arrange({
+        filter: filterKey === '*' ? '*' : `.${filterKey}`
+      });
     }
-  }, [filterKey, imagesLoaded]);
+  }, [filterKey, imagesLoadedCount]);
 
-  const handleFilterKeyChange = (key) => () => setFilterKey(key);
+  const handleFilterKeyChange = (key) => () => {
+    setFilterKey(key);
+  };
+
   return (
     <>
-      <section id="portfolio" className="min-vh-100">
-        <div className="container px-lg-5">
+      <section id="portfolio" className="portfolio-section min-vh-100">
+        <div className="container ">
           {/* Heading */}
-          <div className="position-relative d-flex text-center mb-5">
+          <div className="text-center mb-5">
             <h2 className="text-24 fw-600 w-100 mb-0 text-light opacity-4">
               My Work
             </h2>
@@ -315,7 +317,7 @@ const Portfolio = () => {
           {/* portfolio cards */}
           <div className="portfolio popup-ajax-gallery">
             
-            <div className="row portfolio-filter filter-container g-4">
+          <div className="row portfolio-filter" ref={filterContainerRef}>
               {projectsData.length > 0 &&
                 projectsData.map((project, ) => {
                   if (project.categories.includes(filterKey)) {
@@ -365,14 +367,16 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
-      </section>
-      <div className="project-details-modal">
+        <div className="project-details-modal">
         {/* Modal */}
         <ProjectDetailsModal
           projectDetails={selectedProjectDetails}
           darkTheme={false}
         ></ProjectDetailsModal>
       </div>
+
+      </section>
+      
     </>
   );
 };

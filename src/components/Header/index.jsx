@@ -43,25 +43,22 @@ useEffect(() => {
         </div>
       </div>
 
-
-
-
       <nav className= "nav flex-column" >
         <Link
-         onClick={() => {
-          setSelectedTab("home");
-          handleNavClick("home");
-        }}
         to="home"
         className={`nav-link test ${selectedTab === "home" ? "active" : ""}`}
         style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
-          
+          onClick={() => {
+          setSelectedTab("home");
+          handleNavClick("home");
+        }}  
         >
           Home
         </Link>
+        
         <Link
         activeClass="active"
           to="aboutme"

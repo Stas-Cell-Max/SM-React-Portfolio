@@ -59,7 +59,9 @@ var settings = {
 
   return (
     
-    <section id="testimonial" className="testimonial">
+    <section 
+    id="testimonial"
+     className="testimonial">
       <div className={"container " }>
       <div className="position-relative d-flex text-center mb-5 ">
           <h2
