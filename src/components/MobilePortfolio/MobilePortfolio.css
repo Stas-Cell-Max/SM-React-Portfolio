@@ -1,33 +1,101 @@
-.mobile-portfolio {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+/* General styles that apply globally within the component */
+#portfolio-small {
+    background-color: #343a40; /* Dark background for portfolio section */
+    color: grey; /* Light text for readability */
+    padding: 1rem 0; /* Padding around the content */
+    min-height: 100vh; /* Full viewport height */
 }
 
-.mobile-portfolio-item {
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
+.container-fluid {
+    max-width: 1200px; /* Full width container */
+    margin: auto; /* Centering the container */
+    padding: 0 15px; /* Padding for inner content */
 }
 
-.mobile-portfolio-image {
-    width: 100%;
-    height: auto;
-    display: block;
+.text-center {
+    text-align: center; /* Center align text */
 }
 
-.mobile-portfolio-content {
-    padding: 15px;
-    background-color: #f1f1f1;
-    text-align: center;
+.display-4 {
+    font-size: 2.5rem; /* Larger text for the main title on small screens */
+    font-weight: 600; /* Bold font for emphasis */
+    color: #fff; /* White text for better readability */
+    margin-bottom: 0.5rem; /* Spacing below the title */
 }
 
-h5 {
-    margin: 10px 0;
+.lead {
+    font-size: 1.2rem; /* Smaller text for the subtitle */
+    font-weight: normal; /* Normal font weight */
+    color: #ccc; /* Light grey for less emphasis */
+    margin-bottom: 1rem; /* Spacing below the subtitle */
 }
 
-p {
-    font-size: 14px;
-    color: #666;
+/* Portfolio cards layout */
+.row {
+    display: flex; /* Flex container for alignment */
+    flex-wrap: wrap; /* Allow items to wrap as needed */
+    margin-top: 0; /* Remove top margin for uniform spacing */
+}
+
+.col-12 {
+    padding: 0 15px; /* Padding for columns to ensure spacing around cards */
+}
+
+.card {
+    background: #2c3034; /* Slightly lighter background for cards to distinguish from background */
+    border: 1px solid #212529; /* Subtle border for the cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    margin-bottom: 1rem; /* Space below each card */
+    transition: box-shadow 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.card-img-top {
+    width: 100%; /* Full width images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0; /* No rounded corners for the image */
+}
+
+.card-body {
+    padding: 15px; /* Padding inside card body */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Title size within card */
+    color: #fff; /* White color for title for readability */
+}
+
+.card-text {
+    font-size: 0.9rem; /* Text size within card */
+    color: #bbb; /* Lighter text color for readability */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Bootstrap primary color */
+    border-color: #007bff; /* Border color to match */
+    width: 100%; /* Full width button for easier interaction on mobile */
+}
+
+.btn {
+    display: block; /* Block display to fill width */
+    margin: 10px 0; /* Margin for spacing */
+    text-align: center; /* Center text within button */
+}
+
+/* Adjustments for very small screens */
+@media (max-width: 480px) {
+    .display-4 {
+        font-size: 1.7rem; /* Smaller font size for very small screens */
+    }
+
+    .lead {
+        font-size: 1rem; /* Smaller font size for subtitle */
+    }
+
+    .card-body {
+        padding: 10px; /* Less padding within card */
+    }
+
+    .card-title, .card-text {
+        font-size: 0.85rem; /* Smaller font sizes within cards for better readability */
+    }
 }

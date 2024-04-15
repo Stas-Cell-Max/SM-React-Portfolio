@@ -246,92 +246,29 @@ const Portfolio = () => {
     },
   ];
 
-  // Initialize Isotope after all images are loaded
+  // initialize an Isotope object with configs
   useEffect(() => {
-    const imgLoad = imagesLoaded('.portfolio-filter');
-    imgLoad.on('always', function() {
-      if (isotope.current) {
-        isotope.current.layout();
-      }
+    isotope.current = new Isotope(".portfolio-filter", {
+      itemSelector: ".filter-item",
+      layoutMode: "masonry",
     });
-  }, []);
-  
-  useEffect(() => {
-    function handleResize() {
-      if (isotope.current) {
-        isotope.current.layout();
-      }
-    }
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
-  // Handle filter key change and window resize
-  useEffect(() => {
-    const handleLayout = () => {
-      if (isotope.current) {
-        isotope.current.arrange({ filter: filterKey === '*' ? '*' : `.${filterKey}` });
-      }
-    };
-
-    // Apply layout on filter change
-    handleLayout();
-
-    // Re-apply layout on window resize with debounce
-    let resizeTimer;
-    const handleResize = () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(handleLayout, 300);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    // Cleanup function to remove the event listener
+    // cleanup
     return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [filterKey]);
-
-  // Update Isotope layout when imagesLoadedCount changes
-  useEffect(() => {
-    if (imagesLoadedCount === projectsData.length) {
-      if (isotope.current) {
-        isotope.current.layout();
-      }
-    }
-  }, [imagesLoadedCount]);
-
-  useEffect(() => {
-    const iso = isotope.current;
-    
-    // Instantiate ResizeObserver
-    const resizeObserver = new ResizeObserver(entries => {
-      if (iso) {
-        iso.arrange(); // or iso.layout()
-      }
-    });
-  
-    // Observe the Isotope container for size changes
-    const container = document.querySelector('.portfolio-filter');
-    if (container) {
-      resizeObserver.observe(container);
-    }
-  
-    // Clean up observer on component unmount
-    return () => {
-      resizeObserver.disconnect();
+      isotope.current.destroy();
     };
   }, []);
 
+  // handling filter key change
   useEffect(() => {
-    window.dispatchEvent(new Event('resize'));
-  }, [imagesLoadedCount]);
-  
-  
+    if (imagesLoaded) {
+      filterKey === "*"
+        ? isotope.current.arrange({ filter: `*` })
+        : isotope.current.arrange({ filter: `.${filterKey}` });
+    }
+  }, [filterKey, imagesLoaded]);
 
-  const handleFilterKeyChange = (key) => () => {
-    setFilterKey(key);
-  };
+  const handleFilterKeyChange = (key) => () => setFilterKey(key);
   return (
     <>
       <section id="portfolio" className="min-vh-100">

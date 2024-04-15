@@ -27,7 +27,14 @@ const Header = ({ handleNavClick }) => {
  
 
   return (
-    <header className={`header bg-dark text-white vh-100 fix-to-left ${isSticky ? "sticky" : ""}`}>
+    <header className={`header bg-dark text-white vh-100 fix-to-left  ${isSticky ? "sticky" : ""} ${isNavModalOpen ? "open" : ""}`}>
+       <div className="mobile-header">
+        <button className="hamburger" onClick={toggleNav}>
+          &#9776; {/* This is a simple way to add a hamburger icon */}
+        </button>
+        <h2>Stanislav Morozan</h2>
+      </div>
+
       <div className="profile-container">
       <div className="shadow"> 
         <img
