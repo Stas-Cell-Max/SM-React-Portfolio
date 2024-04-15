@@ -1,15 +1,9 @@
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 1rem;
-  transition: all 0.5s ease;
-}
+
 
 .h2 {
-  font-size: calc(1.325rem + 0.1vw);
-  font-weight: 700 !important;
+  font-size: calc(1.325rem + 0.5vw);
   text-align: center;
+  justify-content: center;
 }
 /* Sticky Header */
 .sticky {
@@ -34,6 +28,7 @@
 .profile-container {
   text-align: center;
   padding-bottom: 2rem;
+  
 }
 
 .profile-image {
@@ -46,16 +41,17 @@
 
 .shadow{
   position: relative;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  
   width: 170px; /* Adjust as needed */
   height: 170px;
-  background: linear-gradient(0deg, #000, #262626);
   border-radius: 50%;
 }
 
 .shadow:before, .shadow:after{
   content: '';
   position: absolute;
+ 
   top: -2px;
   left: -2px;
   background: linear-gradient(45deg, #7a2f5a, #25256c,#306a30,#7e7e2f,#722c2c, #833862, #29296e,#2f612f,#5b2929);
@@ -69,11 +65,14 @@
 
 .shadow:after{
   filter: blur(20px);
+  margin-top: 1rem;
 }
 
 
 
 @-webkit-keyframes hue {
+
+  
   from {
       -webkit-filter: hue-rotate(0deg);
   }
@@ -189,7 +188,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1rem;
   transition: all 0.5s ease;
   position: fixed;
   top: 0;
@@ -197,13 +195,37 @@
   width: 20vw; /* Adjust width for large screens */
   height: 100vh; /* Full height */
   z-index: 1020; /* Ensure it's above other content */
+  justify-content: center; /* Centering the hamburger icon */
+  padding: 10px 20px; /* Slim padding for smaller header strip */
 }
+
+
+
 
 .mobile-header {
   display: none; /* Hide by default, shown only in mobile view */
   align-items: center;
   justify-content: space-between;
   width: 100%;
+}
+
+.mobile-header .hamburger {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.menu-content.closed {
+  display: none;
+}
+
+.menu-content.open {
+  display: block;
+  text-align: center;
+  padding: 20px;
+  background-color: #222; /* Slightly darker background for the dropdown */
 }
 
 .hamburger {
@@ -261,6 +283,7 @@
   display: flex;
   flex-direction: column;
   padding-left: 0;
+  margin-bottom: 0.7rem;
   list-style: none;
   color: white;
   transition: color 0.2s ease;
@@ -279,6 +302,7 @@
   padding: 1.5rem 0;
   color: white;
   font-size: 1.5rem;
+  text-decoration: none; 
 }
 
 .icon-link:hover {
@@ -291,7 +315,10 @@
     height: auto; /* Auto height */
     position: relative; /* Relative positioning */
   }
-
+  .header.open {
+    height: 100vh; /* Full screen when open on small devices */
+    overflow: auto;
+}
   .hamburger {
     display: block; /* Show hamburger icon */
   }

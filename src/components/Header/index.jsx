@@ -9,16 +9,19 @@ const Header = ({ handleNavClick }) => {
   const [isNavModalOpen, setIsNavModalOpen] = useState(false);
 
   // This function will toggle the visibility of the navigation modal in mobile view
-  const toggleNav = () => setIsNavModalOpen(!isNavModalOpen);
+  const toggleNav = () => {
+    setIsNavModalOpen(prevState => !prevState);
+};
 
-  useEffect(() => {
-    const checkScrollTop = () => {
+
+useEffect(() => {
+  const checkScrollTop = () => {
       if (window.scrollY > 180) {
-        setIsSticky(true);
+          setIsSticky(true);
       } else {
-        setIsSticky(false);
+          setIsSticky(false);
       }
-    };
+  };
 
     window.addEventListener("scroll", checkScrollTop);
     return () => window.removeEventListener("scroll", checkScrollTop);
@@ -27,13 +30,7 @@ const Header = ({ handleNavClick }) => {
  
 
   return (
-    <header className={`header bg-dark text-white vh-100 fix-to-left  ${isSticky ? "sticky" : ""} ${isNavModalOpen ? "open" : ""}`}>
-       <div className="mobile-header">
-        <button className="hamburger" onClick={toggleNav}>
-          &#9776; {/* This is a simple way to add a hamburger icon */}
-        </button>
-        <h2>Stanislav Morozan</h2>
-      </div>
+    <header className={`header bg-dark text-white  fix-to-left  ${isSticky ? "sticky" : ""} ${isNavModalOpen ? "open" : ""}`}>
 
       <div className="profile-container">
       <div className="shadow"> 
@@ -45,7 +42,11 @@ const Header = ({ handleNavClick }) => {
         <h2>Stanislav Morozan</h2>
         </div>
       </div>
-      <nav className={`nav flex-column ${!isNavModalOpen ? '' : 'open'}`}>
+
+
+
+
+      <nav className= "nav flex-column" >
         <Link
          onClick={() => {
           setSelectedTab("home");
