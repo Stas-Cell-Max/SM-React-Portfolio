@@ -5,13 +5,13 @@
 }
 /* Portfolio Section Specifics */
 #portfolio {
-
   color: grey;
-  padding: 50px 0;
   min-height: 500px;  /* Ensure it covers minimum full viewport height */
-  overflow: auto;   
+    
 }
 .container {
+ 
+    justify-content: center;
   max-width: 1200px;
   margin-top: 5px;
   margin: 0 auto;
@@ -22,13 +22,17 @@
 .portfolio-filter {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -15px; /* Adjust according to your layout */
-  justify-content: center; /* Centers items if they don't fill a full row */
+  justify-content: center; /* Center align the flex items horizontally */
+  align-items: start; /* Align items to the start of the flex line */
+  margin: 0 35px; /* Maintain existing margin adjustment if needed */
+  width: 100%;
 }
 .filter-item {
+  box-sizing: border-box;
   padding: 15px; /* Padding for spacing around items */
   box-sizing: border-box; /* Include padding and border in the element's width */
   width: calc(33.333% - 30px); /* Subtract double the padding */
+  
 }
 
 .text-center {
@@ -50,13 +54,16 @@
 .heading-separator-line {
   width: 60px;
   height: 1px;
-  background-color: rgba(0, 0, 0, 0.75);
+  margin: 1rem auto;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   margin: 0 auto;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
+
+
 
 .mb-5 {
   margin-bottom: 20px; /* Adjust margin for consistent spacing */
@@ -150,13 +157,44 @@
     width: 50%; /* Full width line on smaller screens */
   }
   
+  .portfolio-section .filter-menu, 
+  .portfolio-section ul { /* Adjust the container holding the nav-links */
+      flex-direction: column; /* Stack nav-links vertically */
+      align-items: center; /* Center-align items for aesthetic purposes */
+      width: 100%; /* Full width */
+      padding: 0;
+      text-decoration: none !important;
+      list-style-type: none; 
+  }
+
+  .portfolio-section .nav-link,
+  .portfolio-section li.nav-link { /* Increase specificity for nav-link and li */
+      width: 100%; /* Full width to utilize space */
+      margin: 5px 0; /* Reduced margin for compact spacing */
+      display: block; /* Block display to occupy full available width */
+      font-size: 1rem !important; /* Smaller font size */
+      padding: 1px 0; /* Adequate padding for touch targets */
+      text-decoration: none; /* Remove underlines */
+      border: none; /* In case borders are applied */
+      background: none; /* Clear any background styles */
+  }
+  .portfolio-section a.nav-link, /* Target <a> tags specifically if they are used */
+  .portfolio-section .nav-link a { /* Target <a> tags inside nav-link divs */
+      text-decoration: none; /* Ensure no underline */
+      color: inherit; /* Inherit text color from parent */
+  }
+  .portfolio-section .nav-link div { /* Further styling if nav-link uses inner div */
+    padding: 4px 0; /* Even smaller padding inside div */
+}
   .filter-menu {
     flex-direction: column; /* Stack filter options vertically on small screens */
     align-items: center;
   }
   
   .filter-item {
-    width: 100%; /* Full width for filter items on small screens */
+    width: 100%; 
+    padding: 5px;
+    padding-top: 0%;
   }
   
   .portfolio-box {
@@ -168,3 +206,4 @@
     justify-content: space-between;
   }
 }
+

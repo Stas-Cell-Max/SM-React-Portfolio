@@ -129,19 +129,11 @@
     .what-i-do-section .text-9 {
       font-size: 3.5rem; /* Adjusted font size for subheadings */
     }
-  }
-  
-  @media (max-width: 768px) {
-    .what-i-do-section .heading-separator-line {
+  .what-i-do-section .heading-separator-line {
       width: 50%; /* Shorten the width of the separator line */
       margin: 0.5rem auto; /* Adjust margin */
     }
-  }
-  
-  @media (max-width: 768px) {
-
-
-    .what-i-do-section .col-md-4 {
+  .what-i-do-section .col-md-4 {
       flex-direction: row; /* Icons and text side by side */
       flex: 0 0 100%;
       align-items: flex-start;  /* Center items vertically */
@@ -150,12 +142,9 @@
       margin-top: 0.3rem;
       max-width: 100%; 
       padding: 1rem;
-      margin-bottom: 0.2rem; 
-      
+      margin-bottom: 0.2rem;  
     }
-  
-   
-  .what-i-do-section .fa-stack.fa-4x {
+    .what-i-do-section .fa-stack.fa-4x {
     width: 1.9rem; /* Adjust size of the icon */
     height: 1.9rem;
     line-height: 2.4rem;
@@ -198,10 +187,8 @@
   .what-i-do-section .text-muted {
     display: block; /* Stack on top of each other */
     margin: 0; /* Reset margins */
-  }
+  } 
   
-    
-  }
   /* Enhance spacing and readability for smaller screens */
   .what-i-do-section .container {
     padding: 2rem; /* More padding on smaller screens */
@@ -222,3 +209,4 @@
   .what-i-do-section .fa-stack {
     margin-bottom: 1.5rem; /* Adjust spacing between icon and text */
   }
+}

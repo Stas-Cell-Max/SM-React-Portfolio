@@ -317,6 +317,7 @@ const Portfolio = ({ darkTheme }) => {
           {/* Filter Menu */}
           <ul className="position-relative d-flex mb-5 justify-content-evenly">
             <li className="nav-link">
+      
               <div
                 className={"nav-link " + (filterKey === "*" ? "active" : "")}
                 onClick={handleFilterKeyChange("*")}
