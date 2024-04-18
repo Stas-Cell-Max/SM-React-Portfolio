@@ -19,7 +19,7 @@ const WrapperComponent = ({handleNavClick}) => {
             <Element name="aboutme" style={{height: '100%'}}  id="aboutme"><AboutMe handleNavClick={handleNavClick} /></Element>
             <Element name="whatido" style={{height: '100%'}}  id="whatido"><WhatIDo handleNavClick={handleNavClick} /></Element>
             <Element name="resume" id="resume"><Resume handleNavClick={handleNavClick} /></Element>
-            <Element name="portfolio" style={{height: '100%'}} id="portfolio"><Portfolio handleNavClick={handleNavClick}/></Element>
+            <Element name="portfolio" id="portfolio"><Portfolio handleNavClick={handleNavClick}/></Element>
             <Element name="testimonials" style={{height: '100%'}} id="testimonials"><Testimonial handleNavClick={handleNavClick}/></Element>
             <Element name="contact"style={{height: '100%'}}  id="contact"><Contact handleNavClick={handleNavClick}/></Element>
             <Footer />

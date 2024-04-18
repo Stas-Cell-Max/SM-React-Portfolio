@@ -1,5 +1,3 @@
-/* General Container Setup */
-
 .portfolio-section {
   padding: 4rem 0;
   background-color: #343a40;
@@ -10,15 +8,15 @@
 
   color: grey;
   padding: 50px 0;
-  min-height: 100vh; /* Ensure it covers minimum full viewport height */
+  min-height: 500px;  /* Ensure it covers minimum full viewport height */
   overflow: auto;   
 }
 .container {
   max-width: 1200px;
-  margin: auto;
-  padding: 0 15px;
-  width: 100%;        /* Ensures container uses full width */
-  box-sizing: border-box; /* Makes sure padding and borders are included in the width */
+  margin-top: 5px;
+  margin: 0 auto;
+  padding: 5px 15px;
+  text-align: center;
 }
 /* Ensure portfolio items do not overflow their container */
 .portfolio-filter {
@@ -38,13 +36,14 @@
 }
 
 .text-24 {
-  font-size: 2.5rem; /* Consistent font size for large texts */
+  font-size: 3.5rem;
   font-weight: 600;
-  z-index: 2;
+  z-index: 1;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .text-9 {
-  font-size: 5.5rem; /* Adjusted for better scalability */
+  font-size: 6rem; /* Adjusted for better scalability */
   color: #282c30;
 }
 

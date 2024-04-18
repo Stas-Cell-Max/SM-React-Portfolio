@@ -11,14 +11,12 @@ const Portfolio = ({ darkTheme }) => {
   const [imagesLoadedCount, setImagesLoadedCount] = useState(0); // Correct state function name
   const [selectedProjectDetails, setSelectedProjectDetails] = useState(null);
 
-  
- 
-// Filters map
-  const filters = {
-    WEBDEV: "Web Development",
-    ARCHTECH: "Architectural Technology",
-    ARCHDESIGN: "Architectural Design",
-  };
+ // Filters map
+ const filters = {
+  WEBDEV: "Web Development",
+  ARCHTECH: "Architectural Technology",
+  ARCHDESIGN: "Architectural Design",
+};
 
   const projectsData = [
     {
@@ -41,12 +39,11 @@ const Portfolio = ({ darkTheme }) => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "/images/VegasMama2.png",
+      thumbImage: "images/Brimloft.png",
       sliderImages: [
-        "/images/VegasMama2.png",
-        "/images/VegasMama3.png",
-        "/images/VegasMama1.png",
-        "/images/VegasMama4.png",
+        "images/Brimloft.png",
+        "images/Brimloft2.png",
+        "images/Brimloft3.png",
       ],
       categories: ["*", filters.WEBDEV],
     },
@@ -242,6 +239,32 @@ const Portfolio = ({ darkTheme }) => {
         "images/project-8.JPG",
       ],
       categories: ["*", filters.ARCHDESIGN],
+    },
+    {
+      title: "Project Title 7",
+      projectInfo:
+        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      client: "Ruby Clinton",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "July 16, 2019",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "images/VegasMama2.png",
+      sliderImages: [
+        "images/projects/project-1.jpeg",   
+        "images/projects/project-5.jpeg",
+      ],
+      categories: [filters.DESIGN, filters.PHOTOS],
     },
   ];
 
