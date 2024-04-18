@@ -296,11 +296,15 @@ const Portfolio = ({ darkTheme }) => {
 
   return (
     <>
-      <section id="portfolio" className="portfolio-section min-vh-100">
+      <section id="portfolio" className="portfolio-section ">
         <div className="container ">
           {/* Heading */}
-          <div className="text-center mb-5">
-            <h2 className="text-24 fw-600 w-100 mb-0 text-light opacity-4">
+          <div className="position-relative d-flex text-center mb-5">
+            <h2
+              className={
+                "text-24 fw-600 w-100 mb-0 " 
+              }
+            >
               My Work
             </h2>
             <p className="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0 ">
