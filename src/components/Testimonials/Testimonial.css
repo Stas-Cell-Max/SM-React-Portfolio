@@ -107,7 +107,8 @@ overflow-x: auto;
 
 .slick-dot {
   bottom: 10px;
-   /* Adjust this value to position the dots correctly */
+  margin-bottom: -4rem;
+
 }
 
 .slick-dots li{

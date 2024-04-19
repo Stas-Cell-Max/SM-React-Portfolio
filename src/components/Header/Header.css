@@ -1,5 +1,19 @@
 
-
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20vw;
+  height: 100vh;
+  z-index: 1020;
+  justify-content: center;
+  padding: 10px 20px;
+  overflow: hidden;   
+}
 .h2 {
   font-size: calc(1.325rem + 0.5vw);
   text-align: center;
@@ -28,6 +42,7 @@
 .profile-container {
   text-align: center;
   padding-bottom: 2rem;
+    
   
 }
 
@@ -184,38 +199,6 @@
   }
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: all 0.5s ease;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 20vw; /* Adjust width for large screens */
-  height: 100vh; /* Full height */
-  z-index: 1020; /* Ensure it's above other content */
-  justify-content: center; /* Centering the hamburger icon */
-  padding: 10px 20px; /* Slim padding for smaller header strip */
-}
-
-
-
-
-.mobile-header {
-  display: none; /* Hide by default, shown only in mobile view */
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.mobile-header .hamburger {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-}
 
 .menu-content.closed {
   display: none;
@@ -339,6 +322,11 @@
   .nav-link {
     padding: 0.5rem 1rem; /* Adjust padding for tap targets */
     border-bottom: 1px solid #efefef; /* Add separators */
+    font-size: 10px;
+    margin-bottom: 0.1rem;
+    text-decoration: none; /* Remove underlines */
+      border: none; /* In case borders are applied */
+      background: none; 
   }
 
   .nav-link:last-child {

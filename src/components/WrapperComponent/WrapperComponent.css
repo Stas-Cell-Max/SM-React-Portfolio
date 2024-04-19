@@ -9,6 +9,7 @@
   background-attachment: fixed; /* Keeps the background image fixed during scroll */
   background-size: cover; /* Ensure it covers the entire component */
   color:white; /* Light text for contrast */
+  min-height: 100vh;
 }
 
 .wrapper-component::before {

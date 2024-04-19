@@ -1,3 +1,8 @@
+
+* {
+  box-sizing: border-box;
+}
+
 .portfolio-section {
   padding: 4rem 0;
   background-color: #343a40;
@@ -5,34 +10,30 @@
 }
 /* Portfolio Section Specifics */
 #portfolio {
+
   color: grey;
-  min-height: 500px;  /* Ensure it covers minimum full viewport height */
-    
+  padding: 50px 1;
+  min-height: 100vh; /* Ensure it covers minimum full viewport height */
+  overflow: hidden;   
 }
 .container {
- 
-    justify-content: center;
   max-width: 1200px;
-  margin-top: 5px;
-  margin: 0 auto;
-  padding: 5px 15px;
-  text-align: center;
+  margin: auto;
+  padding: 0 15px;
+  width: 100%;        /* Ensures container uses full width */
+  box-sizing: border-box; /* Makes sure padding and borders are included in the width */
 }
 /* Ensure portfolio items do not overflow their container */
 .portfolio-filter {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center align the flex items horizontally */
-  align-items: start; /* Align items to the start of the flex line */
-  margin: 0 35px; /* Maintain existing margin adjustment if needed */
-  width: 100%;
+  margin: 0 -15px; /* Adjust according to your layout */
+  justify-content: center; /* Centers items if they don't fill a full row */
 }
 .filter-item {
-  box-sizing: border-box;
   padding: 15px; /* Padding for spacing around items */
   box-sizing: border-box; /* Include padding and border in the element's width */
   width: calc(33.333% - 30px); /* Subtract double the padding */
-  
 }
 
 .text-center {
@@ -40,14 +41,13 @@
 }
 
 .text-24 {
-  font-size: 3.5rem;
+  font-size: 2.5rem; /* Consistent font size for large texts */
   font-weight: 600;
-  z-index: 1;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 2;
 }
 
 .text-9 {
-  font-size: 6rem; /* Adjusted for better scalability */
+  font-size: 5.5rem; /* Adjusted for better scalability */
   color: #282c30;
 }
 
@@ -63,10 +63,8 @@
   transform: translateX(-50%);
 }
 
-
-
 .mb-5 {
-  margin-bottom: 20px; /* Adjust margin for consistent spacing */
+  margin-bottom: 5px; /* Adjust margin for consistent spacing */
 }
 
 /* Filter Menu Styles */
@@ -91,8 +89,8 @@
 .portfolio-box {
   border: 1px solid #212529;
   background: #212529;
-  margin-bottom: 20px;
   position: relative;
+  margin-bottom: 2px;
   cursor: pointer;
   overflow: hidden;
   transition: box-shadow 0.3s, transform 0.3s;
@@ -144,6 +142,43 @@
     padding: 0 10px;
     max-width: 100%;
   }
+
+  .text-24 {
+    font-size: 1.7rem; /* Smaller font size on small screens */
+  }
+
+  .text-9 {
+    font-size: 3.3rem; /* Smaller title font size on small screens */
+  }
+
+  .heading-separator-line {
+    width: 50%; /* Full width line on smaller screens */
+  }
+
+  .filter-menu {
+    flex-direction: column; /* Stack filter options vertically on small screens */
+    align-items: center;
+  }
+
+  .filter-item {
+    width: 100%; /* Full width for filter items on small screens */
+  }
+
+  .portfolio-box {
+    transition: none; /* Disable transitions on small devices for performance */
+  }
+  .portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+/* Media Queries for Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+    max-width: 100%;
+  }
   
   .text-24 {
     font-size: 1.7rem; /* Smaller font size on small screens */
@@ -184,7 +219,7 @@
       color: inherit; /* Inherit text color from parent */
   }
   .portfolio-section .nav-link div { /* Further styling if nav-link uses inner div */
-    padding: 4px 0; /* Even smaller padding inside div */
+    padding: 1px 0; /* Even smaller padding inside div */
 }
   .filter-menu {
     flex-direction: column; /* Stack filter options vertically on small screens */

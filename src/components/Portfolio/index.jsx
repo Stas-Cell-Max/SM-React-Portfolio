@@ -269,30 +269,27 @@ const Portfolio = ({ darkTheme }) => {
   ];
 
   useEffect(() => {
-    // Initialize Isotope after ensuring the images are loaded
-    const elem = filterContainerRef.current;
-    imagesLoaded(elem, function() {
-      isotope.current = new Isotope(elem, {
-        itemSelector: '.filter-item',
-        layoutMode: 'masonry',
-        percentPosition: true
-      });
-    });
-
-    return () => isotope.current?.destroy(); // Cleanup Isotope instance
-  }, []);
-
-  useEffect(() => {
-    if (imagesLoadedCount && isotope.current) {
-      isotope.current.arrange({
-        filter: filterKey === '*' ? '*' : `.${filterKey}`
+    // Ensure the filter container ref is current and has been rendered
+    if (filterContainerRef.current) {
+      // Use imagesLoaded to wait until all images are fully loaded
+      imagesLoaded(filterContainerRef.current, function () {
+        // Now that images are loaded, initialize Isotope
+        isotope.current = new Isotope(filterContainerRef.current, {
+          itemSelector: '.filter-item',
+          layoutMode: 'masonry',
+        });
       });
     }
-  }, [filterKey, imagesLoadedCount]);
+  
+    // Cleanup function to destroy Isotope instance when component unmounts
+    return () => {
+      if (isotope.current) {
+        isotope.current.destroy();
+      }
+    };
+  }, []); // The empty array ensures this effect runs only once on mount
 
-  const handleFilterKeyChange = (key) => () => {
-    setFilterKey(key);
-  };
+  const handleFilterKeyChange = (key) => () => setFilterKey(key);
 
   return (
     <>
