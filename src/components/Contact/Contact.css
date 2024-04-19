@@ -133,7 +133,7 @@
   padding: 1.5rem 0;
     padding-top: 1.5rem;
   margin-top: auto;
-  padding-top: 1rem;
+  padding-top: 0.1rem;
 }
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
@@ -155,8 +155,9 @@
   }
 
   .text-5 {
-    font-size: 1rem; /* Adjust subheading font sizes to be smaller */
-    margin-bottom: 0.5rem; /* Reduce space below subheadings */
+    font-size: 1.3rem;
+    margin-bottom: 0.2rem !important;
+    margin-top: 1.2rem;
   }
 
   .form-control, .btn-primary {
@@ -165,13 +166,16 @@
   }
 
   .social-links {
-    padding-top: 1rem; /* Adjust padding above social links */
-    gap: 10px; /* Reduce gap between social icons for compact layout */
-    margin-bottom: 2rem; 
+    padding-top: 0.01rem;
+    gap: 5px;
+    margin-bottom: 1rem; 
   }
 
   .social-links .icon-link {
     font-size: 20px; /* Adjust social icons size if needed */
+    padding-top: 0.5rem;
+    gap: 5px;
+    margin-bottom: 0.5rem;
   }
 
   .heading-separator-line {

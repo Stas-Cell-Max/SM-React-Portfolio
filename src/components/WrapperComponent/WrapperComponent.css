@@ -10,6 +10,7 @@
   background-size: cover; /* Ensure it covers the entire component */
   color:white; /* Light text for contrast */
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .wrapper-component::before {
@@ -73,6 +74,7 @@
   .wrapper-component {
     margin-left: 0;
     width: 100vw; /* Full width on smaller screens */
+    background-attachment: scroll; /* Normal scrolling */
   }
 
   .wrapper-component .w-full > div {
