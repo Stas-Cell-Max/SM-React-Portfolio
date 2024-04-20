@@ -161,15 +161,15 @@ const Portfolio = ({ darkTheme }) => {
     },
     {
       id: 6,
-      title: "Project Title 6",
+      title: "The Well",
       projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "July 16, 2019",
+        "The Well unites the vision and unique specialty of two top urban developers. The one-of-a-kind partnership between RioCan REIT and Allied Properties REIT combines the residential, retail and office expertise necessary for the creation of the city’s first truly integrated mixed-use project.",
+      client: "Hariri Pontarini Architects",
+      technologies: "Revit, BIM, Lumion",
+      industry: "Architecture & Urbanism",
+      date: "March, 2018",
       url: {
-        name: "www.example.com",
+        name: "https://thewelltoronto.com/",
         link: "https://www.example.com",
       },
       socialLinks: {
@@ -179,13 +179,22 @@ const Portfolio = ({ darkTheme }) => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/OPP.webp",
+      thumbImage: "images/TheWell-Aerial.png",
       sliderImages: [
-        "images/project-7.jpg",
-        "images/project-8.JPG",
+        "images/TheWell-3D2.png",
+        "images/TheWell-3D.png",
+        "images/TheWell-3DA.png",
+        "images/TheWell-Site.png",
+        "images/TheWell-Fac1.png",
+        "images/TheWell-Fac2.png",
+        "images/TheWell-Podium.png",
+        "images/TheWell-Sect.png",
+        "images/TheWell-Sect1.png",
+        
       ],
-      categories: ["*", filters.ARCHDESIGN],
+      categories: ["Arch Design", filters.ARCHDESIGN],
     },
+
     {
       id: 7,
       title: "Project Title 7",

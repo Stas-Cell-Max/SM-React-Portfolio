@@ -2,7 +2,7 @@
 
 /* Base styles for the modal */
 .modal-content {
-    background: #fff; /* Adjust the background as needed */
+    background: #545457; /* Adjust the background as needed */
     color: #333; /* Adjust text color as needed */
     border-radius: 8px;
     overflow-y: auto; /* Makes the content scrollable vertically */
