@@ -77,8 +77,8 @@
 .img-fluid {
     width: 100%; /* Full width to utilize the container space */
     height: auto; /* Maintain aspect ratio */
-    max-height: 520px !important ; /* Fixed max-height to keep image sizes consistent */
-    object-fit: contain !important; /* Cover the frame without distorting aspect ratios */
+    max-height: 520px; /* Fixed max-height to keep image sizes consistent */
+    object-fit: contain; /* Cover the frame without distorting aspect ratios */
 
 }
 
@@ -102,7 +102,7 @@
   
 .slick-list {
     margin: 0 -10px;
-    height: 520px !important; 
+    height: 520px; 
 }
   
 @media (max-width: 768px) {

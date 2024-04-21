@@ -58,8 +58,8 @@ const Portfolio = ({ darkTheme }) => {
       date: "December, 2023",
       url: {
         name: "https://protected-gorge-42703-db942224a3bb.herokuapp.com/",
-        link: " https://protected-gorge-42703-db942224a3bb.herokuapp.com/",
-        gitRepo: "https://github.com/Stas-Cell-Max/brim-loft"
+        link: " https://brim-loft-22a58ce3b819.herokuapp.com/",
+        gitRepo: "https://github.com/waltscode/BrimLoft"
         
       },
       socialLinks: {
@@ -273,7 +273,7 @@ const Portfolio = ({ darkTheme }) => {
         "images/projects/project-1.jpeg",   
         "images/projects/project-5.jpeg",
       ],
-      categories: [filters.DESIGN, filters.PHOTOS],
+      categories: [filters.ARCHDESIGN, filters.ARCHTECH],
     },
   ];
 
