@@ -143,7 +143,7 @@ const Portfolio = ({ darkTheme }) => {
       date: "July 16, 2019",
       url: {
         name: "www.example.com",
-        link: "https://www.example.com",
+        link: "https://hariripontarini.com/projects/the-well/",
       },
       socialLinks: {
         facebook: "http://www.facebook.com/",
@@ -170,7 +170,7 @@ const Portfolio = ({ darkTheme }) => {
       date: "March, 2018",
       url: {
         name: "https://thewelltoronto.com/",
-        link: "https://www.example.com",
+        link: "https://hariripontarini.com/projects/the-well/",
       },
       socialLinks: {
         facebook: "http://www.facebook.com/",
