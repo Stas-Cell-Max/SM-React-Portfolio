@@ -92,7 +92,6 @@
 .img-fluid {
     width: 100%; /* Full width to utilize the container space */
     height: auto; /* Maintain aspect ratio */
-    max-height: 620px; /* Fixed max-height to keep image sizes consistent */
     object-fit: contain; /* Cover the frame without distorting aspect ratios */
 
 }
@@ -127,11 +126,11 @@
       margin: 20px; /* Provide some space around the modal */
     }
     .img-fluid {
-        max-height: 200px; /* Smaller max-height for mobile views */
+        max-height: 300px; /* Smaller max-height for mobile views */
     }
 
     .slick-list {
-        height: 220px; /* Adjusted to smaller image height on mobile devices */
+        height: 320px; /* Adjusted to smaller image height on mobile devices */
     }
 
 }
