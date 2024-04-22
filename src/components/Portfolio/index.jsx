@@ -107,30 +107,24 @@ const Portfolio = ({ darkTheme }) => {
     },
     {
       id: 4,
-      title: "Project Title 4",
+      title: "Bloor One",
       projectInfo:
         "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "July 16, 2019",
+      client: "Hariri Pontarini Architects",
+      technologies: "Revit, AutoCad, Photography",
+      industry: "Architecture",
+      date: "April, 2018",
       url: {
         name: "www.example.com",
         link: "https://www.example.com",
       },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
+    
       thumbImage: "images/OPP.webp",
       sliderImages: [
         "images/project-4.png",
         "images/project-9.png",
       ],
-      categories: ["*", filters.ARCHTECH, filters.ARCHDESIGN],
+      categories: ["*", filters.ARCHTECH,
     },
     {
       id: 5,
@@ -192,7 +186,7 @@ const Portfolio = ({ darkTheme }) => {
         "images/TheWell-Sect1.png",
         
       ],
-      categories: ["Arch Design", filters.ARCHDESIGN],
+      categories: ["*", filters.ARCHDESIGN],
     },
 
     {
@@ -250,30 +244,22 @@ const Portfolio = ({ darkTheme }) => {
       categories: ["*", filters.ARCHDESIGN],
     },
     {
-      title: "Project Title 7",
+      id: 9,
+      title: "Case Study",
       projectInfo:
         "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
+      client: "Hariri Pontarini Architects",
+      technologies: "BIM, Revit",
+      industry: "Architecture, Building Science",
       date: "July 16, 2019",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "images/VegasMama2.png",
+     
+      thumbImage: "images/CaseStudy-1.png",
       sliderImages: [
-        "images/projects/project-1.jpeg",   
-        "images/projects/project-5.jpeg",
+        "images/projects/CaseStudy-1.png",   
+        "images/projects/CaseStudy-2.png",
+        "images/projects/CaseStudy-3.png",
       ],
-      categories: [filters.ARCHDESIGN, filters.ARCHTECH],
+      categories: ["*", filters.ARCHTECH],
     },
   ];
 
