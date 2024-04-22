@@ -203,16 +203,16 @@ const Portfolio = ({ darkTheme }) => {
 
     {
       id: 7,
-      title: "Project Title 7",
+      title: "Weather Forecast Dashboard",
       projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "July 16, 2019",
+        "A weather forecasting application that provides current and future weather data for cities around the world. It uses the OpenWeatherMap API to fetch real-time weather data, including a 5-day forecast.",
+      client: "Alexandee Meyer Inc.",
+      technologies: "HTML, CSS, JavaScript, OpenWeatherMap API",
+      industry: "Web Development",
+      date: "Feb, 2024",
       url: {
         name: "www.example.com",
-        link: "https://www.example.com",
+        link: "https://github.com/Stas-Cell-Max",
       },
       socialLinks: {
         facebook: "http://www.facebook.com/",
@@ -221,12 +221,12 @@ const Portfolio = ({ darkTheme }) => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/OPP.webp",
+      thumbImage: "images/Weather.png",
       sliderImages: [
         "images/project-4.png",
         "images/project-5.png",
       ],
-      categories: ["*", filters.WEBDEV, filters.ARCHTECH],
+      categories: ["*", filters.WEBDEV],
     },
     {
       id: 8,
