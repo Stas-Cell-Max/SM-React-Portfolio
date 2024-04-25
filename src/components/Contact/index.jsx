@@ -1,13 +1,25 @@
 // src/pages/Contact/index.jsx
-import React from 'react';
+import React, { useState }from 'react';
 import './Contact.css'; 
 
 const Contact = ({  }) => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form Submitted');
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    occupationLocation: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
   };
+
+
 
   return (
     <section id="contact" className="contact">
@@ -40,31 +52,65 @@ const Contact = ({  }) => {
           {/* Name Fields */}
           <div className="row mb-3">
             <div className="row mb-3">
-              <input type="text" className="form-control .input-custom" id="firstName" placeholder="First Name" required />
+              <input 
+              type="text"
+              className="form-control input-custom" 
+              id="firstName" 
+              placeholder="First Name" 
+              value={formData.firstName}
+              onChange={handleChange}
+              required />
             </div>
             <div className="row mb-3">
-              <input type="text" className="form-control .input-custom" id="lastName" placeholder="Last Name" required />
+              <input 
+              type="text" 
+              className="form-control input-custom" 
+              id="lastName" 
+              placeholder="Last Name" 
+              value={formData.lastName}
+              onChange={handleChange}
+              required />
             </div>
           </div>
 
           {/* Email & Occupation Fields */}
           <div className="row mb-3">
             <div className="row mb-3">
-              <input type="email" className="form-control input-custom" id="email" placeholder="Email" required />
+              <input 
+              type="email" 
+              className="form-control input-custom" 
+              id="email" 
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleChange} 
+              required />
             </div>
             <div className="row mb-3">
-              <input type="text" className="form-control input-custom" id="occupationLocation" placeholder="Occupation & Location" required />
+              <input type="text" 
+              className="form-control input-custom" 
+              id="occupationLocation" 
+              placeholder="Occupation & Location" 
+              value={formData.occupationLocation}
+              onChange={handleChange}
+              required />
             </div>
           </div>
 
           {/* Message/Topic Textarea */}
           <div className="row mb-3">
-            <textarea className="form-control .input-custom" id="message" rows="5" placeholder="Message/Topic" required></textarea>
+            <textarea 
+            className="form-control input-custom" 
+            id="message" rows="5" 
+            placeholder="Message/Topic"
+            value={formData.message}
+            onChange={handleChange} 
+            required></textarea>
           </div>
 
           {/* Submit Button */}
           <div className="text-center">
-            <button type="submit" className="btn btn-primary btn-custom">Submit</button>
+            <button type="submit" 
+            className="btn btn-primary btn-custom">Submit</button>
           </div>
         </form>
 
