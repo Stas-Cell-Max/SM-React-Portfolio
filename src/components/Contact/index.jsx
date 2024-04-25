@@ -50,10 +50,10 @@ const Contact = ({  }) => {
           {/* Email & Occupation Fields */}
           <div className="row mb-3">
             <div className="row mb-3">
-              <input type="email" className="form-control .input-custom" id="email" placeholder="Email" required />
+              <input type="email" className="form-control input-custom" id="email" placeholder="Email" required />
             </div>
             <div className="row mb-3">
-              <input type="text" className="form-control .input-custom" id="occupationLocation" placeholder="Occupation & Location" required />
+              <input type="text" className="form-control input-custom" id="occupationLocation" placeholder="Occupation & Location" required />
             </div>
           </div>
 

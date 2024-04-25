@@ -1,20 +1,17 @@
 /* Contact.css */
 .contact {
-  padding: 15px;
   color: rgb(235, 234, 234);
   background-color: #343a40;
-  padding: 4rem 0;
+  padding: 4rem 0; /* consolidated padding */
   text-align: center;
-  height: auto;
   
-  
+ 
 }
 
 .container {
   max-width: 1400px;
-  margin-top: 5px;
-  margin: 0 auto;
-  padding: 5px 15px;
+  margin: 0 auto; /* consolidated margin */
+  padding: 0 15px;
   
 }
 .section-title {
@@ -124,7 +121,7 @@
 }
 
 .btn-primary:hover {
-  background-color: 0 0 10px #c5a0f7, 0 0 20px #a763f5; /* Darker shade on hover */
+  background-color: #5ca895;/* Darker shade on hover */
   border-color:  #64ffd8;
 }
 .social-links {
@@ -191,7 +188,5 @@
   form {
     margin-bottom: 2rem; /* Add bottom margin to the form if it's the last significant element */
   }
-  .position-relative {
-    position: relative; /* Double-check this does not cause overlap */
-  }
+ 
 }
