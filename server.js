@@ -1,17 +1,33 @@
-const express = require('express');
+import express from 'express';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import { fileURLToPath } from 'url';
+import path, { dirname } from 'path';
+
 const app = express();
-const path = require('path');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const PORT = process.env.PORT || 3002;
 
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(cors()); // This will allow all CORS requests
+app.use(express.static(path.join(__dirname, 'dist'))); // Serve static files
+app.use(bodyParser.json()); // Parse JSON bodies
 
-// The "catchall" handler: for any request that doesn't
-// match one above, send back React's index.html file.
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/build/index.html'));
+// POST endpoint to receive form data
+app.post('/submit-form', (req, res) => {
+  const { firstName, lastName, email, occupationLocation, message } = req.body;
+  console.log('Received submission:', req.body);
+
+  // handle the data, e.g., save it to a database
+  res.status(200).send('Form data received successfully');
 });
 
-const port = process.env.PORT || 5000;
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+// The "catchall" handler: for any request that doesn't match one above, send back index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
