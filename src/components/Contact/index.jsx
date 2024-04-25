@@ -19,6 +19,21 @@ const Contact = ({  }) => {
     }));
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch('http://localhost:3001/submit-form', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => console.log('Success:', data))
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+  };
 
 
   return (
@@ -28,7 +43,7 @@ const Contact = ({  }) => {
            
           <h2
             className={
-              "text-24   fw-600 w-100 mb-0 " 
+              "text-24 fw-600 w-100 mb-0 " 
             }
           >
             Get in Touch
@@ -39,7 +54,7 @@ const Contact = ({  }) => {
             }
           >
             CONTACT
-            <span className="heading-separator-line  d-block mx-auto" />
+            <span className="heading-separator-line d-block mx-auto" />
           </p>
        
       </div>
@@ -51,56 +66,56 @@ const Contact = ({  }) => {
         </div>
           {/* Name Fields */}
           <div className="row mb-3">
-            <div className="row mb-3">
+            
               <input 
               type="text"
               className="form-control input-custom" 
-              id="firstName" 
+              name="firstName" 
               placeholder="First Name" 
               value={formData.firstName}
               onChange={handleChange}
               required />
-            </div>
-            <div className="row mb-3">
+           
               <input 
               type="text" 
               className="form-control input-custom" 
-              id="lastName" 
+              name="lastName" 
               placeholder="Last Name" 
               value={formData.lastName}
               onChange={handleChange}
               required />
-            </div>
+            
           </div>
 
           {/* Email & Occupation Fields */}
           <div className="row mb-3">
-            <div className="row mb-3">
+            
               <input 
               type="email" 
               className="form-control input-custom" 
-              id="email" 
+              name="email" 
               placeholder="Email"
               value={formData.email}
               onChange={handleChange} 
               required />
-            </div>
-            <div className="row mb-3">
+            
+            
               <input type="text" 
               className="form-control input-custom" 
-              id="occupationLocation" 
+              name="occupationLocation" 
               placeholder="Occupation & Location" 
               value={formData.occupationLocation}
               onChange={handleChange}
               required />
-            </div>
+            
           </div>
 
           {/* Message/Topic Textarea */}
           <div className="row mb-3">
             <textarea 
             className="form-control input-custom" 
-            id="message" rows="5" 
+            name="message" 
+            rows="5" 
             placeholder="Message/Topic"
             value={formData.message}
             onChange={handleChange} 
