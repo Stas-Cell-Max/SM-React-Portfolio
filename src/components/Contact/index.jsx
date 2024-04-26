@@ -21,7 +21,7 @@ const Contact = ({  }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('http://localhost:3001/submit-form', {
+    fetch('http://localhost:3002/submit-form', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
