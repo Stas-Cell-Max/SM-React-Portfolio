@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
+import mongoose from 'mongoose';
 
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
