@@ -9,7 +9,12 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const PORT = process.env.PORT || 3002;
 
-app.use(cors()); // This will allow all CORS requests
+const corsOptions = {
+    origin: 'http://localhost:3002', 
+    optionsSuccessStatus: 200 
+};
+
+app.use(cors(corsOptions));
 app.use(express.static(path.join(__dirname, 'dist'))); // Serve static files
 app.use(bodyParser.json()); // Parse JSON bodies
 
@@ -20,6 +25,10 @@ app.post('/submit-form', (req, res) => {
 
   // handle the data, e.g., save it to a database
   res.status(200).send('Form data received successfully');
+});
+app.post('/submit-form', (req, res) => {
+    console.log('Received submission:', req.body);
+    res.status(200).send('Form data received successfully');
 });
 
 // The "catchall" handler: for any request that doesn't match one above, send back index.html
