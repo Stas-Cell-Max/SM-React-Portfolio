@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
-import Contact from './models/Contact.js'; // Importing the Contact model
+import Contact from '../models/Contact.js'; // Importing the Contact model
 import dotenv from 'dotenv'; // Manage environment variables
 import nodemailer from 'nodemailer';
 
