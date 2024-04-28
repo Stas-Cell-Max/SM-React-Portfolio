@@ -22,6 +22,7 @@ const WrapperComponent = ({handleNavClick}) => {
             <Element name="portfolio" id="portfolio"><Portfolio handleNavClick={handleNavClick}/></Element>
             <Element name="testimonials" style={{height: '100%'}} id="testimonials"><Testimonial handleNavClick={handleNavClick}/></Element>
             <Element name="contact"style={{height: '100%'}}  id="contact"><Contact handleNavClick={handleNavClick}/></Element>
+            
             <Footer />
         </div>
   );

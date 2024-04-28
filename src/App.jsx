@@ -21,11 +21,14 @@ function App() {
       block: 'start',
     });
   };
+
+ 
 return (
 
 <Router>
   <Header handleNavClick={handleNavClick}/>
   <WrapperComponent handleNavClick={handleNavClick}/>
+ 
 </Router>
 );
 }

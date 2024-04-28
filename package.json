@@ -5,6 +5,7 @@
   "type": "module",
   "homepage": "https://Stas-Cell-Max.github.io/SM-React-Portfolio/",
   "scripts": {
+    
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build",
     "dev": "vite",
@@ -36,6 +37,7 @@
     "slick-carousel": "^1.8.1",
     "typed.js": "^2.1.0",
     "typewriter-effect": "^2.21.0"
+    
   },
   "devDependencies": {
     "@types/react": "^18.2.56",
@@ -55,4 +57,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC"
+  
 }

@@ -83,7 +83,12 @@
 .align-self-center {
   align-self: center;
 }
-
+.feedback-message {
+  color: green; /* or any color that stands out */
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 20px 0; /* Adds space around the message */
+}
 /* Form elements styling */
 .form-control,
 .btn-primary,

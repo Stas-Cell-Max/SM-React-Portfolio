@@ -11,6 +11,8 @@ const Contact = ({  }) => {
     message: ''
   });
 
+  const [message, setMessage] = useState(""); // State to handle feedback message
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -28,10 +30,20 @@ const Contact = ({  }) => {
       },
       body: JSON.stringify(formData)
     })
-    .then(response => response.json())
+    .then(response => {
+      if (response.ok) {
+        setMessage("Thank you for contacting me! I will get back to you soon.");
+        setFormData({ firstName: '', lastName: '', email: '', occupationLocation: '', message: '' }); // Clear form fields
+        return response.json();
+      }
+      throw new Error('Network response was not ok.');
+    })
+
+
     .then(data => console.log('Success:', data))
     .catch((error) => {
       console.error('Error:', error);
+      setMessage("There was a problem with your submission. Please try again.");
     });
   };
 
@@ -60,7 +72,9 @@ const Contact = ({  }) => {
       </div>
 
       <br></br>
-
+      <br />
+        {message && <div className="feedback-message">{message}</div>} {/* Display feedback message */}
+        
       <form onSubmit={handleSubmit}>
       <div className="button-group text-center mb-6">
         </div>
