@@ -146,7 +146,7 @@ const Contact = ({  }) => {
         <p className="text-5 text-light mb-4">Follow Me /</p>
         <div className="social-links">
         <a
-          href="https://linkedin.com"
+          href="https://linkedin.com/in/stanislavmorozan"
           target="_blank"
           rel="noopener noreferrer"
           className="icon-link"
@@ -154,7 +154,7 @@ const Contact = ({  }) => {
           <i className="fab fa-linkedin-in"></i>
         </a>
         <a
-          href="https://github.com"
+          href="https://github.com/Stas-Cell-Max"
           target="_blank"
           rel="noopener noreferrer"
           className="icon-link"
@@ -162,7 +162,7 @@ const Contact = ({  }) => {
           <i className="fab fa-github"></i>
         </a>
         <a
-          href="https://facebook.com"
+          href="https://facebook.com/stas.moozan"
           target="_blank"
           rel="noopener noreferrer"
           className="icon-link"
@@ -170,7 +170,7 @@ const Contact = ({  }) => {
           <i className="fab fa-facebook-f"></i>
         </a>
         <a
-          href="https://twitter.com"
+          href="https://twitter.com/yourusername"
           target="_blank"
           rel="noopener noreferrer"
           className="icon-link"
@@ -178,14 +178,14 @@ const Contact = ({  }) => {
           <i className="fab fa-twitter"></i>
         </a>
         <a
-          href="https://instagram.com"
+          href="https://instagram.com/stas_moozan"
           target="_blank"
           rel="noopener noreferrer"
           className="icon-link"
         >
           <i className="fab fa-instagram"></i>
         </a>
-        </div>
+      </div>
       </div>
     </section>
     

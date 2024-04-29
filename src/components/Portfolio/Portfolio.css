@@ -34,6 +34,7 @@
   padding: 15px; /* Padding for spacing around items */
   box-sizing: border-box; /* Include padding and border in the element's width */
   width: calc(33.333% - 30px); /* Subtract double the padding */
+  transition: transform 0.5s ease;
 }
 
 .text-center {
@@ -96,15 +97,31 @@
   transition: box-shadow 0.3s, transform 0.3s;
 }
 
+.row {
+  --bs-gutter-x: 3.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-1.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
 .portfolio-box:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   transform: translateY(-5px);
+}
+.portfolio-img {
+  width: 100%; /* Ensure it spans the full width */
+  height: 100%; /* Ensure it spans the full height */
 }
 
 .portfolio-img img {
   width: 100%;
   height: auto;
   transition: opacity 0.3s ease;
+  object-fit: cover; 
+  object-position: center;
 }
 
 .portfolio-box:hover .portfolio-img img {
@@ -162,6 +179,7 @@
 
   .filter-item {
     width: 100%; /* Full width for filter items on small screens */
+    
   }
 
   .portfolio-box {
