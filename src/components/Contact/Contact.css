@@ -84,10 +84,12 @@
   align-self: center;
 }
 .feedback-message {
-  color: green; /* or any color that stands out */
   font-size: 1.2rem;
   text-align: center;
-  margin: 20px 0; /* Adds space around the message */
+  margin: 10px 0; /* Adds space around the message */
+  color:  #64ffd8;
+  text-decoration: none;
+  text-shadow: 0 0 10px #c5a0f7, 0 0 20px #a763f5;
 }
 /* Form elements styling */
 .form-control,

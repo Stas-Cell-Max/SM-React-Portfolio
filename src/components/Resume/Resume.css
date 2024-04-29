@@ -46,7 +46,7 @@
   flex: 0 0 50%;
   max-width: 50%;
   margin-top: 2rem;
-  margin-right: -15px;
+  
   
 }
 
@@ -58,7 +58,7 @@
   background-color: #212529;
   text-align: left;
   margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  
 }
 
 .info-boxt{
@@ -66,6 +66,10 @@
   text-align: left;
   margin-right: 1.5rem;
 
+}
+.rounded {
+  border-radius: .25rem !important;
+  margin-right: 1.5rem;
 }
 
 .btn {

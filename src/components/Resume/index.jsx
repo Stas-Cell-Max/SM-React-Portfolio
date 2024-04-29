@@ -24,7 +24,7 @@ const Resume = () => {
         yearRange: "2005 - 2010",
         title: "Science of Information Technology",
         place: "Technical University of Moldova",
-        desc: "Built a foundation in IT principles covering software development, systems analysis, and advanced problem-solving.",
+        desc: "Established a robust foundation in core IT principles, including software development, systems analysis, and complex problem-solving, essential for success in a typical Computer Science curriculum.",
       },
       
     ];
@@ -39,13 +39,13 @@ const Resume = () => {
         yearRange: "2018 - 2020",
         title: "Architectural Design Technologist",
         place: "Hariri Pontarini Architects",
-        desc: "Led digital transformation of project documentation with BIM, producing interactive representations that boosted stakeholder engagement. Applied responsive design to visualization tools, enhancing accessibility and user interaction, and spearheaded sustainable design in digital delivery, optimizing for energy efficiency. ",
+        desc: "Led digital transformation of project documentation with BIM, producing interactive representations that boosted stakeholder engagement. Applied responsive design to visualization tools, enhancing accessibility and user interaction, and spearheaded sustainable design in digital delivery. ",
       },
       {
         yearRange: "2020 - 2024",
         title: "Tech Integration Architect",
         place: "One York Construction Management",
-        desc: " Revolutionized client engagement by architecting the company's website with enhanced visualization and interactivity, and led the creation of a construction project management platform, boosting stakeholder collaboration and satisfaction. Prioritized user-centric design with continuous feedback for ongoing improvements and conducted training to increase platform adoption and proficiency.",
+        desc: " Revamped client engagement by developing an interactive website and a management platform to enhance stakeholder collaboration. Focused on user-centric design with continuous updates and training for better platform proficiency.",
       },
     ];
 
