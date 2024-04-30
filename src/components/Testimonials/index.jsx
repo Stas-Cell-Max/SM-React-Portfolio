@@ -17,7 +17,7 @@ const Testimonial = () => {
     name: "Anna Antropova",
     title: "Arch from Toronto",
     src: "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/361112109_10161048926611007_5778823206661691662_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=P-_eaRSYbGcAb4rF0aO&_nc_ht=scontent-ord5-1.xx&oh=00_AfDBbo3On-gpX-FcQ1I7ciitZPgrljY0dH4UuvLxIcOSQQ&oe=66289293",
-    quote: "Stanislav's architectural design work is characterized by creativity, precision, and a deep understanding of space and form. Their designs not only meet but exceed client expectations, showcasing a unique blend of functionality and aesthetic appeal.",
+    quote: "Stanislav's architectural design work is characterized by creativity, precision, and a deep understanding of space and form. Their designs not only meet but exceed client expectations, showcasing a unique blend of functionality and aesthetic appeal, while integrating sustainable practices and innovative solutions.",
     rating: 5,
   },
   {
