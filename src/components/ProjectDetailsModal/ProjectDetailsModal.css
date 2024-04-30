@@ -30,6 +30,11 @@
     line-height: 1.2;
     color: white;
   }
+  .col-md-5 {
+    flex: 0 0 auto;
+    width: 39%;
+  }
+
 /* Close button customization */
 .btn-close {
     position: absolute;

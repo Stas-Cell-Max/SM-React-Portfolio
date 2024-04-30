@@ -6,8 +6,8 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
   const sliderRef = useRef();
 
   var settings = {
-    dots: true,
-    arrows: false,
+    dots: false,
+    arrows: true,
     infinite: true,
     adaptiveHeight: true,
     speed: 500,

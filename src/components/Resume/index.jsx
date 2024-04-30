@@ -11,7 +11,7 @@ const Resume = () => {
         yearRange: "2023 - 2024",
         title: "Web Development",
         place: "University of Toronto",
-        desc: "Mastered full-stack development technologies including MongoDB, Express.js, React.js, and Node.js, specializing in dynamic, responsive web applications with RESTful APIs, modern JavaScript, and implementing best practices in code efficiency.",
+        desc: "Mastered full-stack development technologies including MongoDB, Express.js, React.js, and Node.js, specializing in dynamic, responsive web applications with RESTful APIs, modern JavaScript, and implementing best practices in code efficiency, security, and scalability.",
       },
       
       {
@@ -151,7 +151,7 @@ const Resume = () => {
             My Skills
           </h2>
           <div
-          className="info-box rounded p-4 mb-4"
+          className="info-box1 rounded p-4 mb-4"
           >
             <div className="skills-content">
           <p align="center  ">

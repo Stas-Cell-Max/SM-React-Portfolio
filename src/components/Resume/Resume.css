@@ -57,19 +57,29 @@
 .info-box{
   background-color: #212529;
   text-align: left;
-  margin-left: 1.5rem;
+  margin-left: -1rem;
+  margin-right: 1.5rem;
+  
   
 }
 
 .info-boxt{
   background-color: #212529;
   text-align: left;
-  margin-right: 1.5rem;
+  margin-right: 3.5rem;
+  margin-left: -2.5rem;
+}
 
+.info-box1{
+  background-color: #212529;
+  text-align: left;
+  margin-left: -1rem;
+  
 }
 .rounded {
   border-radius: .25rem !important;
-  margin-right: 1.5rem;
+ 
+  
 }
 
 .btn {
