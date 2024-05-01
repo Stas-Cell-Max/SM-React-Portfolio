@@ -68,7 +68,7 @@ var settings = {
             className={"text-24  fw-600 w-100 mb-0 " 
             }
           >
-            Coleagues Speak
+            Colleagues Speak
           </h2>
           <p
             className={

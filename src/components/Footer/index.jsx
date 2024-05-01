@@ -10,7 +10,7 @@ const Footer = () => {
                 
                 <span>  Made with <span role="img" aria-label="heart">❤️</span> by Stas </span>
                 <div>
-                <span> {(new Date().getFullYear())} &copy; <span> All right reserved. </span>  </span>   
+                <span> {(new Date().getFullYear())} &copy; <span> All rights reserved. </span>  </span>   
                 </div>
             </div>
         </footer>
