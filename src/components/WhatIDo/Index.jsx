@@ -62,7 +62,7 @@ const WhatIDo = () => {
           <div className="col-md-4">
             <span className="fa-stack fa-4x">
               <i className="fas fa-stack-2x text-primary"></i>
-              <i className="fas fa-tree fa-stack-1x fa-inverse"></i>
+              <i className="fas fa-light fa-pen-ruler fa-stack-1x fa-inverse"></i>
             </span>
             <div className="service-content">
             <h4 className="service-heading"> <strong> Architectural Design</strong></h4>
