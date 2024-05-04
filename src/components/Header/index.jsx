@@ -45,6 +45,7 @@ useEffect(() => {
 
       <nav className= "nav flex-column" >
         <Link
+        activeClass="home"
         to="home"
         className={`nav-link test ${selectedTab === "home" ? "active" : ""}`}
         style={{ cursor: "pointer" }}
@@ -60,7 +61,7 @@ useEffect(() => {
         </Link>
         
         <Link
-        activeClass="active"
+        activeClass="aboutme"
           to="aboutme"
           className={`nav-link ${selectedTab === "aboutme" ? "active" : ""}`}
           style={{ cursor: "pointer" }}
