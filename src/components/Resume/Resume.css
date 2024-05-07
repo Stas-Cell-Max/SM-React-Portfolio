@@ -135,6 +135,13 @@
   .text-24 {
     font-size: 1.7rem !important;
   }
+  .h3 {
+    color: white;
+    margin: 0.3rem 0;
+      margin-bottom: 0.5rem;
+      margin-left: -3rem !important;
+      text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -178,8 +185,8 @@
   .info-box, .info-boxt {
     /* Adjust padding and margin for the boxes */
     padding: 1.5rem;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: -2.6rem;
+    margin-right: 1rem;
     margin-bottom: 2rem;
   }
 
@@ -201,6 +208,7 @@
     margin: 0 5px;
     margin-bottom: 0.6rem;
   }
+ 
 
 
 

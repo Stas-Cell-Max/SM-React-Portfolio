@@ -80,13 +80,13 @@ const Resume = () => {
           <div className="row gx-5">
             {/* My Education */}
             <div className="col-md-6 col-sm-12">
-              <h3 align="center"
+              <h2 align="center"
                 className={
                   "text-6 fw-600 mb-4 " 
                 }
               >
                 My Education
-              </h3>
+              </h2>
               {educationDetails.length > 0 &&
                 educationDetails.map((value, index) => (
                   <div
@@ -112,13 +112,13 @@ const Resume = () => {
             </div>
             {/* My Experience */}
             <div className="col-md-6 col-sm-12">
-              <h3 align="center"
+              <h2 align="center"
                 className={
                   "text-6 fw-600 mb-4 " 
                 }
               >
                 My Experience
-              </h3>
+              </h2>
               {experienceDetails.length > 0 &&
                 experienceDetails.map((value, index) => (
                   <div
