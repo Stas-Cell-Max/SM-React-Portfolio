@@ -177,10 +177,11 @@
     flex-direction: column; /* Stack filter options vertically on small screens */
     align-items: center;
   }
-
+  
   .filter-item {
     width: 98%; /* Full width for filter items on small screens */
-    
+    padding: 3px;
+    padding-top: 0%;
   }
 
   .portfolio-box {
@@ -245,10 +246,14 @@
     align-items: center;
   }
   
-  .filter-item {
-    width: 100%; 
-    padding: 10px;
-    padding-top: 0%;
+  .row {
+    --bs-gutter-x: 3.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-1.5 * var(--bs-gutter-x));
+    margin-left: calc(-1.5 * var(--bs-gutter-x));
   }
   
   .portfolio-box {
