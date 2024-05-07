@@ -4,7 +4,7 @@
 }
 
 .portfolio-section {
-  padding: 4rem 0;
+  padding: 4rem ;
   background-color: #343a40;
   color: grey;
 }
@@ -14,12 +14,13 @@
   color: grey;
   padding: 50px 1;
   min-height: 100vh; /* Ensure it covers minimum full viewport height */
-  overflow: hidden;   
+  overflow: hidden;  
+ 
 }
 .container {
   max-width: 1200px;
   margin: auto;
-  padding: 0 15px;
+  padding: 0 -15px;
   width: 100%;        /* Ensures container uses full width */
   box-sizing: border-box; /* Makes sure padding and borders are included in the width */
 }
@@ -27,7 +28,7 @@
 .portfolio-filter {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -15px; /* Adjust according to your layout */
+  margin: 0 15px; /* Adjust according to layout */
   justify-content: center; /* Centers items if they don't fill a full row */
 }
 .filter-item {
@@ -178,7 +179,7 @@
   }
 
   .filter-item {
-    width: 100%; /* Full width for filter items on small screens */
+    width: 98%; /* Full width for filter items on small screens */
     
   }
 
