@@ -57,10 +57,7 @@
 .info-box{
   background-color: #212529;
   text-align: left;
-
   margin-right: 1 rem;
-  
-  
 }
 
 .info-boxt{
@@ -73,15 +70,11 @@
 .info-box1{
   background-color: #212529;
   text-align: center;
-  margin-right: 1.3rem;
-  margin-left: 1.5rem;
-
-  
+  margin-right: 0.1%;
+  margin-left: 0.1%;
 }
 .rounded {
-  border-radius: .25rem !important;
- 
-  
+  border-radius: .25rem !important; 
 }
 
 .btn {
@@ -130,9 +123,12 @@
   background-color: transparent; /* Ensures no background color is influencing the glow */
   border: none;
 }
+/* Responsive adjustments for smaller screens */
+
+
 
 @media (max-width: 768px) {
-  .text-24 {
+ .text-24 {
     font-size: 1.7rem !important;
   }
   .h3 {
@@ -141,27 +137,19 @@
       margin-bottom: 0.5rem;
       margin-left: -3rem !important;
       text-align: center;
-  }
-}
+  }  
 
-@media (max-width: 768px) {
-  
- .container .text-9 {
-    font-size: 3.4rem; /* Adjusted font size for subheadings */
+.container .text-9 {
+    font-size: 3.2rem; /* Adjusted font size for subheadings */
   }
   .container .text-5 {
     font-size: 1.2rem; /* Adjusted font size for subheadings */
   }
-}
 
-@media (max-width: 768px) {
-   .container .heading-separator-line {
-    width: 50%; /* Shorten the width of the separator line */
+  .container .heading-separator-line {
+    width: 70%; /* Shorten the width of the separator line */
     margin: 0.5rem auto; /* Adjust margin */
-  }
-}
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
+  } 
   .col-md-6 {
     /* Stack "My Education" and "My Experience" vertically */
     flex: 0 0 100%;
@@ -169,27 +157,34 @@
   }
 
   /* Adjust font sizes and padding for readability */
-  .text-24, .text-9, .text-6 {
+  .text-24, .text-9  {
     font-size: 1.5rem;
+  
   }
 
+  .text-6 {
+    font-size: 1.5rem;
+   padding-right: 50%;
+  }
   .mb-5, .mb-4, .mt-4 {
     margin-bottom: 2rem;
   }
 
-  .heading-separator-line {
-    width: 50%;
-    margin: 0.5rem auto;
-  }
-
+  
   .info-box, .info-boxt {
     /* Adjust padding and margin for the boxes */
     padding: 1.5rem;
-    margin-left: -2.6rem;
-    margin-right: 1rem;
-    margin-bottom: 2rem;
+    margin-left: -0.5rem;
+    margin-right: 3rem;
+  
   }
-
+  .info-box1{
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 2re;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
   .badge {
     /* Adjust font size for badges */
     font-size: 1rem;
@@ -208,9 +203,6 @@
     margin: 0 5px;
     margin-bottom: 0.6rem;
   }
- 
-
-
 
   /* Download CV button adjustments */
   .btn {

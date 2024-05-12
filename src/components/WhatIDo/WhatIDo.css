@@ -1,212 +1,219 @@
 
 
 .what-i-do-section {
-    padding: 4rem 0;
-    background-color: #343a40;
-    color: #212529;
-    height: 100%;
-    font-size: 3rem ;
-  }
- 
- 
-  .what-i-do-section h2, .what-i-do-section .heading-separator-line {
-    font-size: 2.5rem;
-    width: 80%;
-    margin-top: 1rem;
-  }
-
-  .text-24 {
-    font-size: 2.5rem !important;
-    letter-spacing: 0.05em;
-  }
-  
-  .text-9 {
-    font-size: 2.5rem ; 
-    letter-spacing: 0.05em;
-  }
-  .what-i-do-section h2.section-heading {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  
-  .col-md-4{
-    margin-top: 3rem;
-    display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  }
-  
-  .what-i-do-section .col-md-4 {
-    flex: 0 0 50%; /* This ensures that each box takes up 50% of the container's width */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers the content of the box */
-    text-align: center;
-    
-    margin-bottom: 2rem; /* Adds space between the rows */
-  }
-  
-  .skills-container {
-    display: flex;
-    justify-content: center; /* Align horizontally */
-    align-items: center; /* Align vertically */
-    flex-wrap: wrap; /* Allow the items to wrap */
-  }
-  
-  .skill-icon {
-    margin: 0 10px; /* Adjust space between icons */
-    /* other styles */
-  }
-  .what-i-do-section .featured-box-icon {
-    background-color: #282c30; /* Dark gray background */
-    border-radius: 10px; /* Rounded corners */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-    margin: 1rem auto; /* Center the icon-container */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
-  }
-  
-  .service-heading{
-    color: #ffffff;
-  }
-
-  .text-muted{
-    color: #ffffff !important;
-  }
-
-
-  .fa-inverse {
-    color: #fff9f9;
-    background-color: #282c30;
-    border-radius: 10px; 
-    
-  }
-  .what-i-do-section .featured-box-icon i {
-    color: #ffffff; /* White icon color */
-    font-size: 2em; 
-    /* Adjust icon size as needed */
-  }
-  .what-i-do-section .fa-stack {
-    margin-bottom: 2rem;
-  }
-  
-  /* Base styles for icons */
-.what-i-do-section .fa-stack.fa-4x {
-  font-size: 4rem; /* Default large size */
+  padding: 4rem 0;
+  background-color: #343a40;
+  color: #212529;
+  height: 100%;
+  font-size: 3rem ;
 }
-  .what-i-do-section .service-heading {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    text-align: center;
-    width: 100%;
-  }
-  
-  .what-i-do-section .text-muted {
-    font-size: 1rem;
-    line-height: 1.7;
-  }
-  
-  
-  /* Responsive adjustments for smaller screens */
-  @media (min-width: 992px) {
-    .what-i-do-section .fa-stack.fa-4x {
-      margin-bottom: 2rem;
-    }
-    
-  }
-  
-  @media (max-width: 768px) {
-    .what-i-do-section .text-24  {
-      font-size: 1.5rem; /* Smaller font size for headings */
-    }
-  
-    .what-i-do-section .text-9 {
-      font-size: 3.5rem; /* Adjusted font size for subheadings */
-    }
-  .what-i-do-section .heading-separator-line {
-      width: 50%; /* Shorten the width of the separator line */
-      margin: 0.5rem auto; /* Adjust margin */
-    }
-  .what-i-do-section .col-md-4 {
-      flex-direction: row; /* Icons and text side by side */
-      flex: 0 0 100%;
-      align-items: flex-start;  /* Center items vertically */
-      justify-content: flex-start; /* Align items to the left */
-      margin-bottom: 0.1rem;
-      margin-top: 0.3rem;
-      max-width: 100%; 
-      padding: 1rem;
-      margin-bottom: 0.2rem;  
-    }
-    .what-i-do-section .fa-stack.fa-4x {
-    width: 1.9rem; /* Adjust size of the icon */
-    height: 1.9rem;
-    line-height: 2.4rem;
-    font-size: 1.9rem; /* Adjust font size of the icon */
-    margin-right: 1.5rem; /* Space between the icon and text */
-  }
 
-  .fa-inverse {
-    color: #fff9f9;
-    background-color: #282c30;
-    border-radius: 4px;
-    width: 2.6rem; /* Adjust size of the icon */
-    height: 2.6rem;
-  }
 
-  .what-i-do-section .service-content {
-    /* Ensure the heading and text are contained and can stack */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align items to the start */
-    justify-content: center; /* Center items vertically within the container */
-    margin-left: 1rem; /* Space between the icon and the text content */
-    max-width: 100%; 
-  }
-.what-i-do-section .service-heading {
- 
-    font-size: 0.9rem; /* Smaller font size for service heading */
-    text-align: left; /* Align the text to the left */
-    width: auto;  /* Add padding to the right of the heading */
+.what-i-do-section h2, .what-i-do-section .heading-separator-line {
+  font-size: 2.5rem;
+  width: 80%;
+  margin-top: 1rem;
+}
+
+.text-24 {
+  font-size: 2.5rem !important;
+  letter-spacing: 0.05em;
+}
+
+.text-9 {
+  font-size: 2.5rem ; 
+  letter-spacing: 0.05em;
+}
+.what-i-do-section h2.section-heading {
+  font-size: 2.5rem;
   margin-bottom: 1rem;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.col-md-4{
+  margin-top: 3rem;
+  display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+
+.what-i-do-section .col-md-4 {
+  flex: 0 0 50%; /* This ensures that each box takes up 50% of the container's width */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the content of the box */
+  text-align: center;
+  
+  margin-bottom: 2rem; /* Adds space between the rows */
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center; /* Align horizontally */
+  align-items: center; /* Align vertically */
+  flex-wrap: wrap; /* Allow the items to wrap */
+}
+
+.skill-icon {
+  margin: 0 10px; /* Adjust space between icons */
+  /* other styles */
+}
+.what-i-do-section .featured-box-icon {
+  background-color: #282c30; /* Dark gray background */
+  border-radius: 10px; /* Rounded corners */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  margin: 1rem auto; /* Center the icon-container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+}
+
+.service-heading{
+  color: #ffffff;
+}
+
+.text-muted{
+  color: #ffffff !important;
+}
+
+
+.fa-inverse {
+  color: #fff9f9;
+  background-color: #282c30;
+  border-radius: 10px; 
+  
+}
+.what-i-do-section .featured-box-icon i {
+  color: #ffffff; /* White icon color */
+  font-size: 2em; 
+  /* Adjust icon size as needed */
+}
+.what-i-do-section .fa-stack {
+  margin-bottom: 2rem;
+}
+
+/* Base styles for icons */
+.what-i-do-section .fa-stack.fa-4x {
+font-size: 4rem; /* Default large size */
+}
+.what-i-do-section .service-heading {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.what-i-do-section .text-muted {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+
+/* Responsive adjustments for smaller screens */
+
+
+@media (max-width: 768px) {
+  .what-i-do-section .text-24  {
+    font-size: 1.5rem; /* Smaller font size for headings */
   }
 
-  .what-i-do-section .text-muted {
-    font-size: 0.8rem; /* Even smaller font size for service description */
-    text-align: left; /* Align the text to the left */
-    margin-top: 0.25rem; /* Add a little margin above the description */
-    
+  .what-i-do-section .text-9 {
+    font-size: 3.2rem; /* Adjusted font size for subheadings */
   }
-  .what-i-do-section .service-heading,
-  .what-i-do-section .text-muted {
-    display: block; /* Stack on top of each other */
-    margin: 0; /* Reset margins */
-  } 
+
+  .what-i-do-section .row {
+    --bs-gutter-x: 2.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(.0 * var(--bs-gutter-x));
+    margin-left: calc(0. * var(--bs-gutter-x));
+  }
+
+.what-i-do-section .heading-separator-line {
+    width: 70%; /* Shorten the width of the separator line */
+    margin: 0.5rem auto; /* Adjust margin */
+  }
+.what-i-do-section .col-md-4 {
+    flex-direction: row; /* Icons and text side by side */
+    flex: 0 0 100%;
+    align-items: flex-start;  /* Center items vertically */
+    justify-content: flex-start; /* Align items to the left */
+    margin-bottom: 0.1rem;
+    margin-top: 0.3rem;
+    max-width: 100%; 
+    padding: 1rem;
+    margin-bottom: 0.2rem;  
+  }
+  .what-i-do-section .fa-stack.fa-4x {
+  width: 1.9rem; /* Adjust size of the icon */
+  height: 1.9rem;
+  line-height: 2.4rem;
+  font-size: 1.9rem; /* Adjust font size of the icon */
+  margin-right: 1.5rem; /* Space between the icon and text */
+}
+
+.fa-inverse {
+  color: #fff9f9;
+  background-color: #282c30;
+  border-radius: 4px;
+  width: 2.6rem; /* Adjust size of the icon */
+  height: 2.6rem;
+}
+
+.what-i-do-section .service-content {
+  /* Ensure the heading and text are contained and can stack */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start */
+  justify-content: center; /* Center items vertically within the container */
+  margin-left: 1rem; /* Space between the icon and the text content */
+  max-width: 100%; 
+}
+.what-i-do-section .service-heading {
+
+  font-size: 0.9rem; /* Smaller font size for service heading */
+  text-align: left; /* Align the text to the left */
+  width: auto;  /* Add padding to the right of the heading */
+margin-bottom: 1rem;
+}
+
+.what-i-do-section .text-muted {
+  font-size: 0.9rem; /* Even smaller font size for service description */
+  text-align: left; /* Align the text to the left */
+  margin-top: 0.25rem; /* Add a little margin above the description */
   
-  /* Enhance spacing and readability for smaller screens */
-  .what-i-do-section .container {
-    padding: 2rem; /* More padding on smaller screens */
-  }
-  .what-i-do-section .featured-box-icon {
-    /* Decrease the overall size of the icon container if necessary */
-    width: 50px;
-    height: 50px;
-  }
-  /* Adjust heading and separator for smaller screens */
-  .what-i-do-section h2, .what-i-do-section .heading-separator-line {
-    font-size: 1.5rem; /* Smaller headings */
-    width: 80%; /* Full width for the separator line */
-    margin-top: 1rem; /* Adjusted margin */
-  }
-  
-  /* Ensure icons and text are well spaced and sized */
-  .what-i-do-section .fa-stack {
-    margin-bottom: 1.5rem; /* Adjust spacing between icon and text */
-  }
+}
+.what-i-do-section .service-heading,
+.what-i-do-section .text-muted {
+  display: block; /* Stack on top of each other */
+  margin: 0; /* Reset margins */
+} 
+
+/* Enhance spacing and readability for smaller screens */
+.what-i-do-section .container {
+  padding: 2rem; /* More padding on smaller screens */
+}
+.what-i-do-section .featured-box-icon {
+  /* Decrease the overall size of the icon container if necessary */
+  width: 50px;
+  height: 50px;
+}
+/* Adjust heading and separator for smaller screens */
+.what-i-do-section h2, .what-i-do-section .heading-separator-line {
+  font-size: 1.5rem; /* Smaller headings */
+  width: 80%; /* Full width for the separator line */
+  margin-top: 1rem; /* Adjusted margin */
+}
+
+/* Ensure icons and text are well spaced and sized */
+.what-i-do-section .fa-stack {
+  margin-bottom: 1.5rem; /* Adjust spacing between icon and text */
+}
+
 }

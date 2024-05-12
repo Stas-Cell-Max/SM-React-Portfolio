@@ -108,14 +108,14 @@
     font-size: 0.8rem !important; /* Adjust font size for personal details */
   }
   .about-me .text-24 {
-    font-size: 1.5rem; /* Smaller font size for headings */
+    font-size: 1.3rem; /* Smaller font size for headings */
   }
 
   .about-me .text-9 {
-    font-size: 3.4rem; /* Adjusted font size for subheadings */
+    font-size: 3.2rem; /* Adjusted font size for subheadings */
   }
   .about-me .heading-separator-line {
-    width: 50%; /* Shorten the width of the separator line */
+    width: 70%; /* Shorten the width of the separator line */
     margin: 0.5rem auto; /* Adjust margin */
   }
   .about-me .container {
@@ -135,7 +135,7 @@
     display: block; 
   }
 .about-me .introduction, .about-me .personal-details p {
-    font-size: 0.7rem;/* Smaller font size for readability */
+    font-size: 0.9rem;/* Smaller font size for readability */
     line-height: 1.5; /* Improved line height for readability */
     margin-bottom: 1rem; 
   }

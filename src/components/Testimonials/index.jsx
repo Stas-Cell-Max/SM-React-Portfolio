@@ -5,7 +5,7 @@ import Slider from "react-slick";
 const Testimonial = () => {
   const reviews = [
   {
-    id: 1,
+    
     name: "Gabriel Kraskovskyi",
     title: "Arch Tech from USA",
     src: "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/347436958_1917420595290690_4501166707948439754_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=11w4iCuK5MMAb6fmrbU&_nc_ht=scontent-ord5-2.xx&oh=00_AfDcibnXP5aeFoB2nyPmdfsSungv_RRJQEtv7v47ceBuuA&oe=66287679",
@@ -13,7 +13,7 @@ const Testimonial = () => {
     rating: 5,
   },
   {
-    id: 2,
+    
     name: "Anna Antropova",
     title: "Arch from Toronto",
     src: "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/361112109_10161048926611007_5778823206661691662_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=P-_eaRSYbGcAb4rF0aO&_nc_ht=scontent-ord5-1.xx&oh=00_AfDBbo3On-gpX-FcQ1I7ciitZPgrljY0dH4UuvLxIcOSQQ&oe=66289293",
@@ -21,7 +21,7 @@ const Testimonial = () => {
     rating: 5,
   },
   {
-    id: 3,
+    
     name: "Christina MacIntyre ",
     title: "Arch Tech from Toronto",
     src: "https://media.licdn.com/dms/image/D5603AQEihJlxsuBEjA/profile-displayphoto-shrink_200_200/0/1705968358833?e=1715817600&v=beta&t=ohR16-2zzd1XO2uWYtIwF-6cyaN7gUUi-aOgIFVwWuc",
@@ -29,7 +29,7 @@ const Testimonial = () => {
     rating: 5,
   },
   {
-    id: 4,
+    
     name: "Valeriia Kolimbet",
     title: "QA Analyst from Toronto",
     src: "https://scontent-ord5-1.xx.fbcdn.net/v/t1.6435-9/55849361_10157126481940270_605990318910734336_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=icF_iYRwSoUAX_bA02-&_nc_ht=scontent-ord5-1.xx&oh=00_AfB8XNTb7_Em-mlemcd8IWD0bc7AbHZnmhZbn-lODJA1gA&oe=661D903C",
@@ -61,8 +61,8 @@ var settings = {
     
     <section 
     id="testimonial"
-     className="testimonial">
-      <div className={"container " }>
+     className={"section"}>
+      <div className={"containert " }>
       <div className="position-relative d-flex text-center mb-5 ">
           <h2
             className={"text-24  fw-600 w-100 mb-0 " 
@@ -79,7 +79,6 @@ var settings = {
             <span className="heading-separator-line  d-block mx-auto" />
           </p>
         </div>
-
 
         <Slider {...settings}>
           {reviews.map((review) => (

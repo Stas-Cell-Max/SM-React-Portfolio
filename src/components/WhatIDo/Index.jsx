@@ -3,7 +3,15 @@ import './WhatIDo.css';
 
 const WhatIDo = () => {
   return (
-    <section id="what-i-do" className="what-i-do-section">
+    <section id="what-i-do" 
+    
+    className="what-i-do-section">
+      <div className="grid-overlay">
+        <div className="grid-overlay__col"><div className="grid-overlay__line"></div></div>
+        <div className="grid-overlay__col"><div className="grid-overlay__line"></div></div>
+        <div className="grid-overlay__col"><div className="grid-overlay__line"></div></div>
+        <div className="grid-overlay__col"><div className="grid-overlay__line"></div></div>
+      </div>
        <div className={"container " }>
       <div className="position-relative d-flex text-center mb-5 ">
           <h2
@@ -18,7 +26,7 @@ const WhatIDo = () => {
             }
           >
             SERVICES
-            <span className="heading-separator-line  d-block mx-auto" />
+            <span className="heading-separator-line  align-self-center d-block mx-auto" />
           </p>
         </div>
         

@@ -1,10 +1,8 @@
 
-* {
-  box-sizing: border-box;
-}
+
 
 .portfolio-section {
-  padding: 4rem ;
+  padding: 4rem 0;
   background-color: #343a40;
   color: grey;
 }
@@ -14,13 +12,12 @@
   color: grey;
   padding: 50px 1;
   min-height: 100vh; /* Ensure it covers minimum full viewport height */
-  overflow: hidden;  
- 
+  overflow: hidden;   
 }
 .container {
-  max-width: 1200px;
+  
   margin: auto;
-  padding: 0 -15px;
+  padding: 0 15px;
   width: 100%;        /* Ensures container uses full width */
   box-sizing: border-box; /* Makes sure padding and borders are included in the width */
 }
@@ -28,11 +25,11 @@
 .portfolio-filter {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 15px; /* Adjust according to layout */
+  margin: 0 -15px; /* Adjust according to your layout */
   justify-content: center; /* Centers items if they don't fill a full row */
 }
 .filter-item {
-  padding: 8px; /* Padding for spacing around items */
+  padding: 15px; /* Padding for spacing around items */
   box-sizing: border-box; /* Include padding and border in the element's width */
   width: calc(33.333% - 30px); /* Subtract double the padding */
   transition: transform 0.5s ease;
@@ -104,8 +101,8 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-1.1 * var(--bs-gutter-x));
-  margin-left: calc(-.07 * var(--bs-gutter-x));
+  margin-right: calc(-1.4 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
 }
 
 .portfolio-box:hover {
@@ -156,11 +153,7 @@
 
 /* Media Queries for Responsive Adjustments */
 @media (max-width: 768px) {
-  .container {
-    padding: 0 10px;
-    max-width: 100%;
-  }
-
+  
   .text-24 {
     font-size: 1.7rem; /* Smaller font size on small screens */
   }
@@ -177,11 +170,11 @@
     flex-direction: column; /* Stack filter options vertically on small screens */
     align-items: center;
   }
-  
+
   .filter-item {
-    width: 98%; /* Full width for filter items on small screens */
-    padding: 3px;
-    padding-top: 0%;
+    width: 100%; /* Full width for filter items on small screens */
+    margin-left: -0.5rem;
+    padding: 2rem;
   }
 
   .portfolio-box {
@@ -192,9 +185,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
-}
-/* Media Queries for Responsive Adjustments */
-@media (max-width: 768px) {
   .container {
     padding: 0 10px;
     max-width: 100%;
@@ -205,11 +195,11 @@
   }
   
   .text-9 {
-    font-size: 3.3rem; /* Smaller title font size on small screens */
+    font-size: 3.2rem; /* Smaller title font size on small screens */
   }
   
   .heading-separator-line {
-    width: 50%; /* Full width line on smaller screens */
+    width: 70%; /* Full width line on smaller screens */
   }
   
   .portfolio-section .filter-menu, 
@@ -246,14 +236,10 @@
     align-items: center;
   }
   
-  .row {
-    --bs-gutter-x: 3.5rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(-1 * var(--bs-gutter-y));
-    margin-right: calc(-1.5 * var(--bs-gutter-x));
-    margin-left: calc(-1.5 * var(--bs-gutter-x));
+  .filter-item {
+    width: 100%; 
+    padding: 10px;
+    padding-top: 0%;
   }
   
   .portfolio-box {

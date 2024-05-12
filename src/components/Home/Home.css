@@ -39,7 +39,7 @@
 .text-16 {
     font-size: 7rem; /* Larger size for main heading */
     margin-bottom: 1rem;
-    font-family:  Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Poppins", sans-serif;
 }
   
 .text-5 {
@@ -113,7 +113,7 @@
   }
   
   .text-16 {
-    font-size: 3.5rem; /* Adjusted size for the main heading on mobile devices */
+    font-size: 2.5rem; /* Adjusted size for the main heading on mobile devices */
   }
   
   .text-5 {

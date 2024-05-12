@@ -4,7 +4,7 @@
 .modal-content {
     background: #545457; /* Adjust the background as needed */
     color: #333; /* Adjust text color as needed */
-    border-radius:5px;
+    border-radius:3px;
     overflow-y: auto; /* Makes the content scrollable vertically */
     max-height: 90vh;
 }
@@ -16,10 +16,10 @@
     padding: 1rem;
 }
 .mb-4 {
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 1.5rem !important;
   }
 /* Specific styles for the dark theme */
-.modal-content.dark-theme {
+.modal-content {
     background: #333; /* Dark background for dark theme */
     color: #fff; /* Light text color for dark theme */
 }
@@ -29,11 +29,13 @@
     font-weight: 500;
     line-height: 1.2;
     color: white;
+    font-family: "Poppins", sans-serif;
   }
   .col-md-5 {
     flex: 0 0 auto;
-    width: 39%;
+    width: 40%;
   }
+ 
 
 /* Close button customization */
 .btn-close {
@@ -91,7 +93,10 @@
     color: white;
 }
   
-
+.text-dark {
+    --bs-text-opacity: 1;
+   
+  }
   
 /* Image styles */
 .img-fluid {
@@ -125,6 +130,64 @@
 }
   
 @media (max-width: 768px) {
+
+    .modal-body {
+        padding: 3px;
+      }
+      .modal-content {
+        color: #fff;
+      }
+.column{
+    margin-right: 1rem;
+        margin-left: -1.5rem; 
+} 
+
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x)* .3);
+        padding-left: calc(var(--bs-gutter-x)* .3);
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .div {
+        display: block;
+        unicode-bidi: isolate;
+    }
+   
+
+      .modal-title{
+        margin-bottom: 1.5rem !important;
+        
+       
+      }
+    .modal-body h4 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+      .wrapper-component p {
+        color: white;
+        line-height: 1.6;
+        font-size: 0.8rem; 
+      }
+      .col-md-5 {
+        flex: 0 0 auto;
+        width: 80%;
+      }
+     .li {
+        font-size: 1rem;
+     }
+      .list-style-2 li {
+        margin-bottom: 2px;
+        color: white;
+        font-size: 0.9rem;
+      }
+    .content p {
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+      }
     .modal-dialog {
       height: auto;
       min-height: 100vh;
@@ -134,8 +197,26 @@
         max-height: 300px; /* Smaller max-height for mobile views */
     }
 
+    .modal.show .modal-dialog {
+     
+      }
+
     .slick-list {
         height: 320px; /* Adjusted to smaller image height on mobile devices */
     }
 
+    .slick-prev {
+        left: 10px !important;
+        z-index: 2;
+      }
+      .slick-next {
+        right: 10px !important;
+      }
+
+      .btn-close {
+        position: absolute;
+        top: 1rem;
+        right: .5rem;
+        
+      }
 }
