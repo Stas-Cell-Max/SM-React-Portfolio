@@ -107,7 +107,7 @@ const Portfolio = ({ darkTheme }) => {
     },
     {
       id: 4,
-      title: "Bloor One",
+      title: "One Bloor",
       projectInfo:
         "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
       client: "Hariri Pontarini Architects",

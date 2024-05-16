@@ -63,7 +63,7 @@ const ProjectDetailsModal = ({  projectDetails }) => {
                   {projectDetails?.title}
                 </h2>
                 <div className="row g-4">
-                  <div className="column">
+                  <div className="col-md-7">
                     <Slider {...settings} ref={sliderRef}>
                       <div className="item">
                         <img
@@ -80,10 +80,12 @@ const ProjectDetailsModal = ({  projectDetails }) => {
                         ))}
                     </Slider>
                   </div>
+
+
                   <div className="col-md-5">
                     <h4
                       className={
-                        "text-4 font-weight-600" 
+                        "text-4 font-weight-600 mt-4" 
                       }
                     >
                       Project Info:

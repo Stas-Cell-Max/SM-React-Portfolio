@@ -1,222 +1,220 @@
-/* ProjectDetailsModal.css */
-
 /* Base styles for the modal */
 .modal-content {
-    background: #545457; /* Adjust the background as needed */
-    color: #333; /* Adjust text color as needed */
-    border-radius:3px;
-    overflow-y: auto; /* Makes the content scrollable vertically */
-    max-height: 90vh;
+  background: #545457; /* Adjust the background as needed */
+  color: #333; /* Adjust text color as needed */
+  border-radius:3px;
+  overflow-y: auto; /* Makes the content scrollable vertically */
+  max-height: 100vh;
 }
-  
+
 .modal-body {
-    
-    position: relative;
-    flex: 1 1 auto;
-    padding: 1rem;
+  
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1rem;
 }
 .mb-4 {
-    margin-bottom: 1.5rem !important;
-  }
+  margin-bottom: 1.5rem !important;
+}
 /* Specific styles for the dark theme */
 .modal-content {
-    background: #333; /* Dark background for dark theme */
-    color: #fff; /* Light text color for dark theme */
+  background: #333; /* Dark background for dark theme */
+  color: #fff; /* Light text color for dark theme */
 }
 .h4 {
-    margin-top: 0;
-    margin-bottom: .5rem;
-    font-weight: 500;
-    line-height: 1.2;
-    color: white;
-    font-family: "Poppins", sans-serif;
-  }
-  .col-md-5 {
-    flex: 0 0 auto;
-    width: 40%;
-  }
- 
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.col-md-5 {
+  flex: 0 0 auto;
+  width: 39%;
+}
+
 
 /* Close button customization */
 .btn-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
-  
+
 .btn-close-white {
-    filter: invert(1);
+  filter: invert(1);
 }
 
 .wrapper-component h2 {
-    color: white;
-    margin: 0.5rem 0;
-      margin-bottom: 0.2rem;
-  }
-.wrapper-component titled{
-    font-size: 2rem;
-    font-weight: 600;
-    color: black ;
-    margin-left: 1rem;
+  color: white;
+  margin: 0.5rem !important;
+  margin-bottom: 0.5rem;
 }
+.wrapper-component titled{
+  font-size: 2rem;
+  font-weight: 600;
+  color: black ;
+  
+}
+
+
 
 /* Content within the modal */
 .modal-body {
-    padding: 20px;
+  padding: 20px;
 }
-  
+
 /* Headers inside the modal */
 .modal-body h2,
 .modal-body h4 {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 
 .modal-dialog {
-    display: flex;
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
-    height: 100vh; /* Use at least the viewport height */
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 100vh; /* Use at least the viewport height */
 }
 
 
 
 /* List styles */
 .list-style-2 {
-    list-style: none;
-    padding: 0;
-    color: white;
+  list-style: none;
+  padding: 0;
+  color: white;
 }
-  
+
 .list-style-2 li {
-    margin-bottom: 5px;
-    color: white;
+  margin-bottom: 5px;
+  color: white;
 }
-  
+
 .text-dark {
-    --bs-text-opacity: 1;
-   
-  }
-  
+  --bs-text-opacity: 1;
+ 
+}
+
 /* Image styles */
 .img-fluid {
-    width: 100%; /* Full width to utilize the container space */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Cover the frame without distorting aspect ratios */
+  width: 100%; /* Full width to utilize the container space */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Cover the frame without distorting aspect ratios */
 
 }
 
 
 
 .slick-dots {
-    position: absolute;
-    bottom: -25px;
-    display: block;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
+  position: absolute;
+  bottom: -25px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
 }
 
 /* Slider specific styles */
 .slick-slide {
-    margin: 0 10px;
+  margin: 0 10px;
 }
-  
+
 .slick-list {
-    margin: 0 -10px;
-    height: 620px; 
+  margin: 0 -10px;
+  height: 620px; 
 }
-  
+
 @media (max-width: 768px) {
 
-    .modal-body {
-        padding: 3px;
-      }
-      .modal-content {
-        color: #fff;
-      }
-.column{
-    margin-right: 1rem;
-        margin-left: -1.5rem; 
-} 
-
-    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-        --bs-gutter-x: 1.5rem;
-        --bs-gutter-y: 0;
-        width: 100%;
-        padding-right: calc(var(--bs-gutter-x)* .3);
-        padding-left: calc(var(--bs-gutter-x)* .3);
-        margin-right: auto;
-        margin-left: auto;
+  .modal-body {
+      padding: 3px;
     }
-    .div {
-        display: block;
-        unicode-bidi: isolate;
-    }
-   
-
-      .modal-title{
-        margin-bottom: 1.5rem !important;
-        
-       
-      }
-    .modal-body h4 {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        font-size: 1rem;
-      }
-      .wrapper-component p {
-        color: white;
-        line-height: 1.6;
-        font-size: 0.8rem; 
-      }
-      .col-md-5 {
-        flex: 0 0 auto;
-        width: 80%;
-      }
-     .li {
-        font-size: 1rem;
-     }
-      .list-style-2 li {
-        margin-bottom: 2px;
-        color: white;
-        font-size: 0.9rem;
-      }
-    .content p {
-        font-family: "Poppins", sans-serif;
-        font-size: 1rem;
-      }
-    .modal-dialog {
-      height: auto;
-      min-height: 100vh;
-      margin: 20px; /* Provide some space around the modal */
-    }
-    .img-fluid {
-        max-height: 300px; /* Smaller max-height for mobile views */
+    .modal-content {
+      color: #fff;
     }
 
-    .modal.show .modal-dialog {
+
+  .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
+      width: 100%;
+      padding-right: calc(var(--bs-gutter-x)* .3);
+      padding-left: calc(var(--bs-gutter-x)* .3);
+      margin-right: auto;
+      margin-left: auto;
+  }
+  .div {
+      display: block;
+      unicode-bidi: isolate;
+  }
+ 
+
+    .modal-title{
+      margin-bottom: 1.5rem !important;
+      
      
-      }
+    }
+  .modal-body h4 {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    .wrapper-component p {
+      color: white;
+      line-height: 1.6;
+      font-size: 0.8rem; 
+    }
+    .col-md-5 {
+      flex: 0 0 auto;
+      width: 80%;
+    }
+   .li {
+      font-size: 1rem;
+   }
+    .list-style-2 li {
+      margin-bottom: 2px;
+      color: white;
+      font-size: 0.9rem;
+    }
+  .content p {
+      font-family: "Poppins", sans-serif;
+      font-size: 0.8rem;
+    }
+  .modal-dialog {
+    height: auto;
+    min-height: 100vh;
+    margin: 20px; /* Provide some space around the modal */
+  }
+  .img-fluid {
+      max-height: 300px; /* Smaller max-height for mobile views */
+      margin-left: -2rem;
+  }
 
-    .slick-list {
-        height: 320px; /* Adjusted to smaller image height on mobile devices */
+  .modal.show .modal-dialog {
+   
     }
 
-    .slick-prev {
-        left: 10px !important;
-        z-index: 2;
-      }
-      .slick-next {
-        right: 10px !important;
-      }
+  .slick-list {
+      height: 320px; /* Adjusted to smaller image height on mobile devices */
+  }
 
-      .btn-close {
-        position: absolute;
-        top: 1rem;
-        right: .5rem;
-        
-      }
+  .slick-prev {
+      left: 0.5% !important;
+      z-index: 2;
+    }
+    .slick-next {
+      right: 14% !important;
+    }
+
+    .btn-close {
+      position: absolute;
+      top: 1rem;
+      right: .5rem;
+      
+    }
 }
