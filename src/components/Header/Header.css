@@ -19,6 +19,7 @@
   font-size: calc(1.325rem + 0.5vw);
   text-align: center;
   justify-content: center;
+  color: #dd9624 !important;
 }
 /* Sticky Header */
 .sticky {
@@ -201,25 +202,6 @@
 }
 
 
-.menu-content.closed {
-  display: none;
-}
-
-.menu-content.open {
-  display: block;
-  text-align: center;
-  padding: 20px;
-  background-color: #222; /* Slightly darker background for the dropdown */
-}
-
-.hamburger {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  display: none; /* Ensure it's hidden on desktop */
-}
 
 .sticky {
   position: fixed;
@@ -299,26 +281,8 @@
     height: auto; /* Auto height */
     position: relative; /* Relative positioning */
   }
-  .header.open {
-    height: 100vh; /* Full screen when open on small devices */
-    overflow: auto;
-}
-  .hamburger {
-    display: block; /* Show hamburger icon */
-  }
 
-  .mobile-header {
-    display: flex; /* Show mobile header */
-  }
 
-  .nav.collapsed {
-    display: none;
-  }
-
-  .nav.expanded {
-    display: flex;
-    flex-direction: column;
-  }
 
   .nav-link {
     padding: 0.5rem 1rem; /* Adjust padding for tap targets */

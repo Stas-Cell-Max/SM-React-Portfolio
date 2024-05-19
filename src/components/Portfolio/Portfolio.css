@@ -29,7 +29,8 @@
   justify-content: center; /* Centers items if they don't fill a full row */
 }
 .filter-item {
-  padding: 15px; /* Padding for spacing around items */
+  padding: 10px; /* Padding for spacing around items */
+  padding-right: 1px;
   box-sizing: border-box; /* Include padding and border in the element's width */
   width: calc(33.333% - 30px); /* Subtract double the padding */
   transition: transform 0.5s ease;
@@ -102,7 +103,7 @@
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-1.4 * var(--bs-gutter-x));
-  margin-left: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.2 * var(--bs-gutter-x));
 }
 
 .portfolio-box:hover {
