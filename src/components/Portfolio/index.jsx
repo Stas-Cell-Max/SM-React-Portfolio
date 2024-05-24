@@ -8,7 +8,7 @@ const Portfolio = ({ darkTheme }) => {
   const filterContainerRef = useRef(null);
   const isotope = useRef(null);
   const [filterKey, setFilterKey] = useState("*");
-  const [imagesLoadedCount, setImagesLoadedCount] = useState(0); // Correct state function name
+  const [ setImagesLoadedCount] = useState(0); 
   const [selectedProjectDetails, setSelectedProjectDetails] = useState(null);
 
  // Filters map
@@ -39,11 +39,12 @@ const Portfolio = ({ darkTheme }) => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/Brimloft.png",
+      thumbImage: "images/VegasMama.png",
       sliderImages: [
-        "images/Brimloft.png",
-        "images/Brimloft2.png",
-        "images/Brimloft3.png",
+        "images/VegasMama1.png",
+        "images/VegasMama2.png",
+        "images/VegasMama3.png",
+        "images/VegasMama4.png",
       ],
       categories: ["*", filters.WEBDEV],
     },
@@ -71,9 +72,11 @@ const Portfolio = ({ darkTheme }) => {
       },
       thumbImage: "images/Brimloft.png",
       sliderImages: [
-        "images/Brimloft.png",
+        "images/Brimloft4.png",
         "images/Brimloft2.png",
         "images/Brimloft3.png",
+        "images/Brimloft5.png",
+        
       ],
       categories: ["*", filters.WEBDEV],
     },
@@ -389,7 +392,7 @@ const Portfolio = ({ darkTheme }) => {
                                 <h5 className="text-white fw-400">
                                   {project.title}
                                 </h5>
-                                <span className="text-light">Category</span>
+                                
                               </div>
                             </div>
                           </div>

@@ -15,9 +15,11 @@
   overflow-x: hidden; 
 }
 
-.mb-4 {
-  margin-bottom: 1.5rem !important;
+.mt-4 {
+  margin-top: -0.5rem !important;
+  color: #b9b9b9;
 }
+
 
 /* Specific styles for the dark theme */
 
