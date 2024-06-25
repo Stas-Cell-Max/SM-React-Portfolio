@@ -35,8 +35,8 @@ useEffect(() => {
       <div className="profile-container">
       <div className="shadow"> 
         <img
-          src="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-1/428610638_10231740042114811_7674960509808603039_n.jpg?stp=c0.32.200.200a_dst-jpg_p200x200&_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=86RoT9HWY58Q7kNvgGFTMj9&_nc_ht=scontent-ord5-1.xx&oh=00_AYBdJqlbEDAS3fm28_sXF0yLLH1H8wO8DpriU_V4hnR29g&oe=66504EB5"
-          alt="Profile"
+          src="images/profile.jpg"
+          alt="profile-img"
           className="profile-image"
         />
         <h2>Stanislav Morozan</h2>
