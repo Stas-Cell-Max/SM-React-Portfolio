@@ -50,3 +50,9 @@ html, body {
   .footer {
     flex-shrink: 0; /* Prevents the footer from shrinking */
   }
+
+  .text-5 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem !important;
+    margin-top: 1rem;
+  }

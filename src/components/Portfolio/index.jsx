@@ -84,7 +84,7 @@ const Portfolio = ({ darkTheme }) => {
       id: 3,
       title: "OPP Modernization Phase 2",
       projectInfo:
-        "A design of nine new community police detachment facilities for the OPP through an Alternative Financing and Procurement (AFP) model in Ontario in a Design Build Finance (DBF) delivery method, to better support modern police operations. The detachments vary in size and are located in Clinton, Hawkesbury, Little Current, Marathon, Mississauga, Moosonee, Orillia, Parry Sound and Fort Frances. Design and construction was completed in phases with completion in 2022.",
+        "Contributed to the design of nine new community police detachment facilities for the OPP in Ontario through a Design Build Finance (DBF) delivery method. Completed in 2022, these facilities, located in Clinton, Hawkesbury, Little Current, Marathon, Mississauga, Moosonee, Orillia, Parry Sound, and Fort Frances, support modern police operations.",
       client: "Ontario Provincial Police",
       technologies: "BIM, Revit, Autocad, BlueBeam",
       industry: "Architectural Technology",
@@ -112,7 +112,7 @@ const Portfolio = ({ darkTheme }) => {
       id: 4,
       title: "One Bloor",
       projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+        "One Bloor is a 76-storey landmark mixed-use residential building at a major Toronto intersection and subway junction. The design increases density while enhancing the public realm, with a six-storey podium that preserves the street scale. I designed and documented key architectural elements of the building's envelope.",
       client: "Hariri Pontarini Architects",
       technologies: "Revit, AutoCad, Photography",
       industry: "Architecture",
@@ -179,7 +179,7 @@ const Portfolio = ({ darkTheme }) => {
       id: 6,
       title: "The Well",
       projectInfo:
-        "The Well unites the vision and unique specialty of two top urban developers. The one-of-a-kind partnership between RioCan REIT and Allied Properties REIT combines the residential, retail and office expertise necessary for the creation of the city’s first truly integrated mixed-use project.",
+        "The Well represents a groundbreaking collaboration, uniting the vision and expertise necessary for the creation of the city’s first truly integrated mixed-use project. Hariri Pontarini Architects (HPA) played a pivotal role in this development. As a key team member, I played a key role in designing and documenting this architectural masterpiece.",
       client: "Hariri Pontarini Architects",
       technologies: "Revit, BIM, Lumion",
       industry: "Architecture & Urbanism",
@@ -242,7 +242,7 @@ const Portfolio = ({ darkTheme }) => {
       id: 8,
       title: "Bayview Village",
       projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+        "The Bayview Village Redevelopment is an ambitious project featuring six mixed-use buildings, designed by HPA and DIALOG. Situated at the intersection of Bayview Avenue and Sheppard Avenue East. As a vital team member, I contributed significantly to the design and documentation processes of this transformative project.",
       client: "Hariri Pontarini Architects",
       technologies: "BIM, Revit, Lumion",
       industry: "Architecture",
@@ -273,7 +273,7 @@ const Portfolio = ({ darkTheme }) => {
       id: 9,
       title: "Case Study",
       projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+        "As an Architectural Designer and Building Science team member, I researched and designed the thermal performance of building envelopes. This study focused on the intricate balance of orientation and composition to enhance indoor comfort and energy efficiency. The building envelope acts as a barrier against external elements, requiring precise design to manage climate variations effectively. My work involved optimizing these elements to improve thermal efficiency and ensure sustainable, comfortable living environments.",
       client: "Hariri Pontarini Architects",
       technologies: "BIM, Revit",
       industry: "Architecture, Building Science",
