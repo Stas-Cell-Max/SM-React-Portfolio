@@ -188,13 +188,7 @@ const Portfolio = ({ darkTheme }) => {
         name: "https://thewelltoronto.com/",
         link: "https://hariripontarini.com/projects/the-well/",
       },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
+     
       thumbImage: "images/TheWell-Aerial.png",
       sliderImages: [
         "images/TheWell-3D2.png",
@@ -287,6 +281,39 @@ const Portfolio = ({ darkTheme }) => {
       ],
       categories: ["*", filters.ARCHTECH],
     },
+
+    {
+      id: 10,
+      title: "Personal Portfolio",
+      projectInfo:
+        "This React-based single-page application (SPA) is the personal portfolio of Stanislav Morozan. It showcases his development projects and professional journey with a clean, user-friendly interface. Built using the latest web technologies, it features responsive design with Bootstrap, smooth navigation, interactive project displays, and a contact form. The portfolio effectively highlights Stanislav's skills and accomplishments.",
+      client: "Stanislav Morozan",
+      technologies: "React.js,Vite,Bootstrap,React Router,React-scroll,Slick Carousel,Isotope-layout,CSS",
+      industry: "Web Development",
+      date: "July 16, 2019",
+      url: {
+        name: "www.SM_Portfolio.com",
+        link: "https://stas-cell-max.github.io/SM-React-Portfolio/",
+      },
+      socialLinks: {
+        facebook: "https://facebook.com/stas.moozan",
+        instagram: "https://instagram.com/stas_moozan",
+        LinkedIn: "https://www.linkedin.com/in/stanislavmorozan/",
+  
+      },
+      thumbImage: "images/port.jpg",
+      sliderImages: [
+        "images/port1.jpg",   
+        "images/port3.jpg",
+        "images/port4.jpg",
+        "images/port5.jpg",   
+        "images/port7.jpg",
+        "images/port6.jpg",
+        "images/port9.jpg",
+      ],
+      categories: ["*", filters.WEBDEV],
+    },
+    
   ];
 
   useEffect(() => {
