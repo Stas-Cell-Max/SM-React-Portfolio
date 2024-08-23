@@ -151,8 +151,8 @@ const Portfolio = ({ darkTheme }) => {
       industry: "Web Development",
       date: "June 16, 2024",
       url: {
-        name: "https://stas-cell-max.github.io/elegant-finishes/",
-        link: "https://stas-cell-max.github.io/elegant-finishes/",
+        name: "https://maxidom.net/",
+        link: "https://maxidom.net/",
       },
       socialLinks: {
         facebook: "https://www.facebook.com/MaxidomMax",
