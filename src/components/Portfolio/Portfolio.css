@@ -1,26 +1,24 @@
-
-
-
 .portfolio-section {
   padding: 4rem 0;
   background-color: #343a40;
   color: grey;
 }
+
 /* Portfolio Section Specifics */
 #portfolio {
-
   color: grey;
-  padding: 50px 1;
+  padding: 4rem 0;
   min-height: 100vh; /* Ensure it covers minimum full viewport height */
-  overflow: hidden;   
+  overflow: hidden;
 }
+
 .container {
-  
   margin: auto;
   padding: 0 15px;
-  width: 100%;        /* Ensures container uses full width */
+  width: 100%; /* Ensures container uses full width */
   box-sizing: border-box; /* Makes sure padding and borders are included in the width */
 }
+
 /* Ensure portfolio items do not overflow their container */
 .portfolio-filter {
   display: flex;
@@ -28,11 +26,12 @@
   margin: 0 -15px; /* Adjust according to your layout */
   justify-content: center; /* Centers items if they don't fill a full row */
 }
+
 .filter-item {
-  padding: 10px; /* Padding for spacing around items */
-  padding-right: 1px;
+  padding: 1rem; /* Use rem for responsive padding */
+  padding-right: 0.5rem;
   box-sizing: border-box; /* Include padding and border in the element's width */
-  width: calc(33.333% - 30px); /* Subtract double the padding */
+  width: calc(33.333% - 2rem); /* Subtract double the padding */
   transition: transform 0.5s ease;
 }
 
@@ -64,7 +63,7 @@
 }
 
 .mb-5 {
-  margin-bottom: 5px; /* Adjust margin for consistent spacing */
+  margin-bottom: 5rem; /* Adjust margin for consistent spacing */
 }
 
 /* Filter Menu Styles */
@@ -72,12 +71,12 @@
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 2px;
+  gap: 2rem;
 }
 
 .filter-menu li {
   cursor: pointer;
-  padding: 5px 10px;
+  padding: 0.5rem 1rem;
   border-bottom: 3px solid transparent;
 }
 
@@ -90,26 +89,27 @@
   border: 1px solid #212529;
   background: #212529;
   position: relative;
-  margin-bottom: 2px;
+  margin-bottom: 2rem;
   cursor: pointer;
   overflow: hidden;
   transition: box-shadow 0.3s, transform 0.3s;
 }
 
 .row {
-  --bs-gutter-x: 3.5rem;
-  --bs-gutter-y: 0;
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 1.5rem;
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-1.4 * var(--bs-gutter-x));
-  margin-left: calc(-.2 * var(--bs-gutter-x));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
 
 .portfolio-box:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   transform: translateY(-5px);
 }
+
 .portfolio-img {
   width: 100%; /* Ensure it spans the full width */
   height: 100%; /* Ensure it spans the full height */
@@ -119,7 +119,7 @@
   width: 100%;
   height: auto;
   transition: opacity 0.3s ease;
-  object-fit: cover; 
+  object-fit: cover;
   object-position: center;
 }
 
@@ -154,7 +154,7 @@
 
 /* Media Queries for Responsive Adjustments */
 @media (max-width: 768px) {
-  
+
   .text-24 {
     font-size: 1.7rem; /* Smaller font size on small screens */
   }
@@ -174,82 +174,63 @@
 
   .filter-item {
     width: 100%; /* Full width for filter items on small screens */
-    margin-left: -0.5rem;
-    padding: 2rem;
+    padding: 1rem; /* Responsive padding */
   }
 
+  .portfolio-filter .filter-item {
+    margin-bottom: 0.5rem; /* Minimal margin between portfolio items */
+    padding: 0.5rem; /* Reduced padding for tighter spacing */
+  }
   .portfolio-box {
-    transition: none; /* Disable transitions on small devices for performance */
+    margin-bottom: 0.5rem;
   }
-  .portfolio-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
+  .portfolio-img {
+    margin-bottom: 0.5rem; /* Minimal margin around images */
   }
-  .container {
-    padding: 0 10px;
-    max-width: 100%;
-  }
-  
-  .text-24 {
-    font-size: 1.7rem; /* Smaller font size on small screens */
-  }
-  
-  .text-9 {
-    font-size: 3.2rem; /* Smaller title font size on small screens */
-  }
-  
-  .heading-separator-line {
-    width: 70%; /* Full width line on smaller screens */
-  }
-  
   .portfolio-section .filter-menu, 
-  .portfolio-section ul { /* Adjust the container holding the nav-links */
+  .portfolio-section ul { 
       flex-direction: column; /* Stack nav-links vertically */
-      align-items: center; /* Center-align items for aesthetic purposes */
-      width: 100%; /* Full width */
+      align-items: center; 
+      width: 100%; 
       padding: 0;
       text-decoration: none !important;
       list-style-type: none; 
   }
 
   .portfolio-section .nav-link,
-  .portfolio-section li.nav-link { /* Increase specificity for nav-link and li */
+  .portfolio-section li.nav-link { 
       width: 100%; /* Full width to utilize space */
       margin: 5px 0; /* Reduced margin for compact spacing */
       display: block; /* Block display to occupy full available width */
       font-size: 1rem !important; /* Smaller font size */
-      padding: 1px 0; /* Adequate padding for touch targets */
-      text-decoration: none; /* Remove underlines */
+      padding: 0.1rem 0; /* Adequate padding for touch targets */
+      text-align: center; /* Center-align text */
       border: none; /* In case borders are applied */
       background: none; /* Clear any background styles */
   }
-  .portfolio-section a.nav-link, /* Target <a> tags specifically if they are used */
-  .portfolio-section .nav-link a { /* Target <a> tags inside nav-link divs */
-      text-decoration: none; /* Ensure no underline */
-      color: inherit; /* Inherit text color from parent */
+
+  .portfolio-section .nav-link div {
+    text-align: center; /* Center-align the content inside the div */
   }
-  .portfolio-section .nav-link div { /* Further styling if nav-link uses inner div */
-    padding: 1px 0; /* Even smaller padding inside div */
-}
-  .filter-menu {
-    flex-direction: column; /* Stack filter options vertically on small screens */
-    align-items: center;
+
+  .portfolio-overlay {
+    padding: 0.25rem; /* Reduced padding inside overlays */
   }
-  
-  .filter-item {
-    width: 100%; 
-    padding: 2px;
-    padding-top: 0%;
-  }
-  
-  .portfolio-box {
-    transition: none; /* Disable transitions on small devices for performance */
-  }
-  .portfolio-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
+  .popup-ajax.stretched-link {
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
   }
 }
 
+@media (max-width: 576px) {
+  .filter-item {
+    width: 100%; /* Stack items vertically on extra small screens */
+    padding: 0.5rem 0;
+  }
+  
+  .portfolio-box {
+    margin-bottom: 0.3rem; /* Reduce margin for tighter spacing on extra small screens */
+  }
+}
