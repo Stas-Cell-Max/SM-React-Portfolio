@@ -10,13 +10,14 @@ const Portfolio = ({ darkTheme }) => {
   const [filterKey, setFilterKey] = useState("*");
   const [ setImagesLoadedCount] = useState(0); 
   const [selectedProjectDetails, setSelectedProjectDetails] = useState(null);
+  
 
- // Filters map
- const filters = {
-  WEBDEV: "Web Development",
-  ARCHTECH: "Architectural Technology",
-  ARCHDESIGN: "Architectural Design",
-};
+  const filters = {
+    WEBDEV: { displayName: "Web Development", className: "webdev" },
+    ARCHTECH: { displayName: "Architectural Technology", className: "archtech" },
+    ARCHDESIGN: { displayName: "Architectural Design", className: "archdesign" },
+  };
+  
 
   const projectsData = [
     {
@@ -46,7 +47,7 @@ const Portfolio = ({ darkTheme }) => {
         "images/VegasMama3.png",
         "images/VegasMama4.png",
       ],
-      categories: ["*", filters.WEBDEV],
+      categories: ["*", "webdev"],
     },
     {
       id: 2,
@@ -78,7 +79,7 @@ const Portfolio = ({ darkTheme }) => {
         "images/Brimloft5.png",
         
       ],
-      categories: ["*", filters.WEBDEV],
+      categories: ["*","webdev"],
     },
     {
       id: 3,
@@ -106,7 +107,7 @@ const Portfolio = ({ darkTheme }) => {
         "images/OPP1.webp",
         "images/OPP2.webp",
       ],
-      categories: ["*", filters.ARCHTECH],
+      categories: ["*","archtech"],
     },
     {
       id: 4,
@@ -139,7 +140,7 @@ const Portfolio = ({ darkTheme }) => {
         "images/OneBloor_CanopDet3.png",
         "images/OneBloor_CanopDet4.png",
       ],
-      categories: ["*", filters.ARCHTECH],
+      categories: ["*", "archtech"],
     },
     {
       id: 5,
@@ -173,7 +174,7 @@ const Portfolio = ({ darkTheme }) => {
         "images/maxidom10.jpg",
         "images/maxidom11.jpg",
       ],
-      categories: ["*", filters.WEBDEV],
+      categories: ["*", "webdev"],
     },
     {
       id: 6,
@@ -202,7 +203,7 @@ const Portfolio = ({ darkTheme }) => {
         "images/TheWell-Sect1.png",
         
       ],
-      categories: ["*", filters.ARCHDESIGN],
+      categories: ["*",  "archdesign"],
     },
 
     {
@@ -230,7 +231,7 @@ const Portfolio = ({ darkTheme }) => {
         "images/project-4.png",
         "images/project-5.png",
       ],
-      categories: ["*", filters.WEBDEV],
+      categories: ["*", "webdev"],
     },
     {
       id: 8,
@@ -261,7 +262,7 @@ const Portfolio = ({ darkTheme }) => {
         "images/BayviewVillage_Section1.png",
         "images/BayviewVillage_SitePlan.png",
       ],
-      categories: ["*", filters.ARCHDESIGN],
+      categories: ["*", "archdesign"],
     },
     {
       id: 9,
@@ -279,7 +280,7 @@ const Portfolio = ({ darkTheme }) => {
         "images/CaseStudy-2.png",
         "images/CaseStudy-3.png",
       ],
-      categories: ["*", filters.ARCHTECH],
+      categories: ["*", "archtech"],
     },
 
     {
@@ -311,17 +312,16 @@ const Portfolio = ({ darkTheme }) => {
         "images/port6.jpg",
         "images/port9.jpg",
       ],
-      categories: ["*", filters.WEBDEV],
+      categories: ["*", "webdev"],
     },
     
   ];
 
+ 
+ 
   useEffect(() => {
-    // Ensure the filter container ref is current and has been rendered
     if (filterContainerRef.current) {
-      // Use imagesLoaded to wait until all images are fully loaded
       imagesLoaded(filterContainerRef.current, function () {
-        // Now that images are loaded, initialize Isotope
         isotope.current = new Isotope(filterContainerRef.current, {
           itemSelector: '.filter-item',
           layoutMode: 'masonry',
@@ -329,13 +329,27 @@ const Portfolio = ({ darkTheme }) => {
       });
     }
   
-    // Cleanup function to destroy Isotope instance when component unmounts
+    if (isotope.current) {
+      isotope.current.arrange({ filter: filterKey === '*' ? '*' : `.${filterKey}` });
+      
+      // Force layout reflow after showing all elements with a slight delay
+      if (filterKey === '*') {
+        setTimeout(() => {
+          isotope.current.reloadItems();
+          isotope.current.layout(); // Recalculate layout for all elements
+        }, 100); // Adjust delay as needed
+      }
+    }
+  
     return () => {
       if (isotope.current) {
         isotope.current.destroy();
       }
     };
-  }, []); // The empty array ensures this effect runs only once on mount
+  }, [filterKey]);
+  
+  
+
 
   const handleFilterKeyChange = (key) => () => setFilterKey(key);
 
@@ -371,17 +385,17 @@ const Portfolio = ({ darkTheme }) => {
                 All
               </div>
             </li>
-            {Object.keys(filters).map((oneKey, i) => (
+            {Object.keys(filters).map((key, i) => (
               <li className="nav-link" key={i}>
                 <div
                   className={
                     "nav-link " +
-                    (filterKey === filters[oneKey] ? "active" : "")
+                    (filterKey === filters[key].className ? "active" : "")
                   }
                   style={{ cursor: "pointer" }}
-                  onClick={handleFilterKeyChange(filters[oneKey])}
+                  onClick={handleFilterKeyChange(filters[key].className)}
                 >
-                  {filters[oneKey]}
+                  {filters[key].displayName}
                 </div>
               </li>
             ))}
@@ -393,7 +407,8 @@ const Portfolio = ({ darkTheme }) => {
           <div className="row portfolio-filter" ref={filterContainerRef}>
               {projectsData.length > 0 &&
                 projectsData.map((project, ) => {
-                  if (project.categories.includes(filterKey)) {
+                  
+                    if (project.categories.includes(filterKey) || filterKey === "*") {
                     return (
                       <div
                         className={
@@ -433,9 +448,9 @@ const Portfolio = ({ darkTheme }) => {
                         </div>
                       </div>
                     );
-                  } else {
-                    return "";
-                  }
+                    } else {
+                          return null; // Don't render the project if it doesn't match the filter
+                        }
                 })}
             </div>
           </div>

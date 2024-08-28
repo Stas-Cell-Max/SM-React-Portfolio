@@ -23,16 +23,32 @@
 .portfolio-filter {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -15px; /* Adjust according to your layout */
+  margin: 0 auto; /* Adjust according to your layout */
   justify-content: center; /* Centers items if they don't fill a full row */
 }
 
 .filter-item {
-  padding: 1rem; /* Use rem for responsive padding */
+  flex: 0 1 calc(33.333% - 0.5rem);
+  padding: 0.5rem 0; /* Use rem for responsive padding */
+  margin-bottom: 1rem;
   padding-right: 0.5rem;
   box-sizing: border-box; /* Include padding and border in the element's width */
-  width: calc(33.333% - 2rem); /* Subtract double the padding */
-  transition: transform 0.5s ease;
+  width: calc(33.333% - 3rem); /* Subtract double the padding */
+  display: block;
+  opacity: 1;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+
+
+.filter-item.is-hidden {
+  opacity: 0;
+  transform: scale(0.001); /* Reduce the size to nearly zero */
+  pointer-events: none; /* Prevent interaction with hidden elements */
+  margin: 0; /* Remove margins */
+  padding: 0; /* Remove padding */
+  height: 0; /* Collapse the height */
+  width: 0; /* Collapse the width */
 }
 
 .text-center {
@@ -86,13 +102,14 @@
 
 /* Portfolio Item Styles */
 .portfolio-box {
+  margin-bottom: 1rem;
   border: 1px solid #212529;
   background: #212529;
   position: relative;
   margin-bottom: 2rem;
   cursor: pointer;
   overflow: hidden;
-  transition: box-shadow 0.3s, transform 0.3s;
+  transition: box-shadow 0.4s, transform 0.4s;
 }
 
 .row {
@@ -174,7 +191,7 @@
 
   .filter-item {
     width: 100%; /* Full width for filter items on small screens */
-    padding: 1rem; /* Responsive padding */
+    padding: 0.5rem; /* Responsive padding */
   }
 
   .portfolio-filter .filter-item {
