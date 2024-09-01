@@ -52,10 +52,8 @@ useEffect(() => {
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => {
-          setSelectedTab("home")
+          onClick={() => setSelectedTab("home")}
          
-        }}  
         >
           Home
         </Link>
@@ -68,10 +66,7 @@ useEffect(() => {
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => {
-            setSelectedTab("aboutme");
-            handleNavClick("aboutme");
-          }}
+          onClick={() => setSelectedTab("aboutme")}
         >
           About Me
         </Link>
