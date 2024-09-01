@@ -27,7 +27,7 @@ const AboutMe = ({ }) => {
         </div>
      <div className="container">
       <p className="introduction">
-      Leveraging a solid foundation in architectural technology and a life-long commitment to learning, I am a Full Stack Web Developer known for blending problem-solving skills and creativity to develop user-friendly applications. With a track record of managing complex projects from conception through execution, I excel in delivering solutions that enhance user experience and functionality. Specializing in JavaScript, React, Node.js, and responsive design, I am passionate about adopting a mobile-first approach to meet and exceed project goals. Eager to contribute to a quality-driven team, aiming to innovate and elevate web experiences.
+      As a Full Stack Web Developer with a solid foundation in architectural technology, I blend problem-solving skills and creativity to develop user-friendly applications. I excel in managing complex projects, specializing in JavaScript, React, Node.js, and responsive design. Passionate about a mobile-first approach, I'm eager to contribute to a quality-driven team and elevate web experiences.
       </p>
       <div className="personal-details">
         <p><strong>From:</strong> Toronto, Canada</p>

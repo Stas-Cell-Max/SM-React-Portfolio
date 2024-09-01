@@ -53,8 +53,8 @@ useEffect(() => {
           smooth={true}
           duration={500}
           onClick={() => {
-          setSelectedTab("home");
-          handleNavClick("home");
+          setSelectedTab("home")
+         
         }}  
         >
           Home

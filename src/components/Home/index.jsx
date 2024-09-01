@@ -36,7 +36,7 @@ const Home = ({ handleNavClick }) => {
         
         <button
           className="scroll-down-arrow animated text-white smooth-scroll btn btn-link btn-lg"
-          onClick={() => handleNavClick('about')}
+          onClick={() => handleNavClick('aboutme')}
         >
           <i className="fa fa-chevron-down"></i>
         </button>
