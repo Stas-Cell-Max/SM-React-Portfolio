@@ -49,8 +49,7 @@ useEffect(() => {
           setSelectedTab("home");
           handleNavClick("home");
         }}
-        activeClass="home"
-        
+        activeClass="home"      
         className={`nav-link test ${selectedTab === "home" ? "active" : ""}`}
         style={{ cursor: "pointer" }}
           spy={true}
@@ -66,8 +65,7 @@ useEffect(() => {
           setSelectedTab("aboutme");
           handleNavClick("aboutme");
         }}
-        activeClass="aboutme"
-        
+        activeClass="aboutme"      
           className={`nav-link ${selectedTab === "aboutme" ? "active" : ""}`}
           style={{ cursor: "pointer" }}
           spy={true}
@@ -83,79 +81,75 @@ useEffect(() => {
           setSelectedTab("whatido");
           handleNavClick("whatido");
         }}
-        activeClass="whatido"
-        
+        activeClass="whatido"       
         className={`nav-link ${selectedTab === "whatido" ? "active" : ""}`}
         style={{ cursor: "pointer" }}
         spy={true}
         smooth={true}
         duration={500}
-        offset={-80}
-        
+        offset={-80}       
         >
           What I Do
         </Link>
         <Link
-       activeClass="resume"
-       to="resume"
+         onClick={() => {
+          setSelectedTab("resume");
+          handleNavClick("resume");
+        }}
+       activeClass="resume"      
        className={`nav-link ${selectedTab === "resume" ? "active" : ""}`}
        style={{ cursor: "pointer" }}
        spy={true}
        smooth={true}
        duration={500}
-       offset={-80}
-       onClick={() => {
-         setSelectedTab("resume");
-         
-       }}
+       offset={-80}     
         >
           Resume
         </Link>
         <Link
-         activeClass="portfolio"
-         to="portfolio"
+         onClick={() => {
+          setSelectedTab("portfolio");
+          handleNavClick("portfolio");
+        }}
+         activeClass="portfolio"        
          className={`nav-link ${selectedTab === "portfolio" ? "active" : ""}`}
          style={{ cursor: "pointer" }}
          spy={true}
          smooth={true}
          duration={500}
          offset={-80}
-         onClick={() => {
-           setSelectedTab("portfolio");
-           
-         }}
         >
           Portfolio
         </Link>
-        <Link
+
+        <Link 
+          onClick={() => {
+          setSelectedTab("testimonial");
+          handleNavClick("testimonial");
+          }}
            activeClass="testimonial"
-           to="testimonial"
            className={`nav-link ${selectedTab === "testimonial" ? "active" : ""}`}
            style={{ cursor: "pointer" }}
            spy={true}
            smooth={true}
            duration={500}
            offset={-80}
-           onClick={() => {
-             setSelectedTab("testimonial");
-            
-           }}
         >
           Testimonial
         </Link>
+
         <Link
+         onClick={() => {
+          setSelectedTab("contact");
+          handleNavClick("contact");
+          }}
          activeClass="contact"
-         to="contact"
          className={`nav-link ${selectedTab === "contact" ? "active" : ""}`}
          style={{ cursor: "pointer" }}
          spy={true}
          smooth={true}
          duration={500}
          offset={-80}
-         onClick={() => {
-           setSelectedTab("contact");
-          
-         }}
         >
           Contact
         </Link>
