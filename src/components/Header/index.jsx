@@ -45,43 +45,53 @@ useEffect(() => {
 
       <nav className= "nav flex-column" >
         <Link
+         onClick={() => {
+          setSelectedTab("home");
+          handleNavClick("home");
+        }}
         activeClass="home"
-        to="home"
+        
         className={`nav-link test ${selectedTab === "home" ? "active" : ""}`}
         style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => setSelectedTab("home")}
-         
+          offset={-80} 
         >
           Home
         </Link>
         
         <Link
+         onClick={() => {
+          setSelectedTab("aboutme");
+          handleNavClick("aboutme");
+        }}
         activeClass="aboutme"
-          to="aboutme"
+        
           className={`nav-link ${selectedTab === "aboutme" ? "active" : ""}`}
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => setSelectedTab("aboutme")}
+          offset={-80}
         >
           About Me
         </Link>
+        
         <Link
+         onClick={() => {
+          setSelectedTab("whatido");
+          handleNavClick("whatido");
+        }}
         activeClass="whatido"
-        to="whatido"
+        
         className={`nav-link ${selectedTab === "whatido" ? "active" : ""}`}
         style={{ cursor: "pointer" }}
         spy={true}
         smooth={true}
         duration={500}
-        onClick={() => {
-          setSelectedTab("whatido");
-          handleNavClick("whatido");
-        }}
+        offset={-80}
+        
         >
           What I Do
         </Link>
@@ -93,9 +103,10 @@ useEffect(() => {
        spy={true}
        smooth={true}
        duration={500}
+       offset={-80}
        onClick={() => {
          setSelectedTab("resume");
-         handleNavClick("resume");
+         
        }}
         >
           Resume
@@ -108,9 +119,10 @@ useEffect(() => {
          spy={true}
          smooth={true}
          duration={500}
+         offset={-80}
          onClick={() => {
            setSelectedTab("portfolio");
-           handleNavClick("portfolio");
+           
          }}
         >
           Portfolio
@@ -123,9 +135,10 @@ useEffect(() => {
            spy={true}
            smooth={true}
            duration={500}
+           offset={-80}
            onClick={() => {
              setSelectedTab("testimonial");
-             handleNavClick("testimonial");
+            
            }}
         >
           Testimonial
@@ -138,9 +151,10 @@ useEffect(() => {
          spy={true}
          smooth={true}
          duration={500}
+         offset={-80}
          onClick={() => {
            setSelectedTab("contact");
-           handleNavClick("contact");
+          
          }}
         >
           Contact
