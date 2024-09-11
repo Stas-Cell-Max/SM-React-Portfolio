@@ -47,6 +47,10 @@
     margin-bottom: 2rem;
 }
   
+.btn-outline-secondary {
+  color: #57d499 !important;
+  border-color: #57d499 !important;
+}
 
 .btn-primary {
     margin-top: 2rem;
@@ -64,6 +68,7 @@
 .btn-primary:hover {
     background-color: #377a7d; /* A darker shade for hover state */
   }
+
   .btn-outline-secondary:hover {
     color: #fff;
     background-color: #5ca895;
@@ -82,18 +87,18 @@
 .scroll-down-arrow {
   position: absolute;
   bottom: 40px; /* Distance from the bottom */
-  color: purple; /* White color for the arrow */
-  font-size: 2rem; /* Size of the arrow */
+  color: #57d499  !important;/* White color for the arrow */
+  font-size: 2.5rem !important; /* Size of the arrow */
   height: 42px; /* Height of the element */
   line-height: 42px; /* Aligns the text vertically */
   left: 50%; /* Horizontally center */
   margin-left: -16px; /* Half of the width to truly center the element */
   text-align: center; /* Center the text (arrow icon) */
-  width: 32px; /* Width of the element */
+  width: 52px !important; /* Width of the element */
   z-index: 3; /* Stack order */
   cursor: pointer;
   animation: bounce 2s infinite;
-  font-size: 2rem;
+  font-size: 2.5rem !important;
 }
 
 @keyframes bounce {
