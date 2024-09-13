@@ -114,13 +114,13 @@ padding-left:0.5% ;
 }
 
 .row {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 1.5rem;
+ 
+ 
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-0.5 * var(--bs-gutter-x));
-  margin-left: calc(-0.5 * var(--bs-gutter-x));
+  margin-top: 0.5%;
+  margin-right: 0.5%;
+  margin-left: 0.9%;
 }
 
 .portfolio-box:hover {
