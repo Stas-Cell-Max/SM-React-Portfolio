@@ -57,21 +57,22 @@
 .info-box{
   background-color: #212529;
   text-align: left;
-  margin-right: 1 rem;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
 }
 
 .info-boxt{
   background-color: #212529;
   text-align: left;
-  margin-right: 3.5rem;
-  margin-left: -2.5rem;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
 }
 
 .info-box1{
   background-color: #212529;
   text-align: center;
   margin-right: 0.5%;
-  margin-left: 1.4%;
+  margin-left: 0.5%;
 }
 .rounded {
   border-radius: .25rem !important; 

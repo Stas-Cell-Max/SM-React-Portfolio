@@ -94,7 +94,7 @@
   left: 50%; /* Horizontally center */
   margin-left: -16px; /* Half of the width to truly center the element */
   text-align: center; /* Center the text (arrow icon) */
-  width: 52px !important; /* Width of the element */
+  width: 42px !important; /* Width of the element */
   z-index: 3; /* Stack order */
   cursor: pointer;
   animation: bounce 2s infinite;
