@@ -1,25 +1,28 @@
 import React, { useEffect, useRef, useState } from "react";
-import Isotope from "isotope-layout";
-import imagesLoaded from 'imagesloaded';
-import ProjectDetailsModal from "../ProjectDetailsModal";
-import "./Portfolio.css";
+import Isotope from "isotope-layout"; // Library for layout filtering
+import imagesLoaded from 'imagesloaded'; // Ensures images are loaded before triggering layout
+import ProjectDetailsModal from "../ProjectDetailsModal"; // Modal for project details
+import "./Portfolio.css"; // Component-specific CSS
 
+// Portfolio component: displays project list with filter functionality
 const Portfolio = ({ darkTheme }) => {
-  const filterContainerRef = useRef(null);
-  const isotope = useRef(null);
-  const [filterKey, setFilterKey] = useState("*");
-  const [ setImagesLoadedCount] = useState(0); 
-  const [selectedProjectDetails, setSelectedProjectDetails] = useState(null);
-  
+  const filterContainerRef = useRef(null); // Ref for portfolio filter container
+  const isotope = useRef(null); // Ref for Isotope instance
+  const [filterKey, setFilterKey] = useState("*"); // State to manage active filter
+  const [setImagesLoadedCount] = useState(0); // Tracks images loaded for layout
+  const [selectedProjectDetails, setSelectedProjectDetails] = useState(null); // Stores selected project for modal
 
+
+ // Filter options for portfolio projects
   const filters = {
     WEBDEV: { displayName: "Web Development", className: "webdev" },
     ARCHTECH: { displayName: "Architectural Technology", className: "archtech" },
     ARCHDESIGN: { displayName: "Architectural Design", className: "archdesign" },
   };
   
-
-  const projectsData = [
+ // Array of projects displayed in portfolio
+  const projectsData = [ 
+// Each project object contains details such as title, description, technologies, images, etc.
     {
       id: 1,
       title: "Las Vegas Trip Advisor",
@@ -317,14 +320,14 @@ const Portfolio = ({ darkTheme }) => {
     
   ];
 
- 
- 
+
+ // Effect to initialize Isotope layout and handle filtering
   useEffect(() => {
     if (filterContainerRef.current) {
       imagesLoaded(filterContainerRef.current, function () {
         isotope.current = new Isotope(filterContainerRef.current, {
-          itemSelector: '.filter-item',
-          layoutMode: 'masonry',
+          itemSelector: '.filter-item', // Define which elements Isotope should filter
+          layoutMode: 'masonry', // Masonry layout for dynamic positioning
         });
       });
     }
@@ -342,15 +345,14 @@ const Portfolio = ({ darkTheme }) => {
     }
   
     return () => {
-      if (isotope.current) {
+      if (isotope.current) {   // Clean up Isotope instance when component unmounts
         isotope.current.destroy();
       }
     };
   }, [filterKey]);
   
   
-
-
+  // Updates filter key when user clicks a filter
   const handleFilterKeyChange = (key) => () => setFilterKey(key);
 
   return (
