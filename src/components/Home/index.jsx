@@ -1,9 +1,10 @@
 // src/components/Home/Home.jsx
 
 import React from 'react';
-import './Home.css';
-import Typewriter from 'typewriter-effect';
+import './Home.css'; // Import CSS specific to the Home section
+import Typewriter from 'typewriter-effect'; // Import Typewriter effect component for dynamic text
 
+// Home component displays the landing page section
 const Home = ({ handleNavClick }) => {
   
   return (

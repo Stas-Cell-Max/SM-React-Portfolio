@@ -3,7 +3,7 @@
 import React from 'react';
 import './AboutMe.css'; 
 
-
+// AboutMe component displays information about the developer
 const AboutMe = ({ }) => {
   return (
     <section id="aboutme" className="about-me">
