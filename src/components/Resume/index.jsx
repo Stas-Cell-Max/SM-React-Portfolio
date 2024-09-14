@@ -2,11 +2,11 @@ import React from 'react';
 import './Resume.css';
 import resumeFile from '../../Documents/Resume_Stanislav Morozan_P.pdf';
 
-
+// Resume component showcasing education, experience, and skills
 const Resume = () => {
   
     const educationDetails = [
-
+       // Array of education details
       {
         yearRange: "2023 - 2024",
         title: "Web Development",
@@ -29,6 +29,7 @@ const Resume = () => {
       
     ];
     const experienceDetails = [
+      // Array of experience details
       {
         yearRange: "2016 - 2018",
         title: "Architectural Technologist",

@@ -1,9 +1,11 @@
 import React from 'react';
-import './Testimonial.css';
-import Slider from "react-slick";
+import './Testimonial.css';// Import CSS for Testimonial section
+import Slider from "react-slick";  // Import slider component for displaying testimonials
 
+// Testimonial component showcasing colleague reviews
 const Testimonial = () => {
   const reviews = [
+     // Array of reviews/testimonials from colleagues
   {
     
     name: "Gabriel Kraskovskyi",
@@ -38,6 +40,7 @@ const Testimonial = () => {
   },
 ];
 
+// Slider settings for controlling the testimonial carousel
 var settings = {
   dots: true,
   arrows: false,

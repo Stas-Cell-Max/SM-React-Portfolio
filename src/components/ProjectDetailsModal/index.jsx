@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from "react";
-import './ProjectDetailsModal.css';
-import Slider from "react-slick";
+import './ProjectDetailsModal.css';  // Import CSS for ProjectDetailsModal
+import Slider from "react-slick"; // Import slider component for image slideshow
 
+// ProjectDetailsModal component displays detailed information about selected projects
 const ProjectDetailsModal = ({  projectDetails }) => {
   const sliderRef = useRef();
 
+   // Slider settings for controlling image carousel
   var settings = {
     dots: false,
     arrows: true,
@@ -24,7 +26,8 @@ const ProjectDetailsModal = ({  projectDetails }) => {
       },
     ],
   };
-
+ 
+  // When project details change, reset the slider to the first image
   useEffect(() => {
     sliderRef.current.slickGoTo(0);
   }, [projectDetails]);
