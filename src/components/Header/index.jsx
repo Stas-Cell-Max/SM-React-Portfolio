@@ -1,29 +1,32 @@
 // src/components/Header.jsx
-import React, {useState, useEffect } from "react";
-import { Link } from "react-scroll";
-import "./Header.css";
+import React, { useState, useEffect } from "react"; // Import necessary React hooks
+import { Link } from "react-scroll"; // Link for smooth scrolling to sections
+import "./Header.css"; // Import CSS specific to Header
 
+// Header component accepts handleNavClick as a prop to manage navigation click behavior
 const Header = ({ handleNavClick }) => {
-  const [isSticky, setIsSticky] = useState(false);
-  const [selectedTab, setSelectedTab] = useState("home");
-  const [isNavModalOpen, setIsNavModalOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false); // State to manage sticky header behavior
+  const [selectedTab, setSelectedTab] = useState("home"); // State to track the currently selected tab
+  const [isNavModalOpen, setIsNavModalOpen] = useState(false); // State to manage mobile navigation modal visibility
 
-  // This function will toggle the visibility of the navigation modal in mobile view
+  // Function to toggle navigation modal in mobile view
   const toggleNav = () => {
     setIsNavModalOpen(prevState => !prevState);
 };
 
-
+ // useEffect to manage header stickiness on scroll
 useEffect(() => {
   const checkScrollTop = () => {
       if (window.scrollY > 180) {
-          setIsSticky(true);
+          setIsSticky(true); // Set sticky class when scrolled down
       } else {
-          setIsSticky(false);
+          setIsSticky(false); // Remove sticky class when at top
       }
   };
 
+  // Add scroll event listener
     window.addEventListener("scroll", checkScrollTop);
+      // Cleanup the event listener on component unmount
     return () => window.removeEventListener("scroll", checkScrollTop);
   }, []);
 
