@@ -37,13 +37,19 @@
   }
 }
 
+.nav-content {
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
 /* Profile Section */
 .profile-container {
+  
   text-align: center;
   padding-bottom: 2rem;
 }
 
 .profile-image {
+ 
   width: 170px;
   height: 170px;
   border-radius: 50%;
@@ -93,7 +99,7 @@
 /* Navigation Links */
 .nav {
   display: flex;
-  flex-direction: column;
+  
   padding-left: 0;
   margin-bottom: 3rem;
   list-style: none;
@@ -101,7 +107,7 @@
 }
 
 .nav-link {
-  color: white;
+  color: rgb(255, 255, 255);
   margin: 0.1rem 0;
   transition: color 0.2s ease;
   text-align: center;
@@ -116,11 +122,14 @@
 }
 
 /* Social Links */
+
 .social-links {
   display: flex;
   justify-content: center;
-  padding: 1.5rem 0;
-  margin-top: auto;
+
+  padding-top: 5rem !important;
+  margin-top: auto !important;
+  padding-top: 1rem !important;
 }
 
 .icon-link {
@@ -168,5 +177,74 @@
     top: 100%; /* Position right below the header */
     left: 0;
     right: 0;
+  }
+}
+
+/* Hide hamburger by default */
+.mobile-hamburger {
+  display: none;
+}
+
+.mobile-hamburger {
+  display: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #ffffff; /* Set the icon color to white */
+  z-index: 1000;
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .header {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-top: 3rem; 
+  }
+
+  /* Show hamburger only on mobile */
+  .mobile-hamburger {
+    display: block; /* Show hamburger menu on mobile */
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 2%;
+    left: 45%;
+    padding: 10px;
+    
+    z-index: 1000; 
+    
+    
+    color: #ffffff;
+  }
+
+  .nav-content {
+    display: none;
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    background-color: #343a40;
+    z-index: 999;
+  }
+
+  .nav-open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-link {
+    padding: 1rem;
+    border-bottom: 1px solid rgb(103, 100, 100);
+    text-align: left;
+    width: 100%;
+  }
+
+  .social-links {
+    
+    align-items: center;
+    margin-top: 1rem;
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Element } from "react-scroll";
+import { Element } from "react-scroll"; // Element component for smooth scrolling
 import AboutMe from "../AboutMe";
 import Home from "../Home";
 import WhatIDo from "../WhatIDo";
@@ -9,8 +9,9 @@ import Portfolio from "../Portfolio";
 import Testimonial from "../Testimonials";
 import Contact from "../Contact";
 import Footer from "../Footer";
-import "./WrapperComponent.css";
+import "./WrapperComponent.css"; // Import CSS for the WrapperComponent
 
+// WrapperComponent that wraps all major sections of the website (except Header)
 const WrapperComponent = ({handleNavClick}) => {
   return (
     // <div className="vh-100 ">

@@ -1,8 +1,10 @@
 // src/pages/Contact/index.jsx
 import React, { useState }from 'react';
-import './Contact.css'; 
-
+import './Contact.css';  // Import CSS for the Contact form
+ 
+// Contact component allows users to submit their information and message via a form
 const Contact = ({  }) => {
+   // State to manage form input values
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -10,9 +12,11 @@ const Contact = ({  }) => {
     occupationLocation: '',
     message: ''
   });
-
+  
+   // State to manage form input values
   const [message, setMessage] = useState(""); // State to handle feedback message
-
+  
+  // Handle input changes and update state for form fields
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -20,9 +24,10 @@ const Contact = ({  }) => {
       [name]: value
     }));
   };
-
+ 
+  // Handle form submission
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent default form submission behavior
     fetch('http://localhost:3002/submit-form', {
       method: 'POST',
       headers: {

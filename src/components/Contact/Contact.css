@@ -142,12 +142,12 @@
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .contact {
-    padding: 2rem 1rem 3rem; /* Reduce vertical and horizontal padding */
+    padding: 4rem 1rem 3rem; /* Reduce vertical and horizontal padding */
   }
 
   .container {
     max-width: 100%; /* Allow the container to use full width */
-    padding: 0 20px; /* Adjust padding to ensure some space around the content */
+    padding: 0 10px; /* Adjust padding to ensure some space around the content */
   }
 
   .text-24 {
@@ -159,10 +159,10 @@
      /* Adjusted font size for subheadings */
   }
 
-  .text-5 {
-    font-size: 1rem;
+  .container .text-5 {
+    font-size: 1.3rem;
     margin-bottom: 0.1rem !important;
-    margin-top: 1.2rem;
+    margin-top: 3rem;
   }
 
   .form-control, .btn-primary {
@@ -171,16 +171,15 @@
   }
 
   .social-links {
-    padding-top: 0.01rem;
     gap: 5px;
     margin-bottom: 1rem; 
   }
 
   .social-links .icon-link {
     font-size: 20px; /* Adjust social icons size if needed */
-    padding-top: 0.5rem;
+    padding-top: 2rem;
     gap: 5px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.1rem;
   }
 
   .heading-separator-line {
@@ -193,7 +192,7 @@
     margin-bottom: 0.3rem !important; /* Adjust bottom margin for spacing consistency */
   }
 
-  form {
+  .form {
     margin-bottom: 2rem; /* Add bottom margin to the form if it's the last significant element */
   }
  

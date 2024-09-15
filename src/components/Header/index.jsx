@@ -33,8 +33,16 @@ useEffect(() => {
  
 
   return (
-    <header className={`header bg-dark text-white  fix-to-left  ${isSticky ? "sticky" : ""} ${isNavModalOpen ? "open" : ""}`}>
+    <header className={`header bg-dark text-white ${isSticky ? "sticky" : ""}`}>
+      {/* Hamburger menu for mobile */}
+      <div className="mobile-hamburger" onClick={toggleNav}>
+        <i className="fas fa-bars"></i>
+      </div>
+     
 
+     {/* Wrapping profile, nav, and social links */}
+     <div className={`nav-content ${isNavModalOpen ? "nav-open" : ""}`}> 
+      {/* Profile Section */}
       <div className="profile-container">
       <div className="shadow"> 
         <img
@@ -45,12 +53,15 @@ useEffect(() => {
         <h2>Stanislav Morozan</h2>
         </div>
       </div>
-
-      <nav className= "nav flex-column" >
+       
+       {/* Navigation */}
+       <nav className="nav flex-column">
         <Link
          onClick={() => {
           setSelectedTab("home");
           handleNavClick("home");
+          setIsNavModalOpen(false); // Close the nav modal
+         
         }}
         activeClass="home"      
         className={`nav-link test ${selectedTab === "home" ? "active" : ""}`}
@@ -67,6 +78,7 @@ useEffect(() => {
          onClick={() => {
           setSelectedTab("aboutme");
           handleNavClick("aboutme");
+          setIsNavModalOpen(false); // Close the nav modal
         }}
         activeClass="aboutme"      
           className={`nav-link ${selectedTab === "aboutme" ? "active" : ""}`}
@@ -83,6 +95,7 @@ useEffect(() => {
          onClick={() => {
           setSelectedTab("whatido");
           handleNavClick("whatido");
+          setIsNavModalOpen(false); // Close the nav modal
         }}
         activeClass="whatido"       
         className={`nav-link ${selectedTab === "whatido" ? "active" : ""}`}
@@ -98,6 +111,7 @@ useEffect(() => {
          onClick={() => {
           setSelectedTab("resume");
           handleNavClick("resume");
+          setIsNavModalOpen(false); // Close the nav modal
         }}
        activeClass="resume"      
        className={`nav-link ${selectedTab === "resume" ? "active" : ""}`}
@@ -113,6 +127,7 @@ useEffect(() => {
          onClick={() => {
           setSelectedTab("portfolio");
           handleNavClick("portfolio");
+          setIsNavModalOpen(false); // Close the nav modal
         }}
          activeClass="portfolio"        
          className={`nav-link ${selectedTab === "portfolio" ? "active" : ""}`}
@@ -129,6 +144,7 @@ useEffect(() => {
           onClick={() => {
           setSelectedTab("testimonial");
           handleNavClick("testimonial");
+          setIsNavModalOpen(false); // Close the nav modal
           }}
            activeClass="testimonial"
            className={`nav-link ${selectedTab === "testimonial" ? "active" : ""}`}
@@ -145,6 +161,7 @@ useEffect(() => {
          onClick={() => {
           setSelectedTab("contact");
           handleNavClick("contact");
+          setIsNavModalOpen(false); // Close the nav modal
           }}
          activeClass="contact"
          className={`nav-link ${selectedTab === "contact" ? "active" : ""}`}
@@ -200,7 +217,7 @@ useEffect(() => {
           <i className="fab fa-instagram"></i>
         </a>
       </div>
-     
+      </div>
     </header>
   );
 };
