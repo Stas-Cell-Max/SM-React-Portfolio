@@ -1,4 +1,3 @@
-// src/components/Header.jsx
 import React, { useState, useEffect } from "react"; // Import necessary React hooks
 import { Link } from "react-scroll"; // Link for smooth scrolling to sections
 import "./Header.css"; // Import CSS specific to Header
@@ -7,82 +6,85 @@ import "./Header.css"; // Import CSS specific to Header
 const Header = ({ handleNavClick }) => {
   const [isSticky, setIsSticky] = useState(false); // State to manage sticky header behavior
   const [selectedTab, setSelectedTab] = useState("home"); // State to track the currently selected tab
-  const [isNavModalOpen, setIsNavModalOpen] = useState(false); // State to manage mobile navigation modal visibility
+  const [isNavOpen, setIsNavOpen] = useState(false); // State to manage mobile navigation modal visibility
 
   // Function to toggle navigation modal in mobile view
   const toggleNav = () => {
-    setIsNavModalOpen(prevState => !prevState);
-};
-
- // useEffect to manage header stickiness on scroll
-useEffect(() => {
-  const checkScrollTop = () => {
-      if (window.scrollY > 180) {
-          setIsSticky(true); // Set sticky class when scrolled down
-      } else {
-          setIsSticky(false); // Remove sticky class when at top
-      }
+    setIsNavOpen((prevState) => !prevState);
+    console.log("Nav Open State: ", !isNavOpen); 
   };
 
-  // Add scroll event listener
+  // useEffect to manage header stickiness on scroll
+  useEffect(() => {
+    const checkScrollTop = () => {
+      if (window.scrollY > 180) {
+        setIsSticky(true); // Set sticky class when scrolled down
+      } else {
+        setIsSticky(false); // Remove sticky class when at top
+      }
+    };
+
+    // Add scroll event listener
     window.addEventListener("scroll", checkScrollTop);
-      // Cleanup the event listener on component unmount
+    // Cleanup the event listener on component unmount
     return () => window.removeEventListener("scroll", checkScrollTop);
   }, []);
 
- 
-
+  useEffect(() => {
+    if (isNavOpen) {
+      document.body.style.overflow = "hidden"; // Disable body scroll when nav is open
+    } else {
+      document.body.style.overflow = "auto"; // Enable body scroll when nav is closed
+    }
+  }, [isNavOpen]);
+  
   return (
     <header className={`header bg-dark text-white ${isSticky ? "sticky" : ""}`}>
       {/* Hamburger menu for mobile */}
       <div className="mobile-hamburger" onClick={toggleNav}>
         <i className="fas fa-bars"></i>
       </div>
-     
 
-     {/* Wrapping profile, nav, and social links */}
-     <div className={`nav-content ${isNavModalOpen ? "nav-open" : ""}`}> 
       {/* Profile Section */}
       <div className="profile-container">
-      <div className="shadow"> 
-        <img
-          src="images/profile.jpg"
-          alt="profile-img"
-          className="profile-image"
-        />
-        <h2>Stanislav Morozan</h2>
+        <div className="shadow">
+          <img
+            src="images/profile.jpg"
+            alt="profile-img"
+            className="profile-image"
+          />
+          <h2>Stanislav Morozan</h2>
         </div>
       </div>
-       
+
+      {/* Navigation */}
+      
        {/* Navigation */}
-       <nav className="nav flex-column">
+       <nav className={`nav ${isNavOpen ? "nav-open" : ""}`}>
         <Link
-         onClick={() => {
-          setSelectedTab("home");
-          handleNavClick("home");
-          setIsNavModalOpen(false); // Close the nav modal
-         
-        }}
-        activeClass="home"      
-        className={`nav-link test ${selectedTab === "home" ? "active" : ""}`}
-        style={{ cursor: "pointer" }}
+          onClick={() => {
+            setSelectedTab("home");
+            handleNavClick("home");
+            setIsNavOpen(false); // Close nav on selection
+          }}
+          activeClass="home"
+          className={`nav-link ${selectedTab === "home" ? "active" : ""}`}
           spy={true}
           smooth={true}
           duration={500}
-          offset={-80} 
+          offset={-80}
         >
           Home
         </Link>
-        
+
         <Link
-         onClick={() => {
-          setSelectedTab("aboutme");
-          handleNavClick("aboutme");
-          setIsNavModalOpen(false); // Close the nav modal
-        }}
-        activeClass="aboutme"      
+          onClick={() => {
+            setSelectedTab("aboutme");
+            handleNavClick("aboutme");
+            setIsNavOpen(false); // Close nav on selection
+          }}
+          activeClass="aboutme"
           className={`nav-link ${selectedTab === "aboutme" ? "active" : ""}`}
-          style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
@@ -90,86 +92,81 @@ useEffect(() => {
         >
           About Me
         </Link>
-        
+
         <Link
-         onClick={() => {
-          setSelectedTab("whatido");
-          handleNavClick("whatido");
-          setIsNavModalOpen(false); // Close the nav modal
-        }}
-        activeClass="whatido"       
-        className={`nav-link ${selectedTab === "whatido" ? "active" : ""}`}
-        style={{ cursor: "pointer" }}
-        spy={true}
-        smooth={true}
-        duration={500}
-        offset={-80}       
+          onClick={() => {
+            setSelectedTab("whatido");
+            handleNavClick("whatido");
+            setIsNavOpen(false); // Close nav on selection
+          }}
+          activeClass="whatido"
+          className={`nav-link ${selectedTab === "whatido" ? "active" : ""}`}
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-80}
         >
           What I Do
         </Link>
         <Link
-         onClick={() => {
-          setSelectedTab("resume");
-          handleNavClick("resume");
-          setIsNavModalOpen(false); // Close the nav modal
-        }}
-       activeClass="resume"      
-       className={`nav-link ${selectedTab === "resume" ? "active" : ""}`}
-       style={{ cursor: "pointer" }}
-       spy={true}
-       smooth={true}
-       duration={500}
-       offset={-80}     
+          onClick={() => {
+            setSelectedTab("resume");
+            handleNavClick("resume");
+            setIsNavOpen(false); // Close nav on selection
+          }}
+          activeClass="resume"
+          className={`nav-link ${selectedTab === "resume" ? "active" : ""}`}
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-80}
         >
           Resume
         </Link>
         <Link
-         onClick={() => {
-          setSelectedTab("portfolio");
-          handleNavClick("portfolio");
-          setIsNavModalOpen(false); // Close the nav modal
-        }}
-         activeClass="portfolio"        
-         className={`nav-link ${selectedTab === "portfolio" ? "active" : ""}`}
-         style={{ cursor: "pointer" }}
-         spy={true}
-         smooth={true}
-         duration={500}
-         offset={-80}
+          onClick={() => {
+            setSelectedTab("portfolio");
+            handleNavClick("portfolio");
+            setIsNavOpen(false); // Close nav on selection
+          }}
+          activeClass="portfolio"
+          className={`nav-link ${selectedTab === "portfolio" ? "active" : ""}`}
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-80}
         >
           Portfolio
         </Link>
 
-        <Link 
+        <Link
           onClick={() => {
-          setSelectedTab("testimonial");
-          handleNavClick("testimonial");
-          setIsNavModalOpen(false); // Close the nav modal
+            setSelectedTab("testimonial");
+            handleNavClick("testimonial");
+            setIsNavOpen(false); // Close nav on selection
           }}
-           activeClass="testimonial"
-           className={`nav-link ${selectedTab === "testimonial" ? "active" : ""}`}
-           style={{ cursor: "pointer" }}
-           spy={true}
-           smooth={true}
-           duration={500}
-           offset={-80}
+          activeClass="testimonial"
+          className={`nav-link ${selectedTab === "testimonial" ? "active" : ""}`}
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-80}
         >
           Testimonial
         </Link>
 
         <Link
-         onClick={() => {
-          setSelectedTab("contact");
-          handleNavClick("contact");
-          setIsNavModalOpen(false); // Close the nav modal
+          onClick={() => {
+            setSelectedTab("contact");
+            handleNavClick("contact");
+            setIsNavOpen(false); // Close nav on selection
           }}
-         activeClass="contact"
-         className={`nav-link ${selectedTab === "contact" ? "active" : ""}`}
-         style={{ cursor: "pointer" }}
-         spy={true}
-         smooth={true}
-         duration={500}
-         offset={-80}
+          activeClass="contact"
+          className={`nav-link ${selectedTab === "contact" ? "active" : ""}`}
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-80}
         >
           Contact
         </Link>
@@ -216,7 +213,6 @@ useEffect(() => {
         >
           <i className="fab fa-instagram"></i>
         </a>
-      </div>
       </div>
     </header>
   );

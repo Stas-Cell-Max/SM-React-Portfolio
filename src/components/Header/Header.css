@@ -37,19 +37,13 @@
   }
 }
 
-.nav-content {
-  padding-bottom: 5%;
-  padding-top: 5%;
-}
 /* Profile Section */
 .profile-container {
-  
   text-align: center;
   padding-bottom: 2rem;
 }
 
 .profile-image {
- 
   width: 170px;
   height: 170px;
   border-radius: 50%;
@@ -99,11 +93,11 @@
 /* Navigation Links */
 .nav {
   display: flex;
-  
   padding-left: 0;
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
   list-style: none;
-  margin-top: 7rem;
+  margin-top: 6rem;
+  
 }
 
 .nav-link {
@@ -113,23 +107,26 @@
   text-align: center;
   padding: 0.5px 0;
   font-size: 18px !important;
+  padding-top: 1rem;
+  cursor: pointer;
 }
 
 .nav-link:hover, .nav-link.active {
-  color: #64ffd8;
-  text-shadow: 0 0 10px #c5a0f7, 0 0 20px #a763f5;
+  color: #57d499;
+  text-shadow: 0 0 10px #c0de85, 0 0 20px #dddec6;
   font-weight: bold;
+  cursor: pointer;
+  
 }
 
 /* Social Links */
-
 .social-links {
   display: flex;
   justify-content: center;
-
   padding-top: 5rem !important;
   margin-top: auto !important;
   padding-top: 1rem !important;
+  cursor: pointer;
 }
 
 .icon-link {
@@ -150,101 +147,88 @@
   width: 20vw;
 }
 
-/* Mobile Responsive Styles */
-@media (max-width: 768px) {
-  .header {
-    width: 100%; /* Full width for mobile */
-    height: auto; /* Auto height for mobile */
-    position: relative; /* Relative positioning for mobile */
-  }
-
-  .nav-link {
-    padding: 0.5rem 1rem; /* Adjust padding for tap targets */
-    border-bottom-style: groove  ;
-    
-    font-size: 16px; /* Slightly larger font for readability */
-  }
-
-  .nav-link:last-child {
-    border-bottom: none; /* Remove bottom border for the last item */
-  }
-
-  /* Show accordion menu on mobile */
-  .navbar-accordion {
-    display: flex; /* Display the accordion */
-    flex-direction: column; /* Stack the links vertically */
-    padding: 1rem;
-    top: 100%; /* Position right below the header */
-    left: 0;
-    right: 0;
-  }
-}
-
-/* Hide hamburger by default */
-.mobile-hamburger {
-  display: none;
-}
-
 .mobile-hamburger {
   display: none;
   font-size: 2.5rem;
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 10px;
   left: 50%;
-  color: #ffffff; /* Set the icon color to white */
+  transform: translateX(-50%);
+  color: #ffffff;
   z-index: 1000;
 }
-/* Mobile Styles */
+
+
+
+
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .header {
-    width: 100%;
-    height: auto;
-    position: relative;
-    padding-top: 3rem; 
+    position: fixed; /* Fixes the header to the top of the screen */
+    top: 0;
+    width: 100%; /* Full width to cover the top */
+    z-index: 1000;
+    width: 100%; /* Full width for mobile */
+    height: 7%; 
+    /* Relative positioning for mobile */
+    overflow: visible;
   }
+ /* Initially hide the nav on mobile */
+ .nav {
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
 
-  /* Show hamburger only on mobile */
+}
+/* When the nav is opened */
+.nav-open {
+  position: fixed; 
+  display: flex;
+  max-height: 500px; 
+  transition: max-height 0.3s ease-in-out;
+  flex-direction: column;
+  align-items: center;
+  
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: #343a40;
+  z-index: 999;
+}
+  /* Hamburger Menu */
   .mobile-hamburger {
-    display: block; /* Show hamburger menu on mobile */
-    font-size: 2rem;
+    display: block;
+    font-size: 2.5rem;
     cursor: pointer;
     position: absolute;
-    top: 2%;
-    left: 45%;
-    padding: 10px;
-    
-    z-index: 1000; 
-    
-    
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
     color: #ffffff;
+    z-index: 1000; 
   }
 
-  .nav-content {
+  /* Hide the profile image and name on mobile */
+  .profile-container {
     display: none;
-    position: absolute;
-    top: 70px;
-    width: 100%;
-    background-color: #343a40;
-    z-index: 999;
   }
-
-  .nav-open {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .social-links {
+    display: none !important; /* Completely hide the social links on mobile */
   }
 
   .nav-link {
     padding: 1rem;
-    border-bottom: 1px solid rgb(103, 100, 100);
-    text-align: left;
+    border-bottom: 1px solid #575757;
+    color: white;
     width: 100%;
+    text-align: left;
   }
 
-  .social-links {
-    
-    align-items: center;
-    margin-top: 1rem;
+  .nav-link:hover {
+    background-color: #444;
   }
+
+
+ 
 }
