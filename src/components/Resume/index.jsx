@@ -24,7 +24,7 @@ const Resume = () => {
         yearRange: "2005 - 2010",
         title: "Science of Information Technology",
         place: "Technical University of Moldova",
-        desc: "Established a robust foundation in core IT principles, including software development, systems analysis, and complex problem-solving, essential for success in a typical Computer Science curriculum.",
+        desc: "Built a solid foundation in essential IT principles, including software development, systems analysis, network architecture, cybersecurity, data management, and complex problem-solving, crucial for success in a typical Computer Science curriculum.",
       },
       
     ];

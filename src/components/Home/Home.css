@@ -81,6 +81,7 @@
     left: 0;
     right: 0;
     text-align: center;
+    border: none;
   }
 
  
@@ -99,6 +100,9 @@
   cursor: pointer;
   animation: bounce 2s infinite;
   font-size: 2.5rem !important;
+  align-items: center; 
+justify-content: center;
+  
 }
 
 @keyframes bounce {
@@ -115,7 +119,7 @@
 
   
   .text-7 {
-    font-size: 2rem;
+    font-size: 1.5rem !important;
     margin-top: 5rem;
   }
   
@@ -136,14 +140,14 @@
   .scroll-down-arrow {
     position: absolute;
     bottom: 40px; /* Distance from the bottom */
-    color: #57d499  !important;/* White color for the 
-    font-size: 2.5rem !important; /* Size of the arrow 
-    height: 42px; /* Height of the element */
-    line-height: 42px; /* Aligns the text vertically */
-    left: 45%; /* Horizontally center */
-    margin-left: -16px; /* Half of the width to truly c
-    text-align: center; /* Center the text (arrow icon)
-    width: 42px !important; /* Width of the element */
+    color: #57d499  !important;
+    font-size: 2.5rem !important;  
+    height: 42px; 
+    line-height: 42px; 
+    left: 45%; 
+    margin-left: -16px; 
+    text-align: center; 
+    width: 42px !important; 
     z-index: 3; /* Stack order */
     cursor: pointer;
     animation: bounce 2s infinite;
