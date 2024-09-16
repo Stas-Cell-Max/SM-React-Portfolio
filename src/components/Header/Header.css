@@ -40,6 +40,10 @@
 
 /* Profile Section */
 .profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This will center the image horizontally */
+  justify-content: center; /* Centers vertically (if needed) */
   text-align: center;
   padding-bottom: 2rem;
 }
@@ -50,6 +54,9 @@
   border-radius: 50%;
   margin-bottom: 1rem;
   border: 6px solid #343a40;
+  display: block;
+ 
+ 
 }
 
 .shadow {
@@ -93,11 +100,11 @@
 
 /* Navigation Links */
 .nav {
-  display: flex;
+  display: block;
   padding-left: 0;
-  margin-bottom: 6rem;
+  margin-top: 6rem; 
   list-style: none;
-  margin-top: 6rem;
+  
 }
 
 .nav-link {
@@ -106,36 +113,35 @@
   transition: color 0.2s ease;
   text-align: center;
   padding: 0.5px 0;
-  font-size: 18px !important;
-  padding-top: 1rem;
+  font-size: 20px !important;
+ 
+  padding-top: 1.5rem;
   cursor: pointer;
 }
 
 .nav-link:hover, .nav-link.active {
   color: #57d499;
-  text-shadow: 0 0 10px #c0de85, 0 0 20px #dddec6;
-  font-weight: bold;
-  cursor: pointer;
+  text-shadow: 0 0 10px #ded785, 0 0 20px #e8c08c;
 }
 
 /* Social Links */
 .social-links {
   display: flex;
   justify-content: center;
-  padding-top: 5rem !important;
+  padding-top: 4rem !important;
   margin-top: auto !important;
-  padding-top: 1rem !important;
-  cursor: pointer;
+  
+  
 }
 
 .icon-link {
   color: white;
-  margin: 0 8px;
-  font-size: 1.5rem;
+  margin: 0 15px;
+  font-size: 1.8rem;
 }
 
 .icon-link:hover {
-  color: #ddd;
+  color: #57d499;
 }
 
 /* Fix to Left */
@@ -211,7 +217,7 @@
   opacity: 1; /* Make it visible */
   position: fixed; 
   display: flex;
-  max-height: 48%; 
+  max-height: 50%; 
   transition: max-height 0.7s ease-in-out;
   flex-direction: column;
   align-items: center;
@@ -265,8 +271,8 @@
   display: flex ; /* Hide social links by default */
   margin: 0;
   flex-grow: 1; /* Ensures the social links expand in the middle */
-  padding-top: 0.05rem !important;
-  margin-top: -28px !important;
+  padding-top: 0.01rem !important;
+  margin-top: -20px !important;
   padding-left: 25% !important;
   }
 
