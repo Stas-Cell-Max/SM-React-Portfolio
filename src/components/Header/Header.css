@@ -24,6 +24,7 @@
   width: 20vw;
   z-index: 1020;
   animation: slide-down 0.7s;
+  transition: top 0.3s ease-in-out; /* Smooth transition for the sticky effect */
 }
 
 @keyframes slide-down {
@@ -170,31 +171,42 @@
     width: 100%; /* Full width to cover the top */
     z-index: 1000;
     width: 100%; /* Full width for mobile */
-    height: 7%; 
+    height: auto; 
     /* Relative positioning for mobile */
     overflow: visible;
   }
- /* Initially hide the nav on mobile */
- .nav {
-  display: none;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
 
-}
-/* When the nav is opened */
+ /* Initially hide the nav on mobile */
+ /* Navigation initially hidden with smooth transition for height */
+  .nav {
+    transform: translateY(-100%); /* Initially move the menu off the screen */
+    opacity: 0; /* Invisible initially */
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out; /* Smooth transition for both */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Full height of the viewport */
+    position: fixed; /* Fixes the nav */
+    top: 70px; /* Below the header */
+    left: 0;
+    width: 100%;
+    background-color: #343a40;
+    z-index: 999;
+  }
 .nav-open {
+  transform: translateY(0); /* Slide down the menu */
+  opacity: 1; /* Make it visible */
   position: fixed; 
   display: flex;
-  max-height: 500px; 
-  transition: max-height 0.3s ease-in-out;
+  max-height: 1000px; 
+  transition: max-height 0.7s ease-in-out;
   flex-direction: column;
   align-items: center;
-  
   top: 70px;
   left: 0;
   width: 100%;
   background-color: #343a40;
   z-index: 999;
+  
 }
   /* Hamburger Menu */
   .mobile-hamburger {
@@ -214,15 +226,18 @@
     display: none;
   }
   .social-links {
-    display: none !important; /* Completely hide the social links on mobile */
+  display: flex ; /* Hide social links by default */
+  justify-content: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
   }
 
   .nav-link {
     padding: 1rem;
-    border-bottom: 1px solid #575757;
+    border-bottom: 1px solid #2e2d2d;
     color: white;
     width: 100%;
-    text-align: left;
+    text-align: center;
   }
 
   .nav-link:hover {

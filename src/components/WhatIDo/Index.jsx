@@ -1,6 +1,7 @@
 import React from 'react';
-import './WhatIDo.css'; 
+import './WhatIDo.css'; // Import CSS specific to WhatIDo section
 
+// WhatIDo component showcases the services or skills provided 
 const WhatIDo = () => {
   return (
     <section id="what-i-do" 

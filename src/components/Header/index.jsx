@@ -7,6 +7,7 @@ const Header = ({ handleNavClick }) => {
   const [isSticky, setIsSticky] = useState(false); // State to manage sticky header behavior
   const [selectedTab, setSelectedTab] = useState("home"); // State to track the currently selected tab
   const [isNavOpen, setIsNavOpen] = useState(false); // State to manage mobile navigation modal visibility
+  const offset = window.innerWidth <= 768 ? -50 : -80; // Calculate offset dynamically based on screen width
 
   // Function to toggle navigation modal in mobile view
   const toggleNav = () => {
@@ -15,33 +16,34 @@ const Header = ({ handleNavClick }) => {
   };
 
   // useEffect to manage header stickiness on scroll
+ 
   useEffect(() => {
-    const checkScrollTop = () => {
+    const handleScroll = () => {
       if (window.scrollY > 180) {
-        setIsSticky(true); // Set sticky class when scrolled down
+        setIsSticky(true);
       } else {
-        setIsSticky(false); // Remove sticky class when at top
+        setIsSticky(false);
       }
     };
-
-    // Add scroll event listener
-    window.addEventListener("scroll", checkScrollTop);
-    // Cleanup the event listener on component unmount
-    return () => window.removeEventListener("scroll", checkScrollTop);
+  
+    const debounceScroll = () => {
+      let timeout;
+      return function () {
+        clearTimeout(timeout);
+        timeout = setTimeout(handleScroll, 100); // Adjust delay as necessary
+      };
+    };
+  
+    window.addEventListener("scroll", debounceScroll());
+  
+    return () => window.removeEventListener("scroll", debounceScroll());
   }, []);
-
-  useEffect(() => {
-    if (isNavOpen) {
-      document.body.style.overflow = "hidden"; // Disable body scroll when nav is open
-    } else {
-      document.body.style.overflow = "auto"; // Enable body scroll when nav is closed
-    }
-  }, [isNavOpen]);
+  
   
   return (
     <header className={`header bg-dark text-white ${isSticky ? "sticky" : ""}`}>
       {/* Hamburger menu for mobile */}
-      <div className="mobile-hamburger" onClick={toggleNav}>
+      <div className="mobile-hamburger" onClick={toggleNav} aria-label="Toggle Navigation">
         <i className="fas fa-bars"></i>
       </div>
 
@@ -72,7 +74,7 @@ const Header = ({ handleNavClick }) => {
           spy={true}
           smooth={true}
           duration={500}
-          offset={-80}
+          offset={offset} 
         >
           Home
         </Link>
@@ -88,7 +90,7 @@ const Header = ({ handleNavClick }) => {
           spy={true}
           smooth={true}
           duration={500}
-          offset={-80}
+          offset={offset}
         >
           About Me
         </Link>
@@ -104,7 +106,7 @@ const Header = ({ handleNavClick }) => {
           spy={true}
           smooth={true}
           duration={500}
-          offset={-80}
+          offset={offset}
         >
           What I Do
         </Link>
@@ -119,7 +121,7 @@ const Header = ({ handleNavClick }) => {
           spy={true}
           smooth={true}
           duration={500}
-          offset={-80}
+          offset={offset}
         >
           Resume
         </Link>
@@ -134,7 +136,7 @@ const Header = ({ handleNavClick }) => {
           spy={true}
           smooth={true}
           duration={500}
-          offset={-80}
+          offset={offset}
         >
           Portfolio
         </Link>
@@ -150,7 +152,7 @@ const Header = ({ handleNavClick }) => {
           spy={true}
           smooth={true}
           duration={500}
-          offset={-80}
+          offset={offset}
         >
           Testimonial
         </Link>
@@ -166,7 +168,7 @@ const Header = ({ handleNavClick }) => {
           spy={true}
           smooth={true}
           duration={500}
-          offset={-80}
+          offset={offset}
         >
           Contact
         </Link>
