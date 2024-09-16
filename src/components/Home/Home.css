@@ -120,7 +120,7 @@
   }
   
   .text-16 {
-    font-size: 2.5rem; /* Adjusted size for the main heading on mobile devices */
+    font-size: 2rem; /* Adjusted size for the main heading on mobile devices */
   }
   
   .text-5 {
@@ -132,6 +132,22 @@
   .btn {
     font-size: 2rem; /* Increase font size for better readability on mobile */
     padding: 1rem 1.5rem; /* Increase padding for a larger touch target */
+  }
+  .scroll-down-arrow {
+    position: absolute;
+    bottom: 40px; /* Distance from the bottom */
+    color: #57d499  !important;/* White color for the 
+    font-size: 2.5rem !important; /* Size of the arrow 
+    height: 42px; /* Height of the element */
+    line-height: 42px; /* Aligns the text vertically */
+    left: 45%; /* Horizontally center */
+    margin-left: -16px; /* Half of the width to truly c
+    text-align: center; /* Center the text (arrow icon)
+    width: 42px !important; /* Width of the element */
+    z-index: 3; /* Stack order */
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    font-size: 2.5rem !important;
   }
 
 }
