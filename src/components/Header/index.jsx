@@ -42,9 +42,10 @@ const Header = ({ handleNavClick }) => {
   
   return (
     <header className={`header bg-dark text-white ${isSticky ? "sticky" : ""}`}>
+      <div className="menu-container">
       {/* Hamburger menu for mobile */}
       <div className="mobile-hamburger" onClick={toggleNav} aria-label="Toggle Navigation">
-        <i className="fas fa-bars"></i>
+      <i className={isNavOpen ? "fas fa-times" : "fas fa-bars"}></i>
       </div>
 
       {/* Profile Section */}
@@ -55,13 +56,16 @@ const Header = ({ handleNavClick }) => {
             alt="profile-img"
             className="profile-image"
           />
-          <h2>Stanislav Morozan</h2>
+         
         </div>
       </div>
 
-      {/* Navigation */}
+      <div>
+      <h2>Stanislav Morozan</h2>
+      </div>
       
        {/* Navigation */}
+      
        <nav className={`nav ${isNavOpen ? "nav-open" : ""}`}>
         <Link
           onClick={() => {
@@ -215,6 +219,7 @@ const Header = ({ handleNavClick }) => {
         >
           <i className="fab fa-instagram"></i>
         </a>
+      </div>
       </div>
     </header>
   );

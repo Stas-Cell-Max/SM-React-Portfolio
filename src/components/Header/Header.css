@@ -98,7 +98,6 @@
   margin-bottom: 6rem;
   list-style: none;
   margin-top: 6rem;
-  
 }
 
 .nav-link {
@@ -117,7 +116,6 @@
   text-shadow: 0 0 10px #c0de85, 0 0 20px #dddec6;
   font-weight: bold;
   cursor: pointer;
-  
 }
 
 /* Social Links */
@@ -169,14 +167,30 @@
     position: fixed; /* Fixes the header to the top of the screen */
     top: 0;
     width: 100%; /* Full width to cover the top */
-    z-index: 1000;
+    z-index: 10;
     width: 100%; /* Full width for mobile */
-    height: auto; 
+    height: 7%; 
     /* Relative positioning for mobile */
     overflow: visible;
+    background-color: #343a40;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
   }
 
- /* Initially hide the nav on mobile */
+  h2 {
+    font-size: 1.1rem; /* Smaller font size for mobile */
+    margin: 0;
+    color: #ffffff;
+    display: inline-block;
+    white-space: nowrap; /* Prevents name from breaking into two lines */
+    margin-bottom: 30px !important;
+  }
+
+  .sticky {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
  /* Navigation initially hidden with smooth transition for height */
   .nav {
     transform: translateY(-100%); /* Initially move the menu off the screen */
@@ -186,7 +200,7 @@
     flex-direction: column;
     height: 100%; /* Full height of the viewport */
     position: fixed; /* Fixes the nav */
-    top: 70px; /* Below the header */
+    top: 10px; /* Below the header */
     left: 0;
     width: 100%;
     background-color: #343a40;
@@ -197,39 +211,70 @@
   opacity: 1; /* Make it visible */
   position: fixed; 
   display: flex;
-  max-height: 1000px; 
+  max-height: 48%; 
   transition: max-height 0.7s ease-in-out;
   flex-direction: column;
   align-items: center;
-  top: 70px;
+  top: -25px;
   left: 0;
   width: 100%;
   background-color: #343a40;
   z-index: 999;
   
 }
+
+/* Menu Container */
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
   /* Hamburger Menu */
+ 
   .mobile-hamburger {
-    display: block;
-    font-size: 2.5rem;
+    width: 50px;  /* Set explicit width */
+    height: 50px; /* Set explicit height */
     cursor: pointer;
     position: absolute;
-    top: 5%;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
     color: #ffffff;
-    z-index: 1000; 
+    z-index: 1000;
+    display: flex;
+    align-items: center; /* Centers the icon vertically */
+    justify-content: center; /* Centers the icon horizontally */
+    border: 2px solid #ffffff; /* Thin white border */
+    border-radius: 50%; /* Keeps it circular */
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  }
+  .mobile-hamburger i {
+    font-size: 2rem; /* Force the same font-size for both the bars and the cross icon */
   }
 
+  .mobile-hamburger:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Adds a light background on hover */
+    border-color: #57d499; /* Changes border color on hover for better interactivity */
+  }
   /* Hide the profile image and name on mobile */
   .profile-container {
     display: none;
   }
   .social-links {
   display: flex ; /* Hide social links by default */
-  justify-content: center;
-  margin-top: 20px;
-  padding-bottom: 20px;
+  margin: 0;
+  flex-grow: 1; /* Ensures the social links expand in the middle */
+  padding-top: 0.05rem !important;
+  margin-top: -28px !important;
+  padding-left: 25% !important;
+  }
+
+  .icon-link {
+    color: white;
+    font-size: 1rem !important; /* Smaller icons for mobile */
+    margin: 0 6px !important; /* Space between the icons */
+    left: 50%;
   }
 
   .nav-link {
@@ -243,6 +288,7 @@
   .nav-link:hover {
     background-color: #444;
   }
+  
 
 
  

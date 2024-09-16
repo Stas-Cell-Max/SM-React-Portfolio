@@ -138,7 +138,9 @@
       margin-bottom: 0.5rem;
       margin-left: -3rem !important;
       text-align: center;
+      white-space: nowrap;
   }  
+  
 
 .container .text-9 {
     font-size: 3.2rem; /* Adjusted font size for subheadings */
@@ -166,6 +168,7 @@
   .text-6 {
     font-size: 1.5rem;
    padding-right: 50%;
+   white-space: nowrap;
   }
   .mb-5, .mb-4, .mt-4 {
     margin-bottom: 2rem;

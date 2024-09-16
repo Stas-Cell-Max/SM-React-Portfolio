@@ -91,7 +91,7 @@
   font-size: 2.5rem !important; /* Size of the arrow */
   height: 42px; /* Height of the element */
   line-height: 42px; /* Aligns the text vertically */
-  left: 50%; /* Horizontally center */
+  left: 49%; /* Horizontally center */
   margin-left: -16px; /* Half of the width to truly center the element */
   text-align: center; /* Center the text (arrow icon) */
   width: 42px !important; /* Width of the element */
