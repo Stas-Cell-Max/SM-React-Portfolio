@@ -120,8 +120,9 @@
 }
 
 .nav-link:hover, .nav-link.active {
-  color: #57d499;
+  color: #81ddb2;
   text-shadow: 0 0 10px #ded785, 0 0 20px #e8c08c;
+  transform: scale(1.2); 
 }
 
 /* Social Links */
@@ -130,8 +131,6 @@
   justify-content: center;
   padding-top: 4rem !important;
   margin-top: auto !important;
-  
-  
 }
 
 .icon-link {
@@ -142,6 +141,8 @@
 
 .icon-link:hover {
   color: #57d499;
+   transform: scale(1.2); 
+ 
 }
 
 /* Fix to Left */

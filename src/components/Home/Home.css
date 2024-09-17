@@ -61,7 +61,7 @@
     background-color: #377a7d; /* Bootstrap primary color */
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
     margin-top: 2rem;
   }
   

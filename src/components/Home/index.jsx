@@ -35,12 +35,12 @@ const Home = ({ handleNavClick }) => {
         </div>
 
         
-        <button
-          className="scroll-down-arrow animated text-white smooth-scroll btn btn-link btn-lg"
+        <buttons
+          className="scroll-down-arrow animated text-white smooth-scroll  btn-link btn-lg"
           onClick={() => handleNavClick('aboutme')}
         >
           <i className="fa fa-chevron-down"></i>
-        </button>
+        </buttons>
      
     </section>
   );
