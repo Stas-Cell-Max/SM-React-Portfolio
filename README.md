@@ -68,8 +68,8 @@ Stanislav Morozan is a dedicated software developer with a passion for creating 
 
 ## Contacts
 - Email: stasma.sm17@gmail.com 
-- LinkedIn: [Stanislav Morozan](https://www.linkedin.com/in/stanislavmorozan/)
-- GitHub: [Stas-Cell-Max](https://github.com/Stas-Cell-Max/react-portfolio)
+- LinkedIn: [Stanislav Morozan](https://www.linkedin.com/in/.........../)
+- GitHub: [Stas-Cell-Max](https://github.com/Stas-Cell-Max/r...........
 
 ## Credits
 Special thanks to the following resources that have contributed to the development of this portfolio:

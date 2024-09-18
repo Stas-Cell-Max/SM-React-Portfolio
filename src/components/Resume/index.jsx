@@ -170,7 +170,9 @@ const Resume = () => {
   <a title='AWS' href="https://aws.amazon.com/" target="_blank" rel="noreferrer" className="skill-icon"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored.svg" width="36" height="36" alt="AWS" /></a>&nbsp;&nbsp;&nbsp; 
   <a title='Heroku' href="https://www.heroku.com/" target="_blank" rel="noreferrer" className="skill-icon"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/heroku-colored.svg" width="36" height="36" alt="Heroku" /></a>&nbsp;&nbsp;&nbsp;
   <a title='Cloud' href="https://cloud.google.com/" target="_blank" rel="noreferrer" className="skill-icon"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/googlecloud-colored.svg" width="36" height="36" alt="Google Cloud" /></a>&nbsp;&nbsp;&nbsp;
-  <a title='Mongoose' href="https://mongoosejs.com/" target="_blank" rel="noreferrer" className="skill-icon"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mongoose-colored.svg" width="36" height="36" alt="Mongoose" /></a>&nbsp;&nbsp;&nbsp;
+  <a title='Mongoose' href="https://mongoosejs.com/" target="_blank" rel="noreferrer" className="skill-icon">
+            <img src="images/mongoose.png" width="36" height="36" alt="Mongoose" />
+        </a>&nbsp;&nbsp;&nbsp;
   <a title='MongoDB' href="https://www.mongodb.com/" target="_blank" rel="noreferrer" className="skill-icon"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mongodb-colored.svg" width="36" height="36" alt="MongoDB" /></a>&nbsp;&nbsp;&nbsp;
           </p></div></div></div>
           <div className="text-center mt-5">
