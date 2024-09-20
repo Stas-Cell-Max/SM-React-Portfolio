@@ -322,35 +322,39 @@ const Portfolio = ({ darkTheme }) => {
 
 
  // Effect to initialize Isotope layout and handle filtering
-  useEffect(() => {
-    if (filterContainerRef.current) {
-      imagesLoaded(filterContainerRef.current, function () {
-        isotope.current = new Isotope(filterContainerRef.current, {
-          itemSelector: '.filter-item', // Define which elements Isotope should filter
-          layoutMode: 'masonry', // Masonry layout for dynamic positioning
-        });
+ useEffect(() => {
+  if (filterContainerRef.current) {
+    imagesLoaded(filterContainerRef.current, function () {
+      isotope.current = new Isotope(filterContainerRef.current, {
+        itemSelector: '.filter-item',
+        layoutMode: 'masonry',  // Adjust this based on your layout needs
+        masonry: {
+          columnWidth: '.filter-item',  // Ensure that the column width is properly calculated
+        },
       });
+    });
+  }
+
+  if (isotope.current) {
+    isotope.current.arrange({
+      filter: filterKey === '*' ? '*' : `.${filterKey}`,
+    });
+
+    if (filterKey === '*') {
+      setTimeout(() => {
+        isotope.current.reloadItems();  // Reloads Isotope items
+        isotope.current.layout();       // Forces the layout recalculation
+      }, 100);  // Adjust this delay as needed
     }
-  
+  }
+
+  return () => {
     if (isotope.current) {
-      isotope.current.arrange({ filter: filterKey === '*' ? '*' : `.${filterKey}` });
-      
-      // Force layout reflow after showing all elements with a slight delay
-      if (filterKey === '*') {
-        setTimeout(() => {
-          isotope.current.reloadItems();
-          isotope.current.layout(); // Recalculate layout for all elements
-        }, 100); // Adjust delay as needed
-      }
+      isotope.current.destroy();  // Clean up Isotope instance on unmount
     }
-  
-    return () => {
-      if (isotope.current) {   // Clean up Isotope instance when component unmounts
-        isotope.current.destroy();
-      }
-    };
-  }, [filterKey]);
-  
+  };
+}, [filterKey]);
+
   
   // Updates filter key when user clicks a filter
   const handleFilterKeyChange = (key) => () => setFilterKey(key);
@@ -471,4 +475,41 @@ const Portfolio = ({ darkTheme }) => {
   );
 };
 
-export default Portfolio;
+export default Portfolio;       
+ 
+ 
+ 
+
+
+
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

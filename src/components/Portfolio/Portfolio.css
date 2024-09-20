@@ -28,9 +28,9 @@
 }
 
 .filter-item {
-  flex: 0 1 calc(33.333% - 0.5rem);
+  flex: 0 1 calc(33.333% - 1rem);
   margin: 0.5%;  /* Applying margin equally on all sides */
-    padding: 0.5%;
+   
   box-sizing: border-box; /* Include padding and border in the element's width */
   width: calc(33.333% - 3rem); /* Subtract double the padding */
   display: block;
@@ -86,17 +86,23 @@
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .filter-menu li {
   cursor: pointer;
   padding: 0.5rem 1rem;
-  border-bottom: 3px solid transparent;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
 }
 
 .filter-menu li.active {
   border-color: #007bff; /* Highlight active filter */
+  
+  .filter-menu li:hover {
+    border-color: #2f4966; /* Slight hover effect */
+  }
 }
 
 /* Portfolio Item Styles */
