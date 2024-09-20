@@ -29,10 +29,8 @@
 
 .filter-item {
   flex: 0 1 calc(33.333% - 0.5rem);
-  margin-right: 0.5%;
-margin-left: 0.5%;
-  padding-right: 0.5%;
-padding-left:0.5% ;
+  margin: 0.5%;  /* Applying margin equally on all sides */
+    padding: 0.5%;
   box-sizing: border-box; /* Include padding and border in the element's width */
   width: calc(33.333% - 3rem); /* Subtract double the padding */
   display: block;

@@ -18,7 +18,7 @@ const Resume = () => {
         yearRange: "2014 - 2018",
         title: "Architectural Technology",
         place: "George Brown College",
-        desc: "Gained expertise in digital design and project visualization with BIM and CAD software, incorporating Building Science principles. Applied Building Codes and data-driven decision-making, grounded in Data Analysis, in collaborative projects using an agile methodology for optimized outcomes.",
+        desc: "Developed expertise in digital design and project visualization using BIM and CAD software, incorporating Building Science principles. Applied Building Codes and data-driven decision-making, based on Data Analysis, in collaborative projects using agile methodology for optimized outcomes.",
       },
      {
         yearRange: "2005 - 2010",
