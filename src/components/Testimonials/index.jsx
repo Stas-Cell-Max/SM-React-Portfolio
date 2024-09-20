@@ -26,7 +26,7 @@ const Testimonial = () => {
     
     name: "Sergey Stankevich",
     title: "Software Developer from Toronto",
-    src: "https://media.licdn.com/dms/image/C4D03AQFHu3rKrs3nWg/profile-displayphoto-shrink_400_400/0/1599752777123?e=1721865600&v=beta&t=fd7VPnPscUqTNwx2Sfcq1yXSER0-QSY5NFjWT9-eNpI",
+    src: "images/stankevich.jpg",
     quote: "Stanislav exhibits a rare combination of dedication, expertise, and teamwork. Regardless of the project at hand, he consistently deliver high-quality results, demonstrating his commitment to excellence and making him a valued member of our team.",
     rating: 5,
   },
