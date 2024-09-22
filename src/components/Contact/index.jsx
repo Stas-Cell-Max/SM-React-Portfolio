@@ -144,7 +144,7 @@ const Contact = ({  }) => {
           {/* Submit Button */}
           <div className="text-center">
             <button type="submit" 
-            className="btn btn-primary btn-custom">Submit</button>
+            className=" btn-primary btn-custom">Submit</button>
           </div>
         </form>
 
