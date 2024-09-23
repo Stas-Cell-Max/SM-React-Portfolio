@@ -40,8 +40,8 @@
 
 .text-5 {
   font-size: 1.5rem;
-  margin-bottom: 0.5rem !important;
-  margin-top: 1rem;
+  margin-bottom: auto !important;
+  margin-top: 1.5rem;
 }
 
 .text-uppercase {
@@ -123,22 +123,36 @@
   line-height: 1.5;
   border-radius: 0.25rem; /* Rounded corners */
   color: #fff; /* Text color */
-  background-color: #4197a7; /* Primary button color */
-  border-color: #33506f;
+  background-color: #41a7a4; /* Primary button color */
+  border-color: #1b242e !important;
 }
 
 .btn-primary:hover {
-  background-color: #5ca895;/* Darker shade on hover */
+  background-color: #63c59b;/* Darker shade on hover */
   border-color:  #64ffd8;
 }
-.social-links {
+.contact-social-links {
   display: flex;
-  justify-content: center;
-  padding: 1rem 0;
-    padding-top: 1rem;
-  margin-top: auto;
-  padding-top: 0.1rem;
+  justify-content: center; /* Center the social icons */
+  gap: 10px; /* Add space between icons */
+  margin-top: 1rem; /* Add some margin above the social links */
+  padding-bottom: 8rem; /* Padding at the bottom to separate from other content */
 }
+.contact-social-links a {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  
+}
+.contact-icon-link {
+  color: white; /* Same color as in the header */
+  margin: 0 10px; /* Spacing between icons */
+  font-size: 1.8rem; /* Icon size */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+
+
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .contact {
@@ -170,13 +184,13 @@
     padding: 8px 12px; /* Adjust padding for better touch targets */
   }
 
-  .social-links {
+  .contact-social-links {
     gap: 5px;
     margin-bottom: 1rem; 
   }
 
-  .social-links .icon-link {
-    font-size: 20px; /* Adjust social icons size if needed */
+  .contact-social-links .icon-link {
+    font-size: 15px; /* Adjust social icons size if needed */
     padding-top: 2rem;
     gap: 5px;
     margin-bottom: 0.1rem;

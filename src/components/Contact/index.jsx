@@ -149,12 +149,12 @@ const Contact = ({  }) => {
         </form>
 
         <p className="text-5 text-light mb-4">Follow Me /</p>
-        <div className="social-links">
+        <div className="contact-social-links">
         <a
           href="https://linkedin.com/in/stanislavmorozan"
           target="_blank"
           rel="noopener noreferrer"
-          className="icon-link"
+          className="contact-icon-link"
         >
           <i className="fab fa-linkedin-in"></i>
         </a>
@@ -162,7 +162,7 @@ const Contact = ({  }) => {
           href="https://github.com/Stas-Cell-Max"
           target="_blank"
           rel="noopener noreferrer"
-          className="icon-link"
+          className="contact-icon-link"
         >
           <i className="fab fa-github"></i>
         </a>
@@ -170,7 +170,7 @@ const Contact = ({  }) => {
           href="https://facebook.com/stas.moozan"
           target="_blank"
           rel="noopener noreferrer"
-          className="icon-link"
+          className="contact-icon-link"
         >
           <i className="fab fa-facebook-f"></i>
         </a>
@@ -178,7 +178,7 @@ const Contact = ({  }) => {
           href="https://twitter.com/yourusername"
           target="_blank"
           rel="noopener noreferrer"
-          className="icon-link"
+          className="contact-icon-link"
         >
           <i className="fab fa-twitter"></i>
         </a>
@@ -186,7 +186,7 @@ const Contact = ({  }) => {
           href="https://instagram.com/stas_moozan"
           target="_blank"
           rel="noopener noreferrer"
-          className="icon-link"
+          className="contact-icon-link"
         >
           <i className="fab fa-instagram"></i>
         </a>
