@@ -36,7 +36,7 @@
   font-weight: 700;
   color: #3b3b3b;
 }
-.text-6 {
+.resume-text-6 {
   font-size: 2rem; /* Increased size for subheadings */
   font-weight: 600;
   margin-bottom: 1.5rem;
@@ -62,7 +62,7 @@
   background-color: #333 !important;
 }
 /* Education and Experience Boxes */
-.info-box{
+.resume-info-box{
   background-color: #212529;
   padding: 2.5rem;
   margin-bottom: 2.5rem; /* Add more margin between boxes */
@@ -72,7 +72,7 @@
   margin-left: 0.5%;
 }
 
-.info-boxt{
+.resume-info-boxt{
   background-color: #212529;
   padding: 2.5rem;
   margin-bottom: 2.5rem; /* Add more margin between boxes */
@@ -82,10 +82,10 @@
   margin-left: 0.5%;
 }
 
-.info-box p, .info-boxt p {
+.resume-info-box p, .resume-info-boxt p {
   margin-bottom: 1rem;
 }
-.info-box1{
+.resume-info-box1{
   background-color: #212529;
   text-align: center;
   margin-right: 2.5%;
@@ -189,9 +189,9 @@
   
   }
 
-  .text-6 {
+  .resume-text-6 {
     font-size: 1.5rem;
-   padding-right: 50%;
+   padding-right: 10%;
    white-space: nowrap;
   }
   .mb-5, .mb-4, .mt-4 {
@@ -199,20 +199,17 @@
   }
 
   
-  .info-box, .info-boxt {
+  .resume-info-box, .resume-info-boxt {
     /* Adjust padding and margin for the boxes */
     padding: 1.5rem;
-    margin-left: -0.5rem;
-    margin-right: 3rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
   
   }
-  .info-box1{
+  .resume-info-box1{
     padding: 1.5rem;
     text-align: center;
     margin-top: 2rem;
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
-    
   }
   .badge {
     /* Adjust font size for badges */
@@ -237,4 +234,5 @@
   .btn {
     padding: 0.5rem 1rem;
   }
+ 
 }

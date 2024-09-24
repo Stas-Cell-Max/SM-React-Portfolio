@@ -83,7 +83,7 @@ const Resume = () => {
             <div className="col-md-6 col-sm-12">
               <h2 align="center"
                 className={
-                  "text-6 fw-600 mb-4 " 
+                  "resume-text-6 fw-600 mb-4 " 
                 }
               >
                 My Education
@@ -93,7 +93,7 @@ const Resume = () => {
                   <div
                     key={index}
                     className={
-                      "info-box rounded p-4 mb-4 " 
+                      "resume-info-box rounded p-4 mb-4 " 
                     }
                   >
                     <p className="badge bg-primary text-2 fw-400">
@@ -115,7 +115,7 @@ const Resume = () => {
             <div className="col-md-6 col-sm-12">
               <h2 align="center"
                 className={
-                  "text-6 fw-600 mb-4 " 
+                  "resume-text-6 fw-600 mb-4 " 
                 }
               >
                 My Experience
@@ -125,7 +125,7 @@ const Resume = () => {
                   <div
                     key={index}
                     className={
-                      "info-boxt rounded p-4 mb-4 " 
+                      "resume-info-boxt rounded p-4 mb-4 " 
                     }
                   >
                     <p className="badge bg-primary text-2 fw-400">
@@ -147,12 +147,12 @@ const Resume = () => {
           {/* My Skills */}
           <div className="col-12">
           <h2 align="center"
-              className="text-6 fw-600 mb-4"
+              className="resume-text-6 fw-600 mb-4"
           >
             My Skills
           </h2>
           <div
-          className="info-box1 rounded p-4 mb-4"
+          className="resume-info-box1 rounded p-4 mb-4"
           >
             <div className="skills-content">
           <p align="center  ">
