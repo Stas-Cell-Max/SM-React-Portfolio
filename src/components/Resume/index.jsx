@@ -80,7 +80,7 @@ const Resume = () => {
           {/* Heading end*/}
           <div className="row gx-5">
             {/* My Education */}
-            <div className="col-md-6 col-sm-12">
+            <div className="col-12">
               <h2 align="center"
                 className={
                   "resume-text-6 fw-600 mb-4 " 
@@ -112,7 +112,7 @@ const Resume = () => {
                 ))}
             </div>
             {/* My Experience */}
-            <div className="col-md-6 col-sm-12">
+            <div className="col-12">
               <h2 align="center"
                 className={
                   "resume-text-6 fw-600 mb-4 " 

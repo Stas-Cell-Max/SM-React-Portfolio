@@ -54,6 +54,7 @@
   flex: 0 0 50%;
   max-width: 50%;
   margin-top: 2rem;
+  margin: 0 auto;
   
   
 }
@@ -171,6 +172,8 @@
   }
   .container .text-5 {
     font-size: 1.2rem; /* Adjusted font size for subheadings */
+    margin-bottom: 1rem !important;
+        margin-top: 1rem !important;
   }
 
   .container .heading-separator-line {
@@ -191,8 +194,9 @@
 
   .resume-text-6 {
     font-size: 1.5rem;
-   padding-right: 10%;
-   white-space: nowrap;
+    text-align: center; /* Align headings to the left on smaller screens */
+    margin: 0 auto; 
+    
   }
   .mb-5, .mb-4, .mt-4 {
     margin-bottom: 2rem;
@@ -202,14 +206,18 @@
   .resume-info-box, .resume-info-boxt {
     /* Adjust padding and margin for the boxes */
     padding: 1.5rem;
-    margin-left: -1rem;
-    margin-right: -1rem;
+    
+    margin: 0 auto; 
+    
   
   }
   .resume-info-box1{
     padding: 1.5rem;
-    text-align: center;
-    margin-top: 2rem;
+    margin-left: 1.5rem;
+margin-right: 1.5rem;
+    
+    text-align: 1.5rem;
+   
   }
   .badge {
     /* Adjust font size for badges */
