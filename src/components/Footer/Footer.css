@@ -58,8 +58,18 @@ html, body {
   }
 
   @media (max-width: 768px) {
+    .footer {
+      
+      background-color: #333;
+      color: #ffffff;
+      text-align: center;
+      
+     top: 12rem; /* Ensure there's space before the footer */
+  }
+
     .footer .container {
-      margin-bottom: 5rem;
+      margin-bottom: 15%;
+      margin-top: 15%;
     }
    
   }
