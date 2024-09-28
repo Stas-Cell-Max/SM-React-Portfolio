@@ -187,12 +187,12 @@
   }
 
   h2 {
-    font-size: 1.1rem ; /* Smaller font size for mobile */
+    font-size: 1rem ; /* Smaller font size for mobile */
     margin: 0;
     color: #ffffff;
     display: inline-block;
     white-space: nowrap; /* Prevents name from breaking into two lines */
-    margin-bottom: 30px !important;
+    margin-bottom: 20% !important;
   }
 
   .sticky {
@@ -222,7 +222,7 @@
   transition: max-height 0.7s ease-in-out;
   flex-direction: column;
   align-items: center;
-  top: -25px;
+  top: -30px;
   left: 0;
   width: 100%;
   background-color: #343a40;
@@ -240,11 +240,11 @@
   /* Hamburger Menu */
  
   .mobile-hamburger {
-    width: 50px;  /* Set explicit width */
-    height: 50px; /* Set explicit height */
+    width: 40px;  /* Set explicit width */
+    height: 40px; /* Set explicit height */
     cursor: pointer;
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 50%;
     transform: translateX(-50%);
     color: #ffffff;
@@ -257,7 +257,7 @@
     transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
   }
   .mobile-hamburger i {
-    font-size: 2rem; /* Force the same font-size for both the bars and the cross icon */
+    font-size: 1.5rem; /* Force the same font-size for both the bars and the cross icon */
   }
 
   .mobile-hamburger:hover {
