@@ -56,3 +56,10 @@ html, body {
     margin-bottom: 0.5rem !important;
     margin-top: 1rem;
   }
+
+  @media (max-width: 768px) {
+    .footer .container {
+      margin-bottom: 5rem;
+    }
+   
+  }

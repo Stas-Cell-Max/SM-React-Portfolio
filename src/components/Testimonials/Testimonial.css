@@ -181,7 +181,7 @@ font-size: 10px;
   } 
    .testimonial-item {
     width: 100%; /* Full width for better visibility */
-    margin: 0.1rem ; /* Consistent spacing */
+    margin: 1 0.1rem ; /* Consistent spacing */
    margin-top: 0.1rem;
     padding: 1px; /* Ample padding for readability */
     display: flex;

@@ -218,7 +218,7 @@
   opacity: 1; /* Make it visible */
   position: fixed; 
   display: flex;
-  max-height: 50%; 
+  max-height: 55%; 
   transition: max-height 0.7s ease-in-out;
   flex-direction: column;
   align-items: center;
