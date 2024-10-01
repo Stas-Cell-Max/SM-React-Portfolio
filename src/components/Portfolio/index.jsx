@@ -25,64 +25,69 @@ const Portfolio = ({ darkTheme }) => {
 // Each project object contains details such as title, description, technologies, images, etc.
     {
       id: 1,
-      title: "Las Vegas Trip Advisor",
-      projectInfo:
-        "The Las Vegas Explorer app is a dynamic web application designed to provide users with an immersive experience of Las Vegas. From premium or basic packages to event information and interactive features, this app serves as a gateway to the thrilling world of the city.",
-      client: "The One",
-      technologies: " HTML5, CSS3, JavaScript",
-      industry: "Web Development",
-      date: "October, 2023",
-      url: {
-        name: "https://ozdaldogru.github.io/Las-Vegas-Trip-Organizer/",
-        link: "https://ozdaldogru.github.io/Las-Vegas-Trip-Organizer/",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "images/VegasMama.png",
-      sliderImages: [
-        "images/VegasMama1.png",
-        "images/VegasMama2.png",
-        "images/VegasMama3.png",
-        "images/VegasMama4.png",
-      ],
-      categories: ["*", "webdev"],
+
+      title: "Maxidom",
+ projectInfo:
+   "Maxidom is a professionally crafted, modern, responsive website for a finishing carpentry company. It highlights services like trim work, door installation, cabinetry, flooring, and stair refinishing. The site features SEO optimization, interactive elements, and easy navigation to explore products and contact the company.",
+ client: "Maxidom Inc.",
+ technologies: " HTML5, CSS3, Java Script, jQuery",
+ industry: "Web Development",
+ date: "June 16, 2024",
+ url: {
+   name: "https://maxidom.net/",
+   link: "https://maxidom.net/",
+ },
+ socialLinks: {
+   facebook: "https://www.facebook.com/MaxidomMax",
+ 
+   instagram: "https://www.instagram.com/maxidom_max/",
+ },
+ thumbImage: "images/maxidom3.jpg",
+ sliderImages: [
+   "images/maxidom1.jpg",
+   "images/maxidom2.jpg",
+   "images/maxidom4.jpg",
+   "images/maxidom5.jpg",
+   "images/maxidom6.jpg",
+   "images/maxidom7.jpg",
+   "images/maxidom8.jpg",
+   "images/maxidom9.jpg",
+   "images/maxidom10.jpg",
+   "images/maxidom11.jpg",
+ ],
+ categories: ["*", "webdev"],
+  
     },
     {
       id: 2,
-      title: "BrimLoft",
-      projectInfo:
-        "BrimLoft is a dynamic web application designed for hat enthusiasts. It offers users an exclusive platform to explore, register, and purchase a wide range of stylish hats. With features like user authentication, personalized profiles, and an intuitive shopping interface, BrimLoft elevates the online hat shopping experience.",
-      client: "Group|4",
-      technologies: "[HTML, CSS, JavaScript, Handlebars] [Node.js, Express.js] [MySQL, Sequelize ORM] ",
-      industry: "Web Development",
-      date: "December, 2023",
-      url: {
-        name: "https://protected-gorge-42703-db942224a3bb.herokuapp.com/",
-        link: " https://brim-loft-22a58ce3b819.herokuapp.com/",
-        gitRepo: "https://github.com/waltscode/BrimLoft"
-        
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "images/Brimloft.png",
-      sliderImages: [
-        "images/Brimloft4.png",
-        "images/Brimloft2.png",
-        "images/Brimloft3.png",
-        "images/Brimloft5.png",
-        
-      ],
-      categories: ["*","webdev"],
+        title: "Personal Portfolio",
+ projectInfo:
+   "This React-based single-page application (SPA) is the personal portfolio of Stanislav Morozan. It showcases his development projects and professional journey with a clean, user-friendly interface. Built using the latest web technologies, it features responsive design with Bootstrap, smooth navigation, interactive project displays, and a contact form. The portfolio effectively highlights Stanislav's skills and accomplishments.",
+ client: "Stanislav Morozan",
+ technologies: "React.js,Vite,Bootstrap,React Router,React-scroll,Slick Carousel,Isotope-layout,CSS",
+ industry: "Web Development",
+ date: "July 16, 2019",
+ url: {
+   name: "www.SM_Portfolio.com",
+   link: "https://stas-cell-max.github.io/SM-React-Portfolio/",
+ },
+ socialLinks: {
+   facebook: "https://facebook.com/stas.moozan",
+   instagram: "https://instagram.com/stas_moozan",
+   LinkedIn: "https://www.linkedin.com/in/stanislavmorozan/",
+ },
+ thumbImage: "images/port.jpg",
+ sliderImages: [
+   "images/port1.jpg",   
+   "images/port3.jpg",
+   "images/port4.jpg",
+   "images/port5.jpg",   
+   "images/port7.jpg",
+   "images/port6.jpg",
+   "images/port9.jpg",
+ ],
+ categories: ["*", "webdev"],
+
     },
     {
       id: 3,
@@ -147,37 +152,34 @@ const Portfolio = ({ darkTheme }) => {
     },
     {
       id: 5,
-      title: "Maxidom",
-      projectInfo:
-        "Maxidom is a professionally crafted, modern, responsive website for a finishing carpentry company. It highlights services like trim work, door installation, cabinetry, flooring, and stair refinishing. The site features SEO optimization, interactive elements, and easy navigation to explore products and contact the company.",
-      client: "Maxidom Inc.",
-      technologies: " HTML5, CSS3, Java Script, jQuery",
-      industry: "Web Development",
-      date: "June 16, 2024",
-      url: {
-        name: "https://maxidom.net/",
-        link: "https://maxidom.net/",
-      },
-      socialLinks: {
-        facebook: "https://www.facebook.com/MaxidomMax",
-      
-        instagram: "https://www.instagram.com/maxidom_max/",
-  
-      },
-      thumbImage: "images/maxidom3.jpg",
-      sliderImages: [
-        "images/maxidom1.jpg",
-        "images/maxidom2.jpg",
-        "images/maxidom4.jpg",
-        "images/maxidom5.jpg",
-        "images/maxidom6.jpg",
-        "images/maxidom7.jpg",
-        "images/maxidom8.jpg",
-        "images/maxidom9.jpg",
-        "images/maxidom10.jpg",
-        "images/maxidom11.jpg",
-      ],
-      categories: ["*", "webdev"],
+         title: "Las Vegas Trip Advisor",
+    projectInfo:
+      "The Las Vegas Explorer app is a dynamic web application designed to provide users with an immersive experience of Las Vegas. From premium or basic packages to event information and interactive features, this app serves as a gateway to the thrilling world of the city.",
+    client: "The One",
+    technologies: " HTML5, CSS3, JavaScript",
+    industry: "Web Development",
+    date: "October, 2023",
+    url: {
+      name: "https://ozdaldogru.github.io/Las-Vegas-Trip-Organizer/",
+      link: "https://ozdaldogru.github.io/Las-Vegas-Trip-Organizer/",
+    },
+    socialLinks: {
+      facebook: "http://www.facebook.com/",
+      twitter: "http://www.twitter.com/",
+      google: "http://www.google.com/",
+      instagram: "http://www.instagram.com/",
+      mail: "mailto:example@gmail.com",
+    },
+    thumbImage: "images/VegasMama.png",
+    sliderImages: [
+      "images/VegasMama1.png",
+      "images/VegasMama2.png",
+      "images/VegasMama3.png",
+      "images/VegasMama4.png",
+    ],
+    categories: ["*", "webdev"],
+     
+     
     },
     {
       id: 6,
@@ -288,34 +290,37 @@ const Portfolio = ({ darkTheme }) => {
 
     {
       id: 10,
-      title: "Personal Portfolio",
-      projectInfo:
-        "This React-based single-page application (SPA) is the personal portfolio of Stanislav Morozan. It showcases his development projects and professional journey with a clean, user-friendly interface. Built using the latest web technologies, it features responsive design with Bootstrap, smooth navigation, interactive project displays, and a contact form. The portfolio effectively highlights Stanislav's skills and accomplishments.",
-      client: "Stanislav Morozan",
-      technologies: "React.js,Vite,Bootstrap,React Router,React-scroll,Slick Carousel,Isotope-layout,CSS",
-      industry: "Web Development",
-      date: "July 16, 2019",
-      url: {
-        name: "www.SM_Portfolio.com",
-        link: "https://stas-cell-max.github.io/SM-React-Portfolio/",
-      },
-      socialLinks: {
-        facebook: "https://facebook.com/stas.moozan",
-        instagram: "https://instagram.com/stas_moozan",
-        LinkedIn: "https://www.linkedin.com/in/stanislavmorozan/",
-  
-      },
-      thumbImage: "images/port.jpg",
-      sliderImages: [
-        "images/port1.jpg",   
-        "images/port3.jpg",
-        "images/port4.jpg",
-        "images/port5.jpg",   
-        "images/port7.jpg",
-        "images/port6.jpg",
-        "images/port9.jpg",
-      ],
-      categories: ["*", "webdev"],
+         title: "BrimLoft",
+    projectInfo:
+      "BrimLoft is a dynamic web application designed for hat enthusiasts. It offers users an exclusive platform to explore, register, and purchase a wide range of stylish hats. With features like user authentication, personalized profiles, and an intuitive shopping interface, BrimLoft elevates the online hat shopping experience.",
+    client: "Group|4",
+    technologies: "[HTML, CSS, JavaScript, Handlebars] [Node.js, Express.js] [MySQL, Sequelize ORM] ",
+    industry: "Web Development",
+    date: "December, 2023",
+    url: {
+      name: "https://protected-gorge-42703-db942224a3bb.herokuapp.com/",
+      link: " https://brim-loft-22a58ce3b819.herokuapp.com/",
+      gitRepo: "https://github.com/waltscode/BrimLoft"
+      
+    },
+    socialLinks: {
+      facebook: "http://www.facebook.com/",
+      twitter: "http://www.twitter.com/",
+      google: "http://www.google.com/",
+      instagram: "http://www.instagram.com/",
+      mail: "mailto:example@gmail.com",
+    },
+    thumbImage: "images/Brimloft.png",
+    sliderImages: [
+      "images/Brimloft4.png",
+      "images/Brimloft2.png",
+      "images/Brimloft3.png",
+      "images/Brimloft5.png",
+      
+    ],
+    categories: ["*","webdev"],
+
+     
     },
     
   ];
