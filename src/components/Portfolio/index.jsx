@@ -25,7 +25,6 @@ const Portfolio = ({ darkTheme }) => {
 // Each project object contains details such as title, description, technologies, images, etc.
     {
       id: 1,
-
       title: "Maxidom",
  projectInfo:
    "Maxidom is a professionally crafted, modern, responsive website for a finishing carpentry company. It highlights services like trim work, door installation, cabinetry, flooring, and stair refinishing. The site features SEO optimization, interactive elements, and easy navigation to explore products and contact the company.",
@@ -64,7 +63,7 @@ const Portfolio = ({ darkTheme }) => {
  projectInfo:
    "This React-based single-page application (SPA) is the personal portfolio of Stanislav Morozan. It showcases his development projects and professional journey with a clean, user-friendly interface. Built using the latest web technologies, it features responsive design with Bootstrap, smooth navigation, interactive project displays, and a contact form. The portfolio effectively highlights Stanislav's skills and accomplishments.",
  client: "Stanislav Morozan",
- technologies: "React.js,Vite,Bootstrap,React Router,React-scroll,Slick Carousel,Isotope-layout,CSS",
+ technologies: "React, Vite, Bootstrap, React Router, React-scroll, Slick Carousel, Isotope-layout,CSS",
  industry: "Web Development",
  date: "July 16, 2019",
  url: {
