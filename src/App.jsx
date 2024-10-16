@@ -18,7 +18,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/StanislavMorozan-Portfolio">
       {/* Header component with navigation click handler */}
       <Header handleNavClick={handleNavClick} />
       
