@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Stas-Cell-Max.github.io/SM-React-Portfolio/",
+  "homepage": "https://Stas-Cell-Max.github.io/StanislavMorozan-Portfolio/",
   "scripts": {
     
     "deploy": "gh-pages -d build",
