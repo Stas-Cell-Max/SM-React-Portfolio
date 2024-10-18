@@ -1,6 +1,6 @@
 import React from 'react';
 import './Resume.css';
-import resumeFile from '../../Documents/Resume_Stanislav Morozan_P.pdf';
+import resumeFile from '../../Documents/Resume_Stanislav Morozan_WebDev.pdf';
 
 // Resume component showcasing education, experience, and skills
 const Resume = () => {
@@ -182,7 +182,7 @@ const Resume = () => {
               href={resumeFile}
               download
             >
-              Download CV
+              See my Resume
               <span className="ms-1">
                 <i className="fas fa-download" />
               </span>
