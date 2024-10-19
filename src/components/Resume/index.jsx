@@ -8,45 +8,45 @@ const Resume = () => {
     const educationDetails = [
        // Array of education details
       {
-        yearRange: "2023 - 2024",
+        yearRange: "2022 - 2023",
         title: "Web Development",
         place: "University of Toronto",
-        desc: "Mastered full-stack development technologies including MongoDB, Express.js, React.js, and Node.js, specializing in dynamic, responsive web applications with RESTful APIs, modern JavaScript, and implementing best practices in code efficiency, security, and scalability.",
+        desc: "Mastered full-stack development technologies including MongoDB, Express.js, React.js, and Node.js (MERN Stack) specializing in dynamic, responsive web applications with RESTful APIs, modern JavaScript, and implementing best practices in code efficiency, security, and scalability.",
       },
       
       {
-        yearRange: "2014 - 2018",
+        yearRange: "2015 - 2018",
         title: "Architectural Technology",
         place: "George Brown College",
         desc: "Developed expertise in digital design and project visualization using BIM and CAD software, incorporating Building Science principles. Applied Building Codes and data-driven decision-making, based on Data Analysis, in collaborative projects using agile methodology for optimized outcomes.",
       },
      {
         yearRange: "2005 - 2010",
-        title: "Science of Information Technology",
+        title: "Architectural Engineering ",
         place: "Technical University of Moldova",
-        desc: "Built a solid foundation in essential IT principles, including software development, systems analysis, network architecture, cybersecurity, data management, and complex problem-solving, crucial for success in a typical Computer Science curriculum.",
+        desc: "Developed a solid foundation in Architectural Design, Urban Planning, Construction Engineering Project Management",
       },
       
     ];
     const experienceDetails = [
       // Array of experience details
       {
-        yearRange: "2016 - 2018",
-        title: "Architectural Technologist",
-        place: "NORR",
-        desc: "Transformed architectural solutions into digital formats, enhancing client presentations and bids. Streamlined the conversion of technical drawings for greater team collaboration. Championed data-driven design to improve UI adaptability and reduce revision cycles. ",
+        yearRange: "2020 - 2024",
+        title: "Frontend Developer | Project Web App",
+        place: "One York Construction Management | Toronto, ON ",
+        desc: "•	Directed development of a Web Application Project Hub for architectural presentations and construction project data. •	Designed and built a React.js-based frontend to integrate design drawings, technical documents, and progress photos. •	Implemented real-time updates for designs and documents, eliminating reliance on static PDFs. •	Developed UI components for version control, timelines, and progress tracking, enhancing transparency. •	Collaborated with backend developers to integrate REST APIs, ensuring seamless data flow. •	Applied responsive web design to optimize performance across devices for both on-site and office users.",
       },
       {
         yearRange: "2018 - 2020",
-        title: "Architectural Design Technologist",
-        place: "Hariri Pontarini Architects",
-        desc: "Led digital transformation of project documentation with BIM, producing interactive representations that boosted stakeholder engagement. Applied responsive design to visualization tools, enhancing accessibility and user interaction, and spearheaded sustainable design in digital delivery. ",
+        title: "Architectural Designer | Technologist ",
+        place: "Hariri Pontarini Architects | Toronto, ON ",
+        desc: "•	Managed multiple projects simultaneously while adhering to strict deadlines and quality standards. •	Delivered high-quality technical drawings using AutoCAD and Revit software, ensuring accurate representation of architectural designs. •	Improved project timelines with effective coordination of multidisciplinary teams during the design process. •	Worked with licensing, permitting, planning and inspection authorities to evaluate and resolve concerns. ",
       },
       {
         yearRange: "2020 - 2024",
-        title: "Tech Integration Architect",
-        place: "One York Construction Management",
-        desc: " Revamped client engagement by developing an interactive website and a management platform to enhance stakeholder collaboration. Focused on user-centric design with continuous updates and training for better platform proficiency.",
+       title: "Architectural Technologist",
+       place: "NORR | Toronto, ON ",
+       desc: "•	Enabled data-driven design techniques, utilizing analytics to inform design decisions, reducing revision cycles. • Streamlined project workflows for improved collaboration between architects, engineers, and construction teams.  ",
       },
     ];
 
