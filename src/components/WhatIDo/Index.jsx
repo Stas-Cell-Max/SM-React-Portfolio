@@ -7,12 +7,12 @@ const WhatIDo = () => {
     <section id="what-i-do" 
     
     className="what-i-do-section">
-      <div className="grid-overlay">
-        <div className="grid-overlay__col"><div className="grid-overlay__line"></div></div>
-        <div className="grid-overlay__col"><div className="grid-overlay__line"></div></div>
-        <div className="grid-overlay__col"><div className="grid-overlay__line"></div></div>
-        <div className="grid-overlay__col"><div className="grid-overlay__line"></div></div>
-      </div>
+    
+    
+    
+    
+    
+    
        <div className={"container " }>
       <div className="position-relative d-flex text-center mb-5 ">
           <h2
